@@ -1,0 +1,94 @@
+[gd_scene load_steps=7 format=3 uid="uid://ca10p6j27y6rb"]
+
+[ext_resource type="Script" uid="uid://daf00u7n8i3m6" path="res://scripts/UI/loading_screen.gd" id="1_pe18t"]
+[ext_resource type="FontFile" uid="uid://ds2q7k08drb8x" path="res://Asset/font/dash/Dash-Horizon-Demo.otf" id="2_2t34d"]
+
+[sub_resource type="Gradient" id="Gradient_yxilm"]
+colors = PackedColorArray(0.11528777, 0.31459945, 0.30271176, 1, 0.22895402, 0.14023891, 0.43316054, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5phy8"]
+gradient = SubResource("Gradient_yxilm")
+fill = 1
+fill_from = Vector2(0.5050505, 1)
+fill_to = Vector2(0.4848485, 0.121212125)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djmwj"]
+bg_color = Color(0.054353885, 0.036198843, 0.13813874, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.47397596, 0.4739756, 0.4739756, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qygbf"]
+bg_color = Color(1, 1, 1, 0.8352941)
+border_color = Color(0.4745098, 0.4745098, 0.4745098, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Loading_Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pe18t")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_5phy8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.0
+offset_top = -33.5
+offset_right = 181.0
+offset_bottom = 33.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_2t34d")
+theme_override_font_sizes/font_size = 26
+text = "L o a d i n g ..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -556.0
+offset_top = 20.0
+offset_right = 558.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_djmwj")
+theme_override_styles/fill = SubResource("StyleBoxFlat_qygbf")
+step = 0.0
+show_percentage = false

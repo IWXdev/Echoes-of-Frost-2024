@@ -1,0 +1,253 @@
+[gd_scene load_steps=72 format=3 uid="uid://oifxdol8021h"]
+
+[ext_resource type="Script" uid="uid://bytrsctfpggdn" path="res://scripts/enemys/wetlands.gd" id="1_xeqru"]
+[ext_resource type="Texture2D" uid="uid://5vhs5acvsplk" path="res://Asset/SHADOW Series/Wetlands/attack1/attack10.png" id="3_bii3o"]
+[ext_resource type="Texture2D" uid="uid://cfuw6ohjc4fs3" path="res://Asset/SHADOW Series/Wetlands/attack1/attack11.png" id="4_jcxci"]
+[ext_resource type="Texture2D" uid="uid://dsydnb6saa4er" path="res://Asset/SHADOW Series/Wetlands/attack1/attack12.png" id="5_hc4r4"]
+[ext_resource type="Texture2D" uid="uid://cymccoavhpg12" path="res://Asset/SHADOW Series/Wetlands/attack1/attack13.png" id="6_dosr7"]
+[ext_resource type="Texture2D" uid="uid://cinplkqgei5em" path="res://Asset/SHADOW Series/Wetlands/attack1/attack14.png" id="7_333l5"]
+[ext_resource type="Texture2D" uid="uid://c72lrrccp6wg4" path="res://Asset/SHADOW Series/Wetlands/attack1/attack15.png" id="8_scxxa"]
+[ext_resource type="Texture2D" uid="uid://sppatcmbsk5b" path="res://Asset/SHADOW Series/Wetlands/attack1/attack16.png" id="9_8c5cv"]
+[ext_resource type="Texture2D" uid="uid://kb2naghh4oxf" path="res://Asset/SHADOW Series/Wetlands/attack1/attack17.png" id="10_wfywv"]
+[ext_resource type="Texture2D" uid="uid://dasutd85h5uiq" path="res://Asset/SHADOW Series/Wetlands/attack1/attack18.png" id="11_nc1sl"]
+[ext_resource type="Texture2D" uid="uid://btqe726l72w4j" path="res://Asset/SHADOW Series/Wetlands/attack1/attack19.png" id="12_lyx2t"]
+[ext_resource type="Texture2D" uid="uid://b3kqxfxnmqtgv" path="res://Asset/SHADOW Series/Wetlands/dead/dead0.png" id="13_40nfl"]
+[ext_resource type="Texture2D" uid="uid://bvsouipdpbel5" path="res://Asset/SHADOW Series/Wetlands/dead/dead1.png" id="14_8ji18"]
+[ext_resource type="Texture2D" uid="uid://cd3xvk6guvrw2" path="res://Asset/SHADOW Series/Wetlands/dead/dead2.png" id="15_1korm"]
+[ext_resource type="Texture2D" uid="uid://cmktydrna1jff" path="res://Asset/SHADOW Series/Wetlands/dead/dead3.png" id="16_aa3xy"]
+[ext_resource type="Texture2D" uid="uid://cox83ggcnudnn" path="res://Asset/SHADOW Series/Wetlands/dead/dead4.png" id="17_8crh8"]
+[ext_resource type="Texture2D" uid="uid://cu6bity2b6s1r" path="res://Asset/SHADOW Series/Wetlands/dead/dead5.png" id="18_rf76u"]
+[ext_resource type="Texture2D" uid="uid://c8ggqqjogh0yy" path="res://Asset/SHADOW Series/Wetlands/dead/dead6.png" id="19_0grwh"]
+[ext_resource type="Texture2D" uid="uid://iu3yyqsuo154" path="res://Asset/SHADOW Series/Wetlands/dead/dead7.png" id="20_pmr50"]
+[ext_resource type="Texture2D" uid="uid://dmfhbx65n3v67" path="res://Asset/SHADOW Series/Wetlands/dead/dead8.png" id="21_mtsvp"]
+[ext_resource type="Texture2D" uid="uid://dxgy2v4nceyv6" path="res://Asset/SHADOW Series/Wetlands/dead/dead9.png" id="22_l0ef6"]
+[ext_resource type="Texture2D" uid="uid://bc8wtg2emq2ma" path="res://Asset/SHADOW Series/Wetlands/dead/dead10.png" id="23_taa1c"]
+[ext_resource type="Texture2D" uid="uid://ct5jdv07l05hf" path="res://Asset/SHADOW Series/Wetlands/dead/dead11.png" id="24_5qo7r"]
+[ext_resource type="Texture2D" uid="uid://dqc4fmmms3ag" path="res://Asset/SHADOW Series/Wetlands/dead/dead12.png" id="25_vrf5p"]
+[ext_resource type="Texture2D" uid="uid://bfdo5b5cgh538" path="res://Asset/SHADOW Series/Wetlands/hit/hit0.png" id="26_46agu"]
+[ext_resource type="Texture2D" uid="uid://bt7qkqw8trvvk" path="res://Asset/SHADOW Series/Wetlands/dead/dead13.png" id="26_hwd2k"]
+[ext_resource type="Texture2D" uid="uid://dx7twnvvvjgc2" path="res://Asset/SHADOW Series/Wetlands/dead/dead14.png" id="27_hfnbq"]
+[ext_resource type="Texture2D" uid="uid://g8xlsimnww7a" path="res://Asset/SHADOW Series/Wetlands/dead/dead15.png" id="28_bjy4c"]
+[ext_resource type="Texture2D" uid="uid://dxkgs6auhc4km" path="res://Asset/SHADOW Series/Wetlands/dead/dead16.png" id="29_ltsui"]
+[ext_resource type="Texture2D" uid="uid://5py3byu7nhrx" path="res://Asset/SHADOW Series/Wetlands/dead/dead17.png" id="30_f1t57"]
+[ext_resource type="Texture2D" uid="uid://cwihgklmhcr4m" path="res://Asset/SHADOW Series/Wetlands/idle/idle0.png" id="30_tjovr"]
+[ext_resource type="Texture2D" uid="uid://h0ngtfljbgm8" path="res://Asset/SHADOW Series/Wetlands/idle/idle1.png" id="31_k716c"]
+[ext_resource type="Texture2D" uid="uid://drdx4gdkkh1ku" path="res://Asset/SHADOW Series/Wetlands/dead/dead18.png" id="31_rlf8i"]
+[ext_resource type="Texture2D" uid="uid://bnb1qgeixplwe" path="res://Asset/SHADOW Series/Wetlands/idle/idle2.png" id="32_ivxlf"]
+[ext_resource type="Texture2D" uid="uid://dllh1rywhwynk" path="res://Asset/SHADOW Series/Wetlands/idle/idle3.png" id="33_bii3o"]
+[ext_resource type="Texture2D" uid="uid://bg5up0rlw57om" path="res://Asset/SHADOW Series/Wetlands/idle/idle4.png" id="34_jcxci"]
+[ext_resource type="Texture2D" uid="uid://bd563bya1p3rg" path="res://Asset/SHADOW Series/Wetlands/idle/idle5.png" id="35_hc4r4"]
+[ext_resource type="Texture2D" uid="uid://cnygopcexyp60" path="res://Asset/SHADOW Series/Wetlands/idle/idle6.png" id="36_dosr7"]
+[ext_resource type="Texture2D" uid="uid://dvofa6rwwdnuu" path="res://Asset/SHADOW Series/Wetlands/idle/idle7.png" id="37_333l5"]
+[ext_resource type="Texture2D" uid="uid://s5c4uufyfx4r" path="res://Asset/SHADOW Series/Wetlands/walk/walk0.png" id="38_1sjej"]
+[ext_resource type="Texture2D" uid="uid://cw581bodd0r1n" path="res://Asset/SHADOW Series/Wetlands/idle/idle8.png" id="38_scxxa"]
+[ext_resource type="Texture2D" uid="uid://wrigcuctvp25" path="res://Asset/SHADOW Series/Wetlands/idle/idle9.png" id="39_8c5cv"]
+[ext_resource type="Texture2D" uid="uid://cftvbgc7brt4v" path="res://Asset/SHADOW Series/Wetlands/walk/walk1.png" id="39_ujul4"]
+[ext_resource type="Texture2D" uid="uid://b46mgrcpvbog1" path="res://Asset/SHADOW Series/Wetlands/idle/idle10.png" id="40_wfywv"]
+[ext_resource type="Texture2D" uid="uid://c5tksrb08qtvj" path="res://Asset/SHADOW Series/Wetlands/idle/idle11.png" id="41_nc1sl"]
+[ext_resource type="Texture2D" uid="uid://b33dsk1181x8" path="res://Asset/SHADOW Series/Wetlands/idle/idle12.png" id="42_lyx2t"]
+[ext_resource type="Texture2D" uid="uid://bb2ibifds1kj3" path="res://Asset/SHADOW Series/Wetlands/idle/idle13.png" id="43_40nfl"]
+[ext_resource type="Texture2D" uid="uid://bwv0qkiucil58" path="res://Asset/SHADOW Series/Wetlands/walk/walk2.png" id="46_8ji18"]
+[ext_resource type="Texture2D" uid="uid://dlgajb7k2u83v" path="res://Asset/SHADOW Series/Wetlands/walk/walk3.png" id="47_1korm"]
+[ext_resource type="PackedScene" uid="uid://cx2qv2hiapgk7" path="res://scenes/UI/healthbar.tscn" id="47_1u5gg"]
+[ext_resource type="Texture2D" uid="uid://drl6iw3x2lp8i" path="res://Asset/SHADOW Series/Wetlands/walk/walk4.png" id="48_aa3xy"]
+[ext_resource type="Texture2D" uid="uid://ccrwn2i7vf1f7" path="res://Asset/SHADOW Series/Wetlands/walk/walk5.png" id="49_8crh8"]
+[ext_resource type="Texture2D" uid="uid://ewvh4yqmw12v" path="res://Asset/SHADOW Series/Wetlands/walk/walk6.png" id="50_rf76u"]
+[ext_resource type="Texture2D" uid="uid://b3t77ef56g748" path="res://Asset/SHADOW Series/Wetlands/walk/walk7.png" id="51_0grwh"]
+[ext_resource type="Texture2D" uid="uid://c6qewdjfeaq3h" path="res://Asset/SHADOW Series/Wetlands/walk/walk8.png" id="52_pmr50"]
+[ext_resource type="Texture2D" uid="uid://dvmimvk67wjgu" path="res://Asset/SHADOW Series/Wetlands/walk/walk9.png" id="53_mtsvp"]
+[ext_resource type="Texture2D" uid="uid://cee42k4roott5" path="res://Asset/SHADOW Series/Wetlands/walk/walk10.png" id="54_l0ef6"]
+[ext_resource type="Texture2D" uid="uid://c5hu6qdet4rem" path="res://Asset/SHADOW Series/Wetlands/walk/walk11.png" id="55_taa1c"]
+[ext_resource type="Texture2D" uid="uid://brmp7uirrocai" path="res://Asset/SHADOW Series/Wetlands/walk/walk12.png" id="56_5qo7r"]
+[ext_resource type="Texture2D" uid="uid://c4vi6wqj7p3an" path="res://Asset/SHADOW Series/Wetlands/walk/walk13.png" id="57_vrf5p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cphpr"]
+size = Vector2(56.285717, 57.57143)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v021y"]
+size = Vector2(308.5719, 60.0001)
+
+[sub_resource type="Animation" id="Animation_5iokk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("30_tjovr")]
+}
+
+[sub_resource type="Animation" id="Animation_2e3oh"]
+resource_name = "attack"
+length = 0.9
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_bii3o"), ExtResource("4_jcxci"), ExtResource("5_hc4r4"), ExtResource("6_dosr7"), ExtResource("7_333l5"), ExtResource("8_scxxa"), ExtResource("9_8c5cv"), ExtResource("10_wfywv"), ExtResource("11_nc1sl"), ExtResource("12_lyx2t")]
+}
+
+[sub_resource type="Animation" id="Animation_taof5"]
+resource_name = "dead"
+length = 1.8
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("13_40nfl"), ExtResource("14_8ji18"), ExtResource("15_1korm"), ExtResource("16_aa3xy"), ExtResource("17_8crh8"), ExtResource("18_rf76u"), ExtResource("19_0grwh"), ExtResource("20_pmr50"), ExtResource("21_mtsvp"), ExtResource("22_l0ef6"), ExtResource("23_taa1c"), ExtResource("24_5qo7r"), ExtResource("25_vrf5p"), ExtResource("26_hwd2k"), ExtResource("27_hfnbq"), ExtResource("28_bjy4c"), ExtResource("29_ltsui"), ExtResource("30_f1t57"), ExtResource("31_rlf8i")]
+}
+
+[sub_resource type="Animation" id="Animation_32wjw"]
+resource_name = "hit"
+length = 0.05
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.05),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("26_46agu")]
+}
+
+[sub_resource type="Animation" id="Animation_joc3b"]
+resource_name = "idle"
+length = 0.9272
+loop_mode = 1
+step = 0.07
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.071428575, 0.14285715, 0.21428572, 0.2857143, 0.35714287, 0.42857143, 0.5, 0.5714286, 0.64285713, 0.71428573, 0.78571427, 0.85714287, 0.9285714),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("30_tjovr"), ExtResource("31_k716c"), ExtResource("32_ivxlf"), ExtResource("33_bii3o"), ExtResource("34_jcxci"), ExtResource("35_hc4r4"), ExtResource("36_dosr7"), ExtResource("37_333l5"), ExtResource("38_scxxa"), ExtResource("39_8c5cv"), ExtResource("40_wfywv"), ExtResource("41_nc1sl"), ExtResource("42_lyx2t"), ExtResource("43_40nfl")]
+}
+
+[sub_resource type="Animation" id="Animation_rlqrv"]
+resource_name = "walk"
+length = 0.65
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("38_1sjej"), ExtResource("39_ujul4"), ExtResource("46_8ji18"), ExtResource("47_1korm"), ExtResource("48_aa3xy"), ExtResource("49_8crh8"), ExtResource("50_rf76u"), ExtResource("51_0grwh"), ExtResource("52_pmr50"), ExtResource("53_mtsvp"), ExtResource("54_l0ef6"), ExtResource("55_taa1c"), ExtResource("56_5qo7r"), ExtResource("57_vrf5p")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q4g20"]
+_data = {
+&"RESET": SubResource("Animation_5iokk"),
+&"attack": SubResource("Animation_2e3oh"),
+&"dead": SubResource("Animation_taof5"),
+&"hit": SubResource("Animation_32wjw"),
+&"idle": SubResource("Animation_joc3b"),
+&"walk": SubResource("Animation_rlqrv")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhexh"]
+bg_color = Color(0.14902, 0.14902, 0.14902, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.86036956, 0.8603691, 0.8603692, 1)
+corner_radius_top_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ye0u0"]
+bg_color = Color(0.737389, 0, 0.0984616, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8047434, 0.8047423, 0.8047426, 1)
+corner_radius_top_left = 60
+
+[node name="wetland" type="CharacterBody2D" groups=["enemy"]]
+scale = Vector2(0.7, 0.7)
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_xeqru")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.8571403, -29.785706)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_cphpr")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Golmn" type="Sprite2D" parent="Marker2D"]
+texture_filter = 1
+position = Vector2(2.8571472, -44.285713)
+texture = ExtResource("30_tjovr")
+
+[node name="Area2D" type="Area2D" parent="Marker2D/Golmn"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/Golmn/Area2D"]
+light_mask = 2
+position = Vector2(11.428558, 29.285706)
+scale = Vector2(0.49999917, 0.49999917)
+shape = SubResource("RectangleShape2D_v021y")
+debug_color = Color(0.99390334, 0, 0.23754907, 0.41960785)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_q4g20")
+}
+
+[node name="healthbar" parent="." instance=ExtResource("47_1u5gg")]
+anchors_preset = 5
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_left = -27.142859
+offset_top = -68.571434
+offset_right = 32.857132
+offset_bottom = -64.28572
+grow_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_xhexh")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ye0u0")
+
+[node name="attack" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+
+[node name="walk" type="AudioStreamPlayer2D" parent="."]
+pitch_scale = 1.2
+bus = &"SFX"
+
+[connection signal="body_entered" from="Marker2D/Golmn/Area2D" to="." method="_on_area_2d_body_entered"]

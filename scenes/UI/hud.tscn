@@ -1,0 +1,947 @@
+[gd_scene load_steps=41 format=3 uid="uid://b5xpanusejoot"]
+
+[ext_resource type="FontFile" uid="uid://ds2q7k08drb8x" path="res://Asset/font/dash/Dash-Horizon-Demo.otf" id="1_k00v8"]
+[ext_resource type="Script" uid="uid://doo0ppmai3cb6" path="res://scripts/UI/hud.gd" id="1_t6axx"]
+[ext_resource type="Texture2D" uid="uid://bkjx5asc1orgn" path="res://Asset/icon/LINK/icons8-menu-50.png" id="2_t6axx"]
+[ext_resource type="Texture2D" uid="uid://rgui1gal1qmc" path="res://Asset/icon/LINK/icons8-setting-24.png" id="3_kj32l"]
+[ext_resource type="Texture2D" uid="uid://cdqtvv2jlwavv" path="res://Asset/icon/LINK/icons8-save-24.png" id="4_0fcg2"]
+[ext_resource type="Texture2D" uid="uid://d0mh124bic36f" path="res://Asset/icon/LINK/icons8-pause-24.png" id="5_qe851"]
+[ext_resource type="Texture2D" uid="uid://bo5sy4tn7qda0" path="res://Asset/icon/LINK/icons8-exit-24.png" id="6_ggbtr"]
+[ext_resource type="Script" uid="uid://b1h36ytu5q7pj" path="res://scripts/UI/menu_button.gd" id="7_w414h"]
+[ext_resource type="PackedScene" uid="uid://cx2qv2hiapgk7" path="res://scenes/UI/healthbar.tscn" id="8_d15ok"]
+[ext_resource type="Texture2D" uid="uid://b2y5tqs4tkcn4" path="res://Asset/icon/LINK/icons8-play-60.png" id="10_syq1e"]
+[ext_resource type="Script" uid="uid://bgp1cuv77o3rm" path="res://scripts/UI/settings.gd" id="10_t6axx"]
+
+[sub_resource type="Gradient" id="Gradient_t6axx"]
+offsets = PackedFloat32Array(0.6047904, 0.98802394)
+colors = PackedColorArray(0, 0, 0, 0, 1, 0, 0.3000002, 0.20784314)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kj32l"]
+gradient = SubResource("Gradient_t6axx")
+fill = 1
+fill_from = Vector2(0.5, 0.602)
+fill_to = Vector2(0.5021645, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bvuis"]
+bg_color = Color(0, 0, 0, 0.6745098)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72mkl"]
+bg_color = Color(0.14117648, 0.23137255, 0.3254902, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_riety"]
+bg_color = Color(0.08704165, 0.15315583, 0.22209713, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r44e2"]
+bg_color = Color(0.14117648, 0.23137255, 0.3254902, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.62967473, 0.62967485, 0.62967443, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7frj2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dm2wl"]
+content_margin_bottom = 1.0
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vatau"]
+content_margin_top = 1.0
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2twfv"]
+bg_color = Color(0.14902, 0.14902, 0.14902, 1)
+skew = Vector2(-1.2, 0)
+border_width_left = 3
+border_width_top = 2
+border_width_right = 3
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bp6n0"]
+bg_color = Color(1, 0.61549336, 0.5444042, 1)
+skew = Vector2(-1.2, 0)
+border_width_left = 1
+border_width_top = 2
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_defph"]
+bg_color = Color(0.147672, 0.147672, 0.147672, 1)
+skew = Vector2(0.8, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ca8v"]
+bg_color = Color(0.68113697, 0.90956277, 0.90392655, 1)
+skew = Vector2(0.8, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_32w1k"]
+offsets = PackedFloat32Array(0.0074626803, 0.994012)
+colors = PackedColorArray(0.050980393, 0.06666667, 0.05490196, 1, 0.49411765, 0.36862746, 0.40784314, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4qktv"]
+gradient = SubResource("Gradient_32w1k")
+fill_from = Vector2(0.5050505, 1)
+fill_to = Vector2(0.4848485, 0.121212125)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ufaem"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1kya"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+draw_center = false
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtwuk"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1807692, 0.09571283, 1.2032688e-08, 0.49411765)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 3
+border_width_bottom = 2
+border_color = Color(0.28118706, 0.2811868, 0.28118694, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15mox"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.75, 0.468, 0.045, 0.49411765)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 1
+border_color = Color(1, 1, 1, 0.75)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fo0ve"]
+bg_color = Color(0.70781326, 0.4889511, 0.1948424, 0.34509805)
+border_width_left = 10
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1vrss"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6039216)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_033yp"]
+bg_color = Color(0.919831, 0.55815417, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lnb2"]
+bg_color = Color(0.1677, 0.33813003, 0.39, 1)
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.11758951, 0.1195535, 0.11439446, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eaxyl"]
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 10
+border_color = Color(0.3854925, 0.38549247, 0.38549247, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rydri"]
+bg_color = Color(0.41981313, 0.41981313, 0.41981304, 1)
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.3478169, 0.347817, 0.34781674, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5b84"]
+bg_color = Color(0, 0, 0, 0.6784314)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fmq7i"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kq36x"]
+content_margin_bottom = 2.0
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbf7x"]
+content_margin_top = 2.0
+draw_center = false
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t6axx")
+
+[node name="damag_player" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_kj32l")
+
+[node name="go_out" type="Panel" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.333
+anchor_top = 0.38300002
+anchor_right = 0.611
+anchor_bottom = 0.57600003
+offset_left = 0.38401031
+offset_top = -0.18399906
+offset_right = 0.12799835
+offset_bottom = -0.24800873
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bvuis")
+
+[node name="Label" type="Label" parent="Control/go_out"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.081
+anchor_top = 0.064
+anchor_right = 0.90900004
+anchor_bottom = 0.46400002
+offset_left = 0.07999992
+offset_right = 0.11999512
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 23
+text = "Are you sure you want to leave ?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="yes" type="Button" parent="Control/go_out"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.64000005
+anchor_right = 0.397
+anchor_bottom = 0.91200006
+offset_right = -0.040008545
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_72mkl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_riety")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r44e2")
+text = "YES"
+
+[node name="no" type="Button" parent="Control/go_out"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6
+anchor_top = 0.64000005
+anchor_right = 0.80600005
+anchor_bottom = 0.91200006
+offset_right = 0.07998657
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_72mkl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_riety")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r44e2")
+text = "NO"
+
+[node name="MenuButton" type="MenuButton" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.016
+anchor_top = 0.119
+anchor_right = 0.053000003
+anchor_bottom = 0.185
+offset_left = -0.7200012
+offset_top = -0.519989
+offset_right = 8.191994
+offset_bottom = 8.440018
+scale = Vector2(0.8969584, 0.8934874)
+theme_override_styles/normal = SubResource("StyleBoxFlat_7frj2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dm2wl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vatau")
+toggle_mode = false
+icon = ExtResource("2_t6axx")
+item_count = 4
+popup/item_0/text = "SETTING"
+popup/item_0/icon = ExtResource("3_kj32l")
+popup/item_0/id = 0
+popup/item_1/text = "SAVE"
+popup/item_1/icon = ExtResource("4_0fcg2")
+popup/item_1/id = 1
+popup/item_2/text = "PAUSE"
+popup/item_2/icon = ExtResource("5_qe851")
+popup/item_2/id = 2
+popup/item_3/text = "EXIT"
+popup/item_3/icon = ExtResource("6_ggbtr")
+popup/item_3/id = 3
+script = ExtResource("7_w414h")
+
+[node name="healthbar" parent="Control" instance=ExtResource("8_d15ok")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.026
+anchor_top = 0.076000005
+anchor_right = 0.40300003
+anchor_bottom = 0.096
+offset_left = 0.048000336
+offset_top = -0.08000183
+offset_right = -0.25604248
+offset_bottom = -0.20800018
+theme_override_styles/background = SubResource("StyleBoxFlat_2twfv")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bp6n0")
+
+[node name="stamina" parent="Control" instance=ExtResource("8_d15ok")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.030000001
+anchor_top = 0.09900001
+anchor_right = 0.37100002
+anchor_bottom = 0.108
+offset_left = 0.43999863
+offset_top = -0.15200806
+offset_right = -0.3920288
+offset_bottom = 0.3600006
+theme_override_styles/background = SubResource("StyleBoxFlat_defph")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1ca8v")
+
+[node name="SettingsMenu" type="Control" parent="Control"]
+visible = false
+modulate = Color(1, 1, 1, 0.77254903)
+layout_mode = 1
+anchor_left = 0.036000002
+anchor_top = 0.123
+anchor_right = 0.372
+anchor_bottom = 0.86600006
+offset_left = -0.47200394
+offset_top = 0.29599762
+offset_right = 0.45599365
+offset_bottom = -0.16802979
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("10_t6axx")
+
+[node name="TextureRect" type="TextureRect" parent="Control/SettingsMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_4qktv")
+
+[node name="Panel" type="Panel" parent="Control/SettingsMenu/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ufaem")
+
+[node name="setting" type="PanelContainer" parent="Control/SettingsMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.047000002
+anchor_top = 0.11000001
+anchor_right = 0.9480001
+anchor_bottom = 0.95400006
+offset_left = -0.08000183
+offset_top = -0.2800064
+offset_right = 0.27996826
+offset_bottom = -0.1920166
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t1kya")
+
+[node name="VB" type="VBoxContainer" parent="Control/SettingsMenu/setting"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TabC" type="TabContainer" parent="Control/SettingsMenu/setting/VB"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_dtwuk")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_15mox")
+tab_alignment = 1
+current_tab = 0
+
+[node name="Audio" type="VBoxContainer" parent="Control/SettingsMenu/setting/VB/TabC"]
+layout_mode = 2
+theme_override_constants/separation = 35
+metadata/_tab_index = 0
+
+[node name="Master" type="VBoxContainer" parent="Control/SettingsMenu/setting/VB/TabC/Audio"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="Control/SettingsMenu/setting/VB/TabC/Audio/Master"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_fo0ve")
+text = "Master Volume"
+
+[node name="HSlider" type="HSlider" parent="Control/SettingsMenu/setting/VB/TabC/Audio/Master/name"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.86100006
+anchor_bottom = 0.933
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 0.20297241
+offset_bottom = 0.0099983215
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_1vrss")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_033yp")
+max_value = 3.0
+step = 0.1
+
+[node name="CheckBox" type="CheckBox" parent="Control/SettingsMenu/setting/VB/TabC/Audio/Master/name"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.93700004
+anchor_top = 0.5
+anchor_right = 0.93700004
+anchor_bottom = 0.5
+offset_left = -30.169006
+offset_top = -11.630005
+offset_right = 21.830994
+offset_bottom = 12.369995
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 12
+text = "mute"
+
+[node name="music" type="VBoxContainer" parent="Control/SettingsMenu/setting/VB/TabC/Audio"]
+layout_mode = 2
+theme_override_constants/separation = 52
+
+[node name="name" type="Label" parent="Control/SettingsMenu/setting/VB/TabC/Audio/music"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_fo0ve")
+text = "Music Volume"
+
+[node name="HSlider" type="HSlider" parent="Control/SettingsMenu/setting/VB/TabC/Audio/music/name"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.86100006
+anchor_bottom = 0.933
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 0.20297241
+offset_bottom = 0.0099983215
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_1vrss")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_033yp")
+max_value = 2.5
+step = 0.1
+
+[node name="CheckBox" type="CheckBox" parent="Control/SettingsMenu/setting/VB/TabC/Audio/music/name"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.938
+anchor_top = 0.5
+anchor_right = 0.938
+anchor_bottom = 0.5
+offset_left = -30.518005
+offset_top = -11.630005
+offset_right = 21.481995
+offset_bottom = 12.369995
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 12
+text = "mute"
+
+[node name="SFX" type="VBoxContainer" parent="Control/SettingsMenu/setting/VB/TabC/Audio"]
+layout_mode = 2
+theme_override_constants/separation = 52
+
+[node name="name" type="Label" parent="Control/SettingsMenu/setting/VB/TabC/Audio/SFX"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_fo0ve")
+text = "SFX Volume"
+
+[node name="HSlider" type="HSlider" parent="Control/SettingsMenu/setting/VB/TabC/Audio/SFX/name"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.067
+anchor_right = 0.86100006
+anchor_bottom = 0.933
+offset_left = 150.0
+offset_top = -0.00999999
+offset_right = 0.20297241
+offset_bottom = 0.0099983215
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_1vrss")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_033yp")
+max_value = 2.5
+step = 0.1
+value = 1.0
+
+[node name="CheckBox" type="CheckBox" parent="Control/SettingsMenu/setting/VB/TabC/Audio/SFX/name"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.938
+anchor_top = 0.5
+anchor_right = 0.938
+anchor_bottom = 0.5
+offset_left = -29.518005
+offset_top = -11.630005
+offset_right = 22.481995
+offset_bottom = 12.369995
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 12
+text = "mute"
+
+[node name="Graphics" type="VBoxContainer" parent="Control/SettingsMenu/setting/VB/TabC"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 35
+metadata/_tab_index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/SettingsMenu/setting/VB/TabC/Graphics"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/SettingsMenu/setting/VB/TabC/Graphics/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_fo0ve")
+text = "Brightness"
+
+[node name="HSlider" type="HSlider" parent="Control/SettingsMenu/setting/VB/TabC/Graphics/VBoxContainer/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.067
+anchor_right = 1.0
+anchor_bottom = 0.933
+offset_left = 150.0
+offset_top = -0.00999999
+offset_right = -2.0
+offset_bottom = 0.0099983215
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_1vrss")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_033yp")
+min_value = 0.4
+max_value = 1.5
+step = 0.1
+value = 1.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/SettingsMenu/setting/VB/TabC/Graphics"]
+layout_mode = 2
+theme_override_constants/separation = 52
+
+[node name="Label" type="Label" parent="Control/SettingsMenu/setting/VB/TabC/Graphics/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_fo0ve")
+text = "VSync"
+
+[node name="CheckBox" type="CheckBox" parent="Control/SettingsMenu/setting/VB/TabC/Graphics/VBoxContainer2/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.938
+anchor_top = 0.5
+anchor_right = 0.938
+anchor_bottom = 0.5
+offset_left = -41.518005
+offset_top = -13.630005
+offset_right = 18.481995
+offset_bottom = 14.369995
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 14
+button_pressed = true
+text = "active"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Control/SettingsMenu/setting/VB/TabC/Graphics"]
+layout_mode = 2
+theme_override_constants/separation = 52
+
+[node name="Label" type="Label" parent="Control/SettingsMenu/setting/VB/TabC/Graphics/VBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_fo0ve")
+text = "Resolution"
+
+[node name="OptionButton" type="OptionButton" parent="Control/SettingsMenu/setting/VB/TabC/Graphics/VBoxContainer3/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.89300007
+anchor_top = 0.5
+anchor_right = 0.89300007
+anchor_bottom = 0.5
+offset_left = -40.81302
+offset_top = -10.630005
+offset_right = 32.18698
+offset_bottom = 11.369995
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 10
+flat = true
+selected = 0
+item_count = 3
+popup/item_0/text = "1280, 720"
+popup/item_0/id = 0
+popup/item_1/text = "1600, 900"
+popup/item_1/id = 1
+popup/item_2/text = "1920, 1080"
+popup/item_2/id = 2
+
+[node name="control" type="VBoxContainer" parent="Control/SettingsMenu/setting/VB/TabC"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 35
+metadata/_tab_index = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/SettingsMenu/setting/VB/TabC/control"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/SettingsMenu/setting/VB/TabC/control/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_fo0ve")
+text = "mouse sensitivity"
+
+[node name="HSlider" type="HSlider" parent="Control/SettingsMenu/setting/VB/TabC/control/VBoxContainer/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.067
+anchor_right = 1.0
+anchor_bottom = 0.933
+offset_left = 173.0
+offset_top = -0.00999999
+offset_right = -2.0
+offset_bottom = 0.0099983215
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_1vrss")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_033yp")
+value = 50.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/SettingsMenu/setting/VB/TabC/control"]
+layout_mode = 2
+theme_override_constants/separation = 52
+
+[node name="Label" type="Label" parent="Control/SettingsMenu/setting/VB/TabC/control/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_fo0ve")
+
+[node name="HSlider" type="HSlider" parent="Control/SettingsMenu/setting/VB/TabC/control/VBoxContainer2/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.86100006
+anchor_bottom = 0.933
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 0.20297241
+offset_bottom = 0.0099983215
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_1vrss")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_033yp")
+max_value = 24.0
+value = 5.0
+
+[node name="CheckBox" type="CheckBox" parent="Control/SettingsMenu/setting/VB/TabC/control/VBoxContainer2/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.938
+anchor_top = 0.5
+anchor_right = 0.938
+anchor_bottom = 0.5
+offset_left = -33.226013
+offset_top = -14.0
+offset_right = 21.773987
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 14
+text = "mute"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Control/SettingsMenu/setting/VB/TabC/control"]
+layout_mode = 2
+theme_override_constants/separation = 52
+
+[node name="Label" type="Label" parent="Control/SettingsMenu/setting/VB/TabC/control/VBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_fo0ve")
+
+[node name="HSlider" type="HSlider" parent="Control/SettingsMenu/setting/VB/TabC/control/VBoxContainer3/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.067
+anchor_right = 0.86100006
+anchor_bottom = 0.933
+offset_left = 150.0
+offset_top = -0.00999999
+offset_right = 0.20297241
+offset_bottom = 0.0099983215
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_1vrss")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_033yp")
+value = 50.0
+
+[node name="CheckBox" type="CheckBox" parent="Control/SettingsMenu/setting/VB/TabC/control/VBoxContainer3/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.938
+anchor_top = 0.5
+anchor_right = 0.938
+anchor_bottom = 0.5
+offset_left = -33.226013
+offset_top = -14.0
+offset_right = 21.773987
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 14
+text = "mute"
+
+[node name="apply" type="Button" parent="Control/SettingsMenu/setting/VB"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_1lnb2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eaxyl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rydri")
+text = "A p p l y"
+
+[node name="back" type="Button" parent="Control/SettingsMenu/setting/VB"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_1lnb2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eaxyl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rydri")
+text = "B a c k"
+
+[node name="Panel" type="Panel" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w5b84")
+
+[node name="Button" type="Button" parent="Control/Panel"]
+process_mode = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47900003
+anchor_top = 0.46300003
+anchor_right = 0.521
+anchor_bottom = 0.537
+offset_left = 20.191956
+offset_top = 19.975983
+offset_right = -20.192017
+offset_bottom = -19.976013
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_fmq7i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kq36x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bbf7x")
+icon = ExtResource("10_syq1e")
+
+[connection signal="pressed" from="Control/go_out/yes" to="Control/MenuButton" method="_on_yes_pressed"]
+[connection signal="pressed" from="Control/go_out/no" to="Control/MenuButton" method="_on_no_pressed"]
+[connection signal="value_changed" from="Control/SettingsMenu/setting/VB/TabC/Audio/Master/name/HSlider" to="Control/SettingsMenu" method="_on_master_h_slider_value_changed"]
+[connection signal="toggled" from="Control/SettingsMenu/setting/VB/TabC/Audio/Master/name/CheckBox" to="Control/SettingsMenu" method="_on_master_check_box_toggled"]
+[connection signal="value_changed" from="Control/SettingsMenu/setting/VB/TabC/Audio/music/name/HSlider" to="Control/SettingsMenu" method="_on_music_h_slider_value_changed"]
+[connection signal="toggled" from="Control/SettingsMenu/setting/VB/TabC/Audio/music/name/CheckBox" to="Control/SettingsMenu" method="_on_music_check_box_toggled"]
+[connection signal="value_changed" from="Control/SettingsMenu/setting/VB/TabC/Audio/SFX/name/HSlider" to="Control/SettingsMenu" method="_on_sfx_h_slider_value_changed"]
+[connection signal="toggled" from="Control/SettingsMenu/setting/VB/TabC/Audio/SFX/name/CheckBox" to="Control/SettingsMenu" method="_on_sfx_check_box_toggled"]
+[connection signal="value_changed" from="Control/SettingsMenu/setting/VB/TabC/Graphics/VBoxContainer/Label/HSlider" to="Control" method="_on_brightness_slider_value_changed"]
+[connection signal="toggled" from="Control/SettingsMenu/setting/VB/TabC/Graphics/VBoxContainer2/Label/CheckBox" to="Control/SettingsMenu" method="_on_check_box_toggled"]
+[connection signal="item_selected" from="Control/SettingsMenu/setting/VB/TabC/Graphics/VBoxContainer3/Label/OptionButton" to="Control/SettingsMenu" method="_on_option_button_item_selected"]
+[connection signal="pressed" from="Control/SettingsMenu/setting/VB/apply" to="Control/SettingsMenu" method="_on_apply_level_pressed"]
+[connection signal="pressed" from="Control/SettingsMenu/setting/VB/back" to="Control/SettingsMenu" method="_on_back_level_pressed"]
+[connection signal="pressed" from="Control/Panel/Button" to="Control/MenuButton" method="_on_resume_button_pressed"]

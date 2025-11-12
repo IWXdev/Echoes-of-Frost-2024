@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://baxk1ddqixg85"
+path="res://.godot/imported/sword-blade-slicing-flesh-352708.mp3-2d8afb9dc2ed5ef7ec103b9e87dcf1cd.mp3str"
+
+[deps]
+
+source_file="res://Asset/sounds efficts/sword-blade-slicing-flesh-352708.mp3"
+dest_files=["res://.godot/imported/sword-blade-slicing-flesh-352708.mp3-2d8afb9dc2ed5ef7ec103b9e87dcf1cd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

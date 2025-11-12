@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://cc0c3mpt7wf77"]
+
+[ext_resource type="Script" uid="uid://cp8astojkq3gb" path="res://scripts/basic/Game.gd" id="1_2dpvj"]
+[ext_resource type="PackedScene" uid="uid://cmsnjwwqwnvvt" path="res://scenes/UI/splash.tscn" id="2_nnbi3"]
+[ext_resource type="PackedScene" uid="uid://ca10p6j27y6rb" path="res://scenes/UI/loading_screen.tscn" id="2_xrr3b"]
+[ext_resource type="PackedScene" uid="uid://b5xpanusejoot" path="res://scenes/UI/hud.tscn" id="3_y8ayb"]
+[ext_resource type="PackedScene" uid="uid://ba8s43aufgie0" path="res://scenes/Characters/boss.tscn" id="4_d01ik"]
+[ext_resource type="PackedScene" uid="uid://cuai1cmp07o1k" path="res://scenes/UI/gpu_particles_2d.tscn" id="5_2dpvj"]
+[ext_resource type="PackedScene" uid="uid://cufua7id3kqa3" path="res://scenes/Global/Red.tscn" id="6_6k8op"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_2dpvj")
+
+[node name="currentLevel" type="Node" parent="."]
+
+[node name="Loading" parent="." instance=ExtResource("2_xrr3b")]
+
+[node name="HUD" parent="." instance=ExtResource("3_y8ayb")]
+
+[node name="Boss" parent="." instance=ExtResource("4_d01ik")]
+
+[node name="GPUParticles2D2" parent="Boss" instance=ExtResource("5_2dpvj")]
+position = Vector2(0, -10)
+
+[node name="Red" parent="." instance=ExtResource("6_6k8op")]
+position = Vector2(957, 557)
+
+[node name="GlobalBrightnessModulator" type="CanvasModulate" parent="."]
+
+[node name="splash" parent="." instance=ExtResource("2_nnbi3")]
+
+[connection signal="scene_loaded" from="Loading" to="." method="_on_scene_loaded"]

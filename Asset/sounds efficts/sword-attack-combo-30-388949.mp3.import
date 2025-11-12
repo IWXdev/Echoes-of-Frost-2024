@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ot8fus6su0xn"
+path="res://.godot/imported/sword-attack-combo-30-388949.mp3-c2b9cd4370af946467dc7c9c04194e9a.mp3str"
+
+[deps]
+
+source_file="res://Asset/sounds efficts/sword-attack-combo-30-388949.mp3"
+dest_files=["res://.godot/imported/sword-attack-combo-30-388949.mp3-c2b9cd4370af946467dc7c9c04194e9a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

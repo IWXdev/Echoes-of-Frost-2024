@@ -1,0 +1,244 @@
+[gd_scene load_steps=61 format=3 uid="uid://dblxvgm7y3t2s"]
+
+[ext_resource type="Script" uid="uid://l4y1dei51h8u" path="res://scripts/enemys/golems_blue.gd" id="1_4ln80"]
+[ext_resource type="Texture2D" uid="uid://c616dya3q40pu" path="res://Asset/SHADOW Series/golem Blue/attack/golmnattack1.png" id="8_6pe5t"]
+[ext_resource type="Texture2D" uid="uid://ddvbp3j4mn4cn" path="res://Asset/SHADOW Series/golem Blue/attack/golmnattack2.png" id="8_7g3xe"]
+[ext_resource type="Texture2D" uid="uid://hssfslvcky80" path="res://Asset/SHADOW Series/golem Blue/attack/golmnattack3.png" id="9_vj7e7"]
+[ext_resource type="Texture2D" uid="uid://cqyk7vrtn0c01" path="res://Asset/SHADOW Series/golem Blue/attack/golmnattack4.png" id="10_8nck4"]
+[ext_resource type="Texture2D" uid="uid://bdvemfc0x4a0o" path="res://Asset/SHADOW Series/golem Blue/attack/golmnattack5.png" id="11_4sj26"]
+[ext_resource type="Texture2D" uid="uid://bq8dn6sl5w088" path="res://Asset/SHADOW Series/golem Blue/attack/golmnattack6.png" id="12_o4axl"]
+[ext_resource type="Texture2D" uid="uid://crjuwephyfm33" path="res://Asset/SHADOW Series/golem Blue/attack/golmnattack7.png" id="13_gfwpx"]
+[ext_resource type="Texture2D" uid="uid://bwryqdmhuutvw" path="res://Asset/SHADOW Series/golem Blue/idle/idle0.png" id="13_jsx1s"]
+[ext_resource type="Texture2D" uid="uid://c0qw755xgib2p" path="res://Asset/SHADOW Series/golem Blue/attack/golmnattack8.png" id="14_hmrv6"]
+[ext_resource type="Texture2D" uid="uid://bdeieklvamgoj" path="res://Asset/SHADOW Series/golem Blue/idle/idle1.png" id="14_kuces"]
+[ext_resource type="Texture2D" uid="uid://c7ruqbpxifsqc" path="res://Asset/SHADOW Series/golem Blue/attack/golmnattack9.png" id="15_gjnli"]
+[ext_resource type="Texture2D" uid="uid://bdjdurlp5gvx2" path="res://Asset/SHADOW Series/golem Blue/idle/idle2.png" id="15_xhexh"]
+[ext_resource type="Texture2D" uid="uid://cwpwc1535ko6r" path="res://Asset/SHADOW Series/golem Blue/attack/golmnattack10.png" id="16_2313e"]
+[ext_resource type="Texture2D" uid="uid://dxlah634x3wce" path="res://Asset/SHADOW Series/golem Blue/idle/idle3.png" id="16_ye0u0"]
+[ext_resource type="Texture2D" uid="uid://t1peqvv33gtm" path="res://Asset/SHADOW Series/golem Blue/attack/golmnattack11.png" id="17_1c1a7"]
+[ext_resource type="Texture2D" uid="uid://bm2dnw4au5fa1" path="res://Asset/SHADOW Series/golem Blue/idle/idle4.png" id="17_m5ow2"]
+[ext_resource type="Texture2D" uid="uid://dsswg48fbbasg" path="res://Asset/SHADOW Series/golem Blue/idle/idle5.png" id="18_y653q"]
+[ext_resource type="Texture2D" uid="uid://bb0lg3pj71t2u" path="res://Asset/SHADOW Series/golem Blue/idle/idle6.png" id="19_7m48q"]
+[ext_resource type="Texture2D" uid="uid://3v248eu3pwmp" path="res://Asset/SHADOW Series/golem Blue/idle/idle7.png" id="20_tp5jk"]
+[ext_resource type="Texture2D" uid="uid://b24o61qx76uw1" path="res://Asset/SHADOW Series/golem Blue/hit/hit0.png" id="21_xrf23"]
+[ext_resource type="Texture2D" uid="uid://l55l6o08kir6" path="res://Asset/SHADOW Series/golem Blue/hit/hit1.png" id="22_xx6r3"]
+[ext_resource type="Texture2D" uid="uid://ca281ep75davl" path="res://Asset/SHADOW Series/golem Blue/hit/hit2.png" id="23_ll6og"]
+[ext_resource type="Texture2D" uid="uid://dan8t6jqoigmh" path="res://Asset/SHADOW Series/golem Blue/hit/hit3.png" id="24_j6jsm"]
+[ext_resource type="Texture2D" uid="uid://cm0xppkv3egc6" path="res://Asset/SHADOW Series/golem Blue/walk/walk0.png" id="25_x3xd5"]
+[ext_resource type="Texture2D" uid="uid://bhtf37tcqv00c" path="res://Asset/SHADOW Series/golem Blue/walk/walk1.png" id="26_s1x1x"]
+[ext_resource type="Texture2D" uid="uid://bf34qel8uo5fa" path="res://Asset/SHADOW Series/golem Blue/walk/walk2.png" id="27_g2c4d"]
+[ext_resource type="Texture2D" uid="uid://bcntfsk3ds0fw" path="res://Asset/SHADOW Series/golem Blue/walk/walk3.png" id="28_aabfi"]
+[ext_resource type="Texture2D" uid="uid://d3jm45qwf7xo6" path="res://Asset/SHADOW Series/golem Blue/walk/walk4.png" id="29_pkno7"]
+[ext_resource type="Texture2D" uid="uid://cw2yf77qw0d31" path="res://Asset/SHADOW Series/golem Blue/walk/walk5.png" id="30_6tw65"]
+[ext_resource type="Texture2D" uid="uid://s82go34rh1dh" path="res://Asset/SHADOW Series/golem Blue/walk/walk6.png" id="31_1a34t"]
+[ext_resource type="Texture2D" uid="uid://dl4kpehw4lef6" path="res://Asset/SHADOW Series/golem Blue/walk/walk7.png" id="32_cxoj0"]
+[ext_resource type="Texture2D" uid="uid://1pbppjmedd85" path="res://Asset/SHADOW Series/golem Blue/walk/walk8.png" id="33_5dfvk"]
+[ext_resource type="Texture2D" uid="uid://ygrwnp3ktjq2" path="res://Asset/SHADOW Series/golem Blue/walk/walk9.png" id="34_j8h0u"]
+[ext_resource type="Texture2D" uid="uid://cl5xkdupj15kj" path="res://Asset/SHADOW Series/golem Blue/dead/dead0.png" id="35_cxoaf"]
+[ext_resource type="Texture2D" uid="uid://b5hhrx1h0io3a" path="res://Asset/SHADOW Series/golem Blue/dead/dead1.png" id="36_aoi4e"]
+[ext_resource type="Texture2D" uid="uid://vaf4825lvu3d" path="res://Asset/SHADOW Series/golem Blue/dead/dead2.png" id="37_nrlry"]
+[ext_resource type="Texture2D" uid="uid://0oqjdyt6cmn2" path="res://Asset/SHADOW Series/golem Blue/dead/dead3.png" id="38_n7xaf"]
+[ext_resource type="Texture2D" uid="uid://brvjxktp35wut" path="res://Asset/SHADOW Series/golem Blue/dead/dead4.png" id="39_0ylfn"]
+[ext_resource type="Texture2D" uid="uid://cjxw3iqx7gxl1" path="res://Asset/SHADOW Series/golem Blue/dead/dead5.png" id="40_8s406"]
+[ext_resource type="Texture2D" uid="uid://cnriabui8m3d0" path="res://Asset/SHADOW Series/golem Blue/dead/dead6.png" id="41_gm5a5"]
+[ext_resource type="Texture2D" uid="uid://bb5s6kr7nogca" path="res://Asset/SHADOW Series/golem Blue/dead/dead7.png" id="42_p04m3"]
+[ext_resource type="Texture2D" uid="uid://3bxtwlmysris" path="res://Asset/SHADOW Series/golem Blue/dead/dead8.png" id="43_xc2lg"]
+[ext_resource type="Texture2D" uid="uid://dih6fg7lk7gea" path="res://Asset/SHADOW Series/golem Blue/dead/dead9.png" id="44_601jh"]
+[ext_resource type="Texture2D" uid="uid://clj373tk23kf7" path="res://Asset/SHADOW Series/golem Blue/dead/dead10.png" id="45_wkuu1"]
+[ext_resource type="Texture2D" uid="uid://q7yx6dettdhj" path="res://Asset/SHADOW Series/golem Blue/dead/dead11.png" id="46_0q1hl"]
+[ext_resource type="Texture2D" uid="uid://r6yhr42urm7a" path="res://Asset/SHADOW Series/golem Blue/dead/dead12.png" id="47_u88w6"]
+[ext_resource type="PackedScene" uid="uid://cx2qv2hiapgk7" path="res://scenes/UI/healthbar.tscn" id="48_kuces"]
+[ext_resource type="AudioStream" uid="uid://ot8fus6su0xn" path="res://Asset/sounds efficts/sword-attack-combo-30-388949.mp3" id="49_xhexh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cphpr"]
+size = Vector2(67, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v021y"]
+size = Vector2(110.00012, 35.714317)
+
+[sub_resource type="Animation" id="Animation_5iokk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_6pe5t")]
+}
+
+[sub_resource type="Animation" id="Animation_2e3oh"]
+resource_name = "attack"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_6pe5t"), ExtResource("8_7g3xe"), ExtResource("9_vj7e7"), ExtResource("10_8nck4"), ExtResource("11_4sj26"), ExtResource("12_o4axl"), ExtResource("13_gfwpx"), ExtResource("14_hmrv6"), ExtResource("15_gjnli"), ExtResource("16_2313e"), ExtResource("17_1c1a7")]
+}
+
+[sub_resource type="Animation" id="Animation_taof5"]
+resource_name = "dead"
+length = 1.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("35_cxoaf"), ExtResource("36_aoi4e"), ExtResource("37_nrlry"), ExtResource("38_n7xaf"), ExtResource("39_0ylfn"), ExtResource("40_8s406"), ExtResource("41_gm5a5"), ExtResource("42_p04m3"), ExtResource("43_xc2lg"), ExtResource("44_601jh"), ExtResource("45_wkuu1"), ExtResource("46_0q1hl"), ExtResource("47_u88w6")]
+}
+
+[sub_resource type="Animation" id="Animation_32wjw"]
+resource_name = "hit"
+length = 0.3
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("21_xrf23"), ExtResource("22_xx6r3"), ExtResource("23_ll6og"), ExtResource("24_j6jsm")]
+}
+
+[sub_resource type="Animation" id="Animation_joc3b"]
+resource_name = "idle"
+length = 0.7
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("13_jsx1s"), ExtResource("14_kuces"), ExtResource("15_xhexh"), ExtResource("16_ye0u0"), ExtResource("17_m5ow2"), ExtResource("18_y653q"), ExtResource("19_7m48q"), ExtResource("20_tp5jk")]
+}
+
+[sub_resource type="Animation" id="Animation_rlqrv"]
+resource_name = "walk"
+length = 0.9
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("25_x3xd5"), ExtResource("26_s1x1x"), ExtResource("27_g2c4d"), ExtResource("28_aabfi"), ExtResource("29_pkno7"), ExtResource("30_6tw65"), ExtResource("31_1a34t"), ExtResource("32_cxoj0"), ExtResource("33_5dfvk"), ExtResource("34_j8h0u")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q4g20"]
+_data = {
+&"RESET": SubResource("Animation_5iokk"),
+&"attack": SubResource("Animation_2e3oh"),
+&"dead": SubResource("Animation_taof5"),
+&"hit": SubResource("Animation_32wjw"),
+&"idle": SubResource("Animation_joc3b"),
+&"walk": SubResource("Animation_rlqrv")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhexh"]
+bg_color = Color(0.14902, 0.14902, 0.14902, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.86036956, 0.8603691, 0.8603692, 1)
+corner_radius_top_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ye0u0"]
+bg_color = Color(0.737389, 0, 0.0984616, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8047434, 0.8047423, 0.8047426, 1)
+corner_radius_top_left = 60
+
+[node name="Golems_blue" type="CharacterBody2D" groups=["enemy"]]
+scale = Vector2(0.7, 0.7)
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_4ln80")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, -34)
+shape = SubResource("RectangleShape2D_cphpr")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Golmn" type="Sprite2D" parent="Marker2D"]
+texture_filter = 1
+position = Vector2(0, -64.28571)
+scale = Vector2(2, 2)
+texture = ExtResource("8_6pe5t")
+
+[node name="Area2D" type="Area2D" parent="Marker2D/Golmn"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/Golmn/Area2D"]
+visible = false
+light_mask = 2
+position = Vector2(6.7857127, 23.21428)
+scale = Vector2(0.49999937, 0.49999937)
+shape = SubResource("RectangleShape2D_v021y")
+debug_color = Color(0.99390334, 0, 0.23754907, 0.41960785)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_q4g20")
+}
+
+[node name="healthbar" parent="." instance=ExtResource("48_kuces")]
+anchors_preset = 5
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_left = -35.714287
+offset_top = -82.85715
+offset_right = 35.71428
+offset_bottom = -78.571434
+grow_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_xhexh")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ye0u0")
+
+[node name="attack" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("49_xhexh")
+volume_db = -10.024
+bus = &"SFX"
+
+[node name="walk" type="AudioStreamPlayer2D" parent="."]
+pitch_scale = 1.2
+bus = &"SFX"
+
+[connection signal="body_entered" from="Marker2D/Golmn/Area2D" to="." method="_on_area_2d_body_entered"]

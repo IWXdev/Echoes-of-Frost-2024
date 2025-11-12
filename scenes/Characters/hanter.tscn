@@ -1,0 +1,496 @@
+[gd_scene load_steps=78 format=3 uid="uid://4jco874r5vt7"]
+
+[ext_resource type="Script" uid="uid://baebmk0668dd2" path="res://scripts/basic/player.gd" id="1_k130v"]
+[ext_resource type="Texture2D" uid="uid://d1jvllpaccxdu" path="res://Asset/SHADOW Series/hanter/idle/tile012.png" id="2_1v4cw"]
+[ext_resource type="Texture2D" uid="uid://bjd4qayeafaob" path="res://Asset/SHADOW Series/hanter/idle/tile001.png" id="3_tcxjt"]
+[ext_resource type="Texture2D" uid="uid://dwkprf43xs8ns" path="res://Asset/SHADOW Series/hanter/idle/tile002.png" id="4_la4jf"]
+[ext_resource type="Texture2D" uid="uid://juaf3e4bolwg" path="res://Asset/SHADOW Series/hanter/idle/tile003.png" id="5_bepbi"]
+[ext_resource type="Texture2D" uid="uid://d206wt501mi7h" path="res://Asset/SHADOW Series/hanter/idle/tile004.png" id="6_di5fo"]
+[ext_resource type="Texture2D" uid="uid://bd5uhdvtbjlln" path="res://Asset/SHADOW Series/hanter/idle/tile005.png" id="7_kt0nr"]
+[ext_resource type="Texture2D" uid="uid://bitvsep6gc4wf" path="res://Asset/SHADOW Series/hanter/idle/tile006.png" id="8_lqpyh"]
+[ext_resource type="Texture2D" uid="uid://disj0u12nxd6a" path="res://Asset/SHADOW Series/hanter/idle/tile007.png" id="9_7nbcl"]
+[ext_resource type="Texture2D" uid="uid://dq0qu1tffmwk3" path="res://Asset/SHADOW Series/hanter/idle/tile008.png" id="10_xs66u"]
+[ext_resource type="Texture2D" uid="uid://dlywqlbmj5f2e" path="res://Asset/SHADOW Series/hanter/idle/tile009.png" id="11_lwg2j"]
+[ext_resource type="Texture2D" uid="uid://cdoqvubglwoej" path="res://Asset/SHADOW Series/hanter/idle/tile010.png" id="12_wcbnt"]
+[ext_resource type="Texture2D" uid="uid://btych0gls0unk" path="res://Asset/SHADOW Series/hanter/run/tile001.png" id="13_31qr4"]
+[ext_resource type="Texture2D" uid="uid://hnktogbphrgg" path="res://Asset/SHADOW Series/hanter/run/tile002.png" id="14_e86r0"]
+[ext_resource type="Texture2D" uid="uid://nbp62eiiv30c" path="res://Asset/SHADOW Series/hanter/run/tile003.png" id="15_qxph4"]
+[ext_resource type="Texture2D" uid="uid://6fy42xk6rgnn" path="res://Asset/SHADOW Series/hanter/run/tile004.png" id="16_c12ln"]
+[ext_resource type="Texture2D" uid="uid://btll8rmbfeknm" path="res://Asset/SHADOW Series/hanter/run/tile005.png" id="17_w8cvf"]
+[ext_resource type="Texture2D" uid="uid://bgk7c4gjxgipq" path="res://Asset/SHADOW Series/hanter/run/tile006.png" id="18_awwds"]
+[ext_resource type="Texture2D" uid="uid://cb5f0y7r7cfyh" path="res://Asset/SHADOW Series/hanter/run/tile007.png" id="19_xq02v"]
+[ext_resource type="Texture2D" uid="uid://bclxd565h17cf" path="res://Asset/SHADOW Series/hanter/run/tile008.png" id="20_u3gmn"]
+[ext_resource type="Texture2D" uid="uid://c1uvf7nq1qrk3" path="res://Asset/SHADOW Series/hanter/jump/1. Jump 48 x 48.png" id="26_nj5r5"]
+[ext_resource type="Texture2D" uid="uid://c1id5wr1qmaa8" path="res://Asset/SHADOW Series/hanter/jump/2. Jump 48 x 48.png" id="27_ig7km"]
+[ext_resource type="Texture2D" uid="uid://clt8e1581tgqj" path="res://Asset/SHADOW Series/hanter/jump/3. Jump 48 x 48.png" id="28_8nd7h"]
+[ext_resource type="Texture2D" uid="uid://da53xebl2ln7r" path="res://Asset/SHADOW Series/hanter/jump/4. Jump 48 x 48.png" id="29_bmdci"]
+[ext_resource type="Texture2D" uid="uid://32hdjkyiqadi" path="res://Asset/SHADOW Series/hanter/fall/1. Fall 48 x 48.png" id="30_cwf51"]
+[ext_resource type="Texture2D" uid="uid://brhtue8r8ehw4" path="res://Asset/SHADOW Series/hanter/fall/2. Fall 48 x 48.png" id="31_rvaqx"]
+[ext_resource type="Texture2D" uid="uid://cv6r3h0rv3km" path="res://Asset/SHADOW Series/hanter/fall/3. Fall 48 x 48.png" id="32_ma186"]
+[ext_resource type="Texture2D" uid="uid://b7j57ximebp0q" path="res://Asset/SHADOW Series/hanter/fall/4. Fall 48 x 48.png" id="33_yflt3"]
+[ext_resource type="Texture2D" uid="uid://wgmu244qqpuu" path="res://Asset/SHADOW Series/hanter/attack/tile15.png" id="39_4orlm"]
+[ext_resource type="Texture2D" uid="uid://dmoehn7g2sjiq" path="res://Asset/SHADOW Series/hanter/attack/tile16.png" id="40_pxgi4"]
+[ext_resource type="Texture2D" uid="uid://cq65hig2jnkgt" path="res://Asset/SHADOW Series/hanter/attack/tile17.png" id="41_m575l"]
+[ext_resource type="Texture2D" uid="uid://crxne5sondsfi" path="res://Asset/SHADOW Series/hanter/attack/tile18.png" id="42_ik0g4"]
+[ext_resource type="Texture2D" uid="uid://8n2o2yebts1j" path="res://Asset/SHADOW Series/hanter/attack/tile19.png" id="43_gajhi"]
+[ext_resource type="Texture2D" uid="uid://r2e17jqwef5q" path="res://Asset/SHADOW Series/hanter/attack/tile20.png" id="44_di5pk"]
+[ext_resource type="Texture2D" uid="uid://c0rgom4w6vum8" path="res://Asset/SHADOW Series/hanter/attack/tile21.png" id="45_oqt1s"]
+[ext_resource type="Texture2D" uid="uid://ycof36kuf3al" path="res://Asset/SHADOW Series/hanter/dash/tile01.png" id="45_slocv"]
+[ext_resource type="Texture2D" uid="uid://8miy3d1065gx" path="res://Asset/SHADOW Series/hanter/attack/tile22.png" id="46_b5v42"]
+[ext_resource type="Texture2D" uid="uid://2aumxfo2evlx" path="res://Asset/SHADOW Series/hanter/dash/tile02.png" id="46_ndxno"]
+[ext_resource type="Texture2D" uid="uid://odbbduc1c5sk" path="res://Asset/SHADOW Series/hanter/dash/tile03.png" id="47_0hsly"]
+[ext_resource type="Texture2D" uid="uid://bntbdnm68onat" path="res://Asset/SHADOW Series/hanter/attack/tile24.png" id="48_ue6cq"]
+[ext_resource type="Texture2D" uid="uid://darlrqxs1llf" path="res://Asset/SHADOW Series/hanter/dash/tile04.png" id="48_vvcr0"]
+[ext_resource type="Texture2D" uid="uid://d335uaomexwn4" path="res://Asset/SHADOW Series/hanter/dash/tile05.png" id="49_0ln8f"]
+[ext_resource type="Texture2D" uid="uid://na6gx21o2b27" path="res://Asset/SHADOW Series/hanter/attack/tile25.png" id="49_o2o0e"]
+[ext_resource type="Texture2D" uid="uid://bnliyxh688q00" path="res://Asset/SHADOW Series/hanter/attack/tile26.png" id="50_xowtb"]
+[ext_resource type="Texture2D" uid="uid://brmfk04xjeit6" path="res://Asset/SHADOW Series/hanter/dash/tile06.png" id="50_yu4iy"]
+[ext_resource type="Texture2D" uid="uid://x2v0g0lux7ij" path="res://Asset/SHADOW Series/hanter/attack/tile27.png" id="51_bu4p0"]
+[ext_resource type="Texture2D" uid="uid://cjavu275arwem" path="res://Asset/SHADOW Series/hanter/dash/tile07.png" id="51_dihru"]
+[ext_resource type="Texture2D" uid="uid://dqtd73oy2udws" path="res://Asset/SHADOW Series/hanter/dash/tile08.png" id="52_shhjp"]
+[ext_resource type="Texture2D" uid="uid://b2i55twc4grdp" path="res://Asset/SHADOW Series/hanter/attack/tile28.png" id="52_yokxw"]
+[ext_resource type="Texture2D" uid="uid://c26fxr4o40ftk" path="res://Asset/SHADOW Series/hanter/dash/tile09.png" id="53_6023c"]
+[ext_resource type="Texture2D" uid="uid://ccy7j7xlq6ygn" path="res://Asset/SHADOW Series/hanter/dead/tile001.png" id="53_dg6r4"]
+[ext_resource type="Texture2D" uid="uid://6drw8r7emxv" path="res://Asset/SHADOW Series/hanter/attack/tile29.png" id="53_vshj7"]
+[ext_resource type="Texture2D" uid="uid://bjgnsm17q351o" path="res://Asset/SHADOW Series/hanter/dash/tile10.png" id="54_5ytk7"]
+[ext_resource type="Texture2D" uid="uid://boxnnnn3ql1u" path="res://Asset/SHADOW Series/hanter/dead/tile002.png" id="54_g8pcj"]
+[ext_resource type="Texture2D" uid="uid://dq1r8xh1rmjdg" path="res://Asset/SHADOW Series/hanter/dead/tile003.png" id="55_nnsey"]
+[ext_resource type="Texture2D" uid="uid://ce8aq2ib504kt" path="res://Asset/SHADOW Series/hanter/dead/tile004.png" id="56_pd7w5"]
+[ext_resource type="Texture2D" uid="uid://4o3n7r7rn78k" path="res://Asset/SHADOW Series/hanter/dead/tile005.png" id="57_6ty8d"]
+[ext_resource type="Texture2D" uid="uid://dclpl7w4vdlqg" path="res://Asset/SHADOW Series/hanter/dead/tile006.png" id="58_qe5og"]
+[ext_resource type="Texture2D" uid="uid://3trarcgcnaie" path="res://Asset/SHADOW Series/hanter/dead/tile007.png" id="59_yirsj"]
+[ext_resource type="Texture2D" uid="uid://lmnhwekixqiq" path="res://Asset/SHADOW Series/hanter/dead/tile008.png" id="60_wwm35"]
+[ext_resource type="Texture2D" uid="uid://c7ptt7agah3pj" path="res://Asset/SHADOW Series/hanter/dead/tile009.png" id="61_bafth"]
+[ext_resource type="Texture2D" uid="uid://bg7108pp4kpl6" path="res://Asset/SHADOW Series/hanter/dead/tile010.png" id="62_mntvm"]
+[ext_resource type="Texture2D" uid="uid://c6a7t60au36pb" path="res://Asset/SHADOW Series/hanter/hit/tile001.png" id="63_uew7t"]
+[ext_resource type="Texture2D" uid="uid://be1qn7hg2p22r" path="res://Asset/SHADOW Series/hanter/hit/tile002.png" id="64_v8e3q"]
+[ext_resource type="Texture2D" uid="uid://gian6g8m54j6" path="res://Asset/SHADOW Series/hanter/hit/tile003.png" id="65_v07nl"]
+[ext_resource type="Texture2D" uid="uid://cw00eed6fr7bw" path="res://Asset/SHADOW Series/hanter/hit/tile004.png" id="66_agwq8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdcjv"]
+size = Vector2(9.254837, 24.965706)
+
+[sub_resource type="Animation" id="Animation_jcd3o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/hanter:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_1v4cw")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4.87521, 2.8848)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Marker2D/hanter:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.07695, 1.81819)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_tdcjv")]
+}
+
+[sub_resource type="Animation" id="Animation_5xtl0"]
+resource_name = "attack"
+length = 1.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/hanter:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("39_4orlm"), ExtResource("40_pxgi4"), ExtResource("41_m575l"), ExtResource("42_ik0g4"), ExtResource("43_gajhi"), ExtResource("44_di5pk"), ExtResource("45_oqt1s"), ExtResource("46_b5v42"), ExtResource("48_ue6cq"), ExtResource("49_o2o0e"), ExtResource("50_xowtb"), ExtResource("51_bu4p0"), ExtResource("52_yokxw"), ExtResource("53_vshj7")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.15, 0.2, 1.05, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(4.87521, 2.8848), Vector2(184.615, 3.63636), Vector2(184.615, 3.63636), Vector2(4.87521, 2.8848)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Marker2D/hanter:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(118.462, -12.7273)]
+}
+
+[sub_resource type="Animation" id="Animation_q7bif"]
+resource_name = "dash"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/hanter:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("45_slocv"), ExtResource("46_ndxno"), ExtResource("47_0hsly"), ExtResource("48_vvcr0"), ExtResource("49_0ln8f"), ExtResource("50_yu4iy"), ExtResource("51_dihru"), ExtResource("52_shhjp"), ExtResource("53_6023c"), ExtResource("54_5ytk7")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.05, 0.1, 0.55, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1.52588e-05, -2.0504e-05), Vector2(175.385, 6.67572e-06), Vector2(175.385, 6.67572e-06), Vector2(-1.52588e-05, -2.0504e-05)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Marker2D/hanter:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(86.1539, -18.1818)]
+}
+
+[sub_resource type="Animation" id="Animation_4axof"]
+resource_name = "dead"
+length = 1.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/hanter:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("53_dg6r4"), ExtResource("54_g8pcj"), ExtResource("55_nnsey"), ExtResource("56_pd7w5"), ExtResource("57_6ty8d"), ExtResource("58_qe5og"), ExtResource("59_yirsj"), ExtResource("60_wwm35"), ExtResource("61_bafth"), ExtResource("62_mntvm")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Marker2D/hanter:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(36.6666, 3.95261)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_tdcjv")]
+}
+
+[sub_resource type="Animation" id="Animation_h7im6"]
+resource_name = "fall"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/hanter:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("30_cwf51"), ExtResource("31_rvaqx"), ExtResource("32_ma186"), ExtResource("33_yflt3")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-2.43771, 2.8848), Vector2(-2.43771, 2.8848)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Marker2D/hanter:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.07695, 5.45455)]
+}
+
+[sub_resource type="Animation" id="Animation_h32fu"]
+resource_name = "hit"
+length = 0.25
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/hanter:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.2, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("63_uew7t"), ExtResource("64_v8e3q"), ExtResource("65_v07nl"), ExtResource("66_agwq8")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Marker2D/hanter:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.07695, 1.81819)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4.87521, 2.8848)]
+}
+
+[sub_resource type="Animation" id="Animation_tdo02"]
+resource_name = "idle"
+length = 0.6
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/hanter:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.25, 0.3, 0.35, 0.45, 0.5, 0.55, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_tcxjt"), ExtResource("4_la4jf"), ExtResource("5_bepbi"), ExtResource("6_di5fo"), ExtResource("7_kt0nr"), ExtResource("8_lqpyh"), ExtResource("9_7nbcl"), ExtResource("10_xs66u"), ExtResource("11_lwg2j"), ExtResource("12_wcbnt"), ExtResource("2_1v4cw")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4.87521, 2.8848), Vector2(4.87521, 2.8848)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Marker2D/hanter:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.07695, 5.45455)]
+}
+
+[sub_resource type="Animation" id="Animation_pfnag"]
+resource_name = "jump"
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/hanter:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("26_nj5r5"), ExtResource("27_ig7km"), ExtResource("28_8nd7h"), ExtResource("29_bmdci")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Marker2D/hanter:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.07695, 5.45455)]
+}
+
+[sub_resource type="Animation" id="Animation_bq1nv"]
+resource_name = "run"
+length = 0.7
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4.87521, 2.8848), Vector2(4.87521, 2.8848)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Marker2D/hanter:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(2, 1, 1, 1, 1, 1, 1, 0.5),
+"update": 1,
+"values": [ExtResource("13_31qr4"), ExtResource("14_e86r0"), ExtResource("15_qxph4"), ExtResource("16_c12ln"), ExtResource("17_w8cvf"), ExtResource("18_awwds"), ExtResource("19_xq02v"), ExtResource("20_u3gmn")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Marker2D/hanter:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.07695, 5.45455)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_45yj7"]
+_data = {
+&"RESET": SubResource("Animation_jcd3o"),
+&"attack": SubResource("Animation_5xtl0"),
+&"dash": SubResource("Animation_q7bif"),
+&"dead": SubResource("Animation_4axof"),
+&"fall": SubResource("Animation_h7im6"),
+&"hit": SubResource("Animation_h32fu"),
+&"idle": SubResource("Animation_tdo02"),
+&"jump": SubResource("Animation_pfnag"),
+&"run": SubResource("Animation_bq1nv")
+}
+
+[node name="hanter" type="CharacterBody2D" groups=["player"]]
+texture_filter = 1
+position = Vector2(547, 312)
+scale = Vector2(0.3, 0.253)
+collision_mask = 4
+floor_block_on_wall = false
+script = ExtResource("1_k130v")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.8, 2.8)
+limit_left = 0
+limit_top = 95
+limit_right = 3490
+limit_bottom = 2000
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.87521, 2.8848)
+scale = Vector2(4.9, 4.9)
+shape = SubResource("RectangleShape2D_tdcjv")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(3.333333, 3.9525692)
+
+[node name="hanter" type="Sprite2D" parent="Marker2D"]
+position = Vector2(3.07695, 1.81819)
+scale = Vector2(2.31703, 3.12524)
+texture = ExtResource("2_1v4cw")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Marker2D/hanter"]
+position = Vector2(9.29572, -11.0537)
+color = Color(0.209789, 0.207911, 0, 1)
+energy = 1.5
+shadow_enabled = true
+shadow_color = Color(0.0509804, 0.0509804, 0.0509804, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_45yj7")
+}
+autoplay = "idle"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -1,0 +1,545 @@
+[gd_scene load_steps=33 format=3 uid="uid://dbamoyflfyor4"]
+
+[ext_resource type="Script" uid="uid://b8y275l0frpti" path="res://scripts/UI/about.gd" id="1_ac6a0"]
+[ext_resource type="FontFile" uid="uid://dh2vb5h8q0xdn" path="res://Asset/font/paladins-font/PaladinsLaser-KVdRZ.otf" id="1_e6kqm"]
+[ext_resource type="FontFile" uid="uid://dj850dihykvod" path="res://Asset/font/paladins-font/PaladinsCondensed-YqELy.otf" id="2_6h1kh"]
+[ext_resource type="FontFile" uid="uid://ds2q7k08drb8x" path="res://Asset/font/dash/Dash-Horizon-Demo.otf" id="3_8un67"]
+[ext_resource type="Texture2D" uid="uid://vg8gnftxaeof" path="res://Asset/icon/LINK/social.png" id="4_8un67"]
+[ext_resource type="Texture2D" uid="uid://crba5dui4g0he" path="res://Asset/icon/LINK/github.png" id="5_ac6a0"]
+[ext_resource type="Texture2D" uid="uid://baj0gv3q5bahs" path="res://Asset/icon/LINK/instagram.png" id="6_5rspr"]
+[ext_resource type="Texture2D" uid="uid://cpk2dm8qq5xer" path="res://Asset/icon/LINK/icons8-epic-games-24.png" id="7_a086s"]
+[ext_resource type="Texture2D" uid="uid://dh0d5x2aqx3py" path="res://Asset/icon/LINK/icons8-itch-io-24.png" id="8_4sggt"]
+
+[sub_resource type="Gradient" id="Gradient_32w1k"]
+offsets = PackedFloat32Array(0.0074626803, 1)
+colors = PackedColorArray(0.17706844, 0.44271767, 0.42677703, 1, 0.15275723, 0.08720308, 0.30280963, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_17uwy"]
+gradient = SubResource("Gradient_32w1k")
+fill_from = Vector2(0.5050505, 1)
+fill_to = Vector2(0.4848485, 0.121212125)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6h1kh"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17uwy"]
+draw_center = false
+border_width_left = 3
+border_width_top = 2
+border_width_right = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gm3y3"]
+draw_center = false
+border_width_left = 3
+border_width_top = 1
+border_width_right = 3
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ac6a0"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5rspr"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a086s"]
+bg_color = Color(0.16800001, 0.36520004, 0.4, 0.26666668)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 0.44705883)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4sggt"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ctv45"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bnxpt"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8un67"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rovmy"]
+bg_color = Color(0.16862746, 0.3647059, 0.4, 0.26666668)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_flfh0"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ktm52"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eyvtv"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kqlri"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k6hd5"]
+bg_color = Color(0.16862746, 0.3647059, 0.4, 0.26666668)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b46oh"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gw024"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_af8cy"]
+draw_center = false
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtdvj"]
+draw_center = false
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqali"]
+draw_center = false
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[node name="about" type="Control"]
+layout_mode = 3
+anchor_left = 0.22200002
+anchor_right = 0.77800006
+anchor_bottom = 1.0
+offset_left = 0.25598145
+offset_right = -0.25604248
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ac6a0")
+metadata/_edit_vertical_guides_ = [255.0, 896.0, 256.0]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_17uwy")
+
+[node name="Panel" type="Panel" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6h1kh")
+
+[node name="Settings" type="Label" parent="TextureRect"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_right = 0.702
+anchor_bottom = 0.083000004
+offset_left = -1.0
+offset_right = -0.2800293
+offset_bottom = 0.29899597
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.5019608, 0.54509807, 0.79607844, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.015686275)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("1_e6kqm")
+theme_override_font_sizes/font_size = 53
+text = "About"
+
+[node name="VScrollBar" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.012
+anchor_top = 0.09900001
+anchor_right = 0.98700005
+anchor_bottom = 0.98800004
+offset_left = 0.3199997
+offset_top = -0.15200806
+offset_right = 0.3199463
+offset_bottom = -0.22399902
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+horizontal_scroll_mode = 0
+
+[node name="HBoxContainer" type="VBoxContainer" parent="VScrollBar"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+theme_override_constants/separation = 333
+
+[node name="GAME" type="Control" parent="VScrollBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+
+[node name="T" type="Label" parent="VScrollBar/HBoxContainer/GAME"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_right = 80.0
+offset_bottom = 27.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_6h1kh")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_17uwy")
+text = "the game "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="des" type="Label" parent="VScrollBar/HBoxContainer/GAME"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -217.0
+offset_top = 27.0
+offset_right = 222.0
+offset_bottom = 322.0
+grow_horizontal = 2
+theme_override_constants/line_spacing = 25
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_6h1kh")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_gm3y3")
+text = "game combining parkour and puzzles
+ set in a fantasy city at night
+under falling snow.
+The hero tries to reach a mysterious
+puzzle by navigating rooftops and
+ solving diverse challenges "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ME" type="Control" parent="VScrollBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+
+[node name="T" type="Label" parent="VScrollBar/HBoxContainer/ME"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_right = 80.0
+offset_bottom = 27.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_6h1kh")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_17uwy")
+text = "Developer . Contact "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="des" type="Label" parent="VScrollBar/HBoxContainer/ME"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -217.0
+offset_top = 27.0
+offset_right = 222.0
+offset_bottom = 218.0
+grow_horizontal = 2
+theme_override_constants/line_spacing = 25
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_6h1kh")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxFlat_gm3y3")
+text = "
+Developed by IWX
+Follow & Support:"
+horizontal_alignment = 1
+
+[node name="steam" type="Button" parent="VScrollBar/HBoxContainer/ME/des"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.059000004
+anchor_top = 0.675
+anchor_right = 0.148
+anchor_bottom = 0.96900004
+offset_left = 3.098999
+offset_top = 0.07499695
+offset_right = 0.027999878
+offset_bottom = -0.07901001
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_8un67")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_ac6a0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5rspr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a086s")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4sggt")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ctv45")
+text = "steam"
+icon = ExtResource("4_8un67")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="github" type="Button" parent="VScrollBar/HBoxContainer/ME/des"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.24800001
+anchor_top = 0.675
+anchor_right = 0.333
+anchor_bottom = 0.96900004
+offset_left = 0.12799835
+offset_top = 0.07499695
+offset_right = -0.18699646
+offset_bottom = -0.07901001
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_8un67")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_bnxpt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8un67")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rovmy")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_flfh0")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ktm52")
+text = "github"
+icon = ExtResource("5_ac6a0")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="epic game" type="Button" parent="VScrollBar/HBoxContainer/ME/des"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.43500003
+anchor_top = 0.68100005
+anchor_right = 0.565
+anchor_bottom = 0.97400004
+offset_left = 0.034988403
+offset_top = -0.071014404
+offset_right = -0.035003662
+offset_bottom = -0.03401184
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_8un67")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_eyvtv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kqlri")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k6hd5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_b46oh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gw024")
+text = "epic game"
+icon = ExtResource("7_a086s")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="itch_io" type="Button" parent="VScrollBar/HBoxContainer/ME/des"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.63100004
+anchor_top = 0.65400004
+anchor_right = 0.74500006
+anchor_bottom = 0.984
+offset_left = -0.009033203
+offset_top = 0.085990906
+offset_right = -0.055023193
+offset_bottom = 0.055999756
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_8un67")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_eyvtv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kqlri")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k6hd5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_b46oh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gw024")
+text = "itch.io"
+icon = ExtResource("8_4sggt")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="instagram" type="Button" parent="VScrollBar/HBoxContainer/ME/des"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.813
+anchor_top = 0.68600005
+anchor_right = 0.929
+anchor_bottom = 0.97900003
+offset_left = 0.09298706
+offset_top = -0.026016235
+offset_right = 0.16900635
+offset_bottom = 0.010986328
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_8un67")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_eyvtv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kqlri")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k6hd5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_b46oh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gw024")
+text = "instgram"
+icon = ExtResource("6_5rspr")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="version" type="Label" parent="VScrollBar/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/line_spacing = 25
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_6h1kh")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_gm3y3")
+text = "
+   version :      1.0       
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="T" type="Label" parent="VScrollBar/HBoxContainer/version"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -0.126
+anchor_right = 0.5
+anchor_bottom = -0.126
+offset_left = -79.5
+offset_top = -13.518
+offset_right = 80.5
+offset_bottom = 13.482
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_6h1kh")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_17uwy")
+text = "version"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="exit" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.85
+anchor_top = 0.023000002
+anchor_right = 0.961
+anchor_bottom = 0.062000003
+offset_top = 1.0959988
+offset_right = 1092.8281
+offset_bottom = 435.6778
+grow_horizontal = 0
+scale = Vector2(0.0610305, 0.0521905)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 65
+theme_override_fonts/font = ExtResource("3_8un67")
+theme_override_font_sizes/font_size = 200
+theme_override_styles/normal = SubResource("StyleBoxFlat_af8cy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rtdvj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gqali")
+text = "E X I T"
+
+[connection signal="pressed" from="VScrollBar/HBoxContainer/ME/des/steam" to="." method="_on_steam_pressed"]
+[connection signal="pressed" from="VScrollBar/HBoxContainer/ME/des/github" to="." method="_on_github_pressed"]
+[connection signal="pressed" from="VScrollBar/HBoxContainer/ME/des/epic game" to="." method="_on_epic_game_pressed"]
+[connection signal="pressed" from="VScrollBar/HBoxContainer/ME/des/itch_io" to="." method="_on_itch_io_pressed"]
+[connection signal="pressed" from="VScrollBar/HBoxContainer/ME/des/instagram" to="." method="_on_instagram_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

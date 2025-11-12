@@ -1,0 +1,645 @@
+[gd_scene load_steps=16 format=3 uid="uid://bun0rf6prausr"]
+
+[ext_resource type="Script" uid="uid://bgp1cuv77o3rm" path="res://scripts/UI/settings.gd" id="1_i4dvr"]
+[ext_resource type="FontFile" uid="uid://dh2vb5h8q0xdn" path="res://Asset/font/paladins-font/PaladinsLaser-KVdRZ.otf" id="1_t8pki"]
+[ext_resource type="FontFile" uid="uid://ds2q7k08drb8x" path="res://Asset/font/dash/Dash-Horizon-Demo.otf" id="2_32w1k"]
+
+[sub_resource type="Gradient" id="Gradient_32w1k"]
+offsets = PackedFloat32Array(0.0074626803, 1)
+colors = PackedColorArray(0.17706844, 0.44271767, 0.42677703, 1, 0.15275723, 0.08720308, 0.30280963, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_32w1k"]
+gradient = SubResource("Gradient_32w1k")
+fill_from = Vector2(0.5050505, 1)
+fill_to = Vector2(0.4848485, 0.121212125)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_emn88"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i4dvr"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+draw_center = false
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyo1n"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.029521441, 0.13835156, 0.13358724, 0.49411765)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 3
+border_width_bottom = 2
+border_color = Color(0.28118706, 0.2811868, 0.28118694, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibeei"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.23599997, 0.59, 0.5723, 0.49411765)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 1
+border_color = Color(1, 1, 1, 0.75)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25bb8"]
+bg_color = Color(0.44255617, 0.47098225, 0.99999064, 0.1764706)
+border_width_left = 10
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxa2i"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6039216)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6hnnl"]
+bg_color = Color(0.21460001, 0.74, 0.7312434, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pa0cq"]
+bg_color = Color(0.1677, 0.33813003, 0.39, 1)
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i25m7"]
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_npqem"]
+bg_color = Color(0.41981313, 0.41981313, 0.41981304, 1)
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.3478169, 0.347817, 0.34781674, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchor_left = 0.22200002
+anchor_right = 0.77800006
+anchor_bottom = 1.0
+offset_left = 0.25598145
+offset_right = -0.25604248
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_i4dvr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_32w1k")
+
+[node name="Panel" type="Panel" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_emn88")
+
+[node name="Settings" type="Label" parent="TextureRect"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -190.0
+offset_right = 190.0
+offset_bottom = 54.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.5019608, 0.54509807, 0.79607844, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.015686275)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("1_t8pki")
+theme_override_font_sizes/font_size = 53
+text = "Settings"
+
+[node name="setting" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.047000002
+anchor_top = 0.11000001
+anchor_right = 0.9480001
+anchor_bottom = 0.95400006
+offset_left = -0.08000183
+offset_top = -0.2800064
+offset_right = 0.27996826
+offset_bottom = -0.1920166
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_i4dvr")
+
+[node name="VB" type="VBoxContainer" parent="setting"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TabC" type="TabContainer" parent="setting/VB"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_jyo1n")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_ibeei")
+tab_alignment = 1
+current_tab = 0
+
+[node name="Audio" type="VBoxContainer" parent="setting/VB/TabC"]
+layout_mode = 2
+theme_override_constants/separation = 35
+metadata/_tab_index = 0
+
+[node name="Master" type="VBoxContainer" parent="setting/VB/TabC/Audio"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="setting/VB/TabC/Audio/Master"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_25bb8")
+text = "Master Volume"
+
+[node name="HSlider" type="HSlider" parent="setting/VB/TabC/Audio/Master/name"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.86100006
+anchor_bottom = 0.933
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 0.20297241
+offset_bottom = 0.0099983215
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_hxa2i")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_6hnnl")
+max_value = 3.0
+step = 0.1
+value = 2.0
+
+[node name="CheckBox" type="CheckBox" parent="setting/VB/TabC/Audio/Master/name"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.93700004
+anchor_top = 0.5
+anchor_right = 0.93700004
+anchor_bottom = 0.5
+offset_left = -33.649048
+offset_top = -14.0
+offset_right = 33.350952
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 20
+text = "mute"
+
+[node name="music" type="VBoxContainer" parent="setting/VB/TabC/Audio"]
+layout_mode = 2
+theme_override_constants/separation = 52
+
+[node name="name" type="Label" parent="setting/VB/TabC/Audio/music"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_25bb8")
+text = "Music Volume"
+
+[node name="HSlider" type="HSlider" parent="setting/VB/TabC/Audio/music/name"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.86100006
+anchor_bottom = 0.933
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 0.20297241
+offset_bottom = 0.0099983215
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_hxa2i")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_6hnnl")
+max_value = 2.5
+step = 0.1
+value = 1.0
+
+[node name="CheckBox" type="CheckBox" parent="setting/VB/TabC/Audio/music/name"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.938
+anchor_top = 0.5
+anchor_right = 0.938
+anchor_bottom = 0.5
+offset_left = -33.226013
+offset_top = -14.0
+offset_right = 33.773987
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 20
+text = "mute"
+
+[node name="SFX" type="VBoxContainer" parent="setting/VB/TabC/Audio"]
+layout_mode = 2
+theme_override_constants/separation = 52
+
+[node name="name" type="Label" parent="setting/VB/TabC/Audio/SFX"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_25bb8")
+text = "SFX Volume"
+
+[node name="HSlider" type="HSlider" parent="setting/VB/TabC/Audio/SFX/name"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.067
+anchor_right = 0.86100006
+anchor_bottom = 0.933
+offset_left = 150.0
+offset_top = -0.00999999
+offset_right = 0.20297241
+offset_bottom = 0.0099983215
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_hxa2i")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_6hnnl")
+max_value = 2.5
+step = 0.1
+
+[node name="CheckBox" type="CheckBox" parent="setting/VB/TabC/Audio/SFX/name"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.938
+anchor_top = 0.5
+anchor_right = 0.938
+anchor_bottom = 0.5
+offset_left = -33.226013
+offset_top = -14.0
+offset_right = 33.773987
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 20
+text = "mute"
+
+[node name="Graphics" type="VBoxContainer" parent="setting/VB/TabC"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 35
+metadata/_tab_index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="setting/VB/TabC/Graphics"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="setting/VB/TabC/Graphics/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_25bb8")
+text = "Brightness"
+
+[node name="HSlider" type="HSlider" parent="setting/VB/TabC/Graphics/VBoxContainer/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.067
+anchor_right = 1.0
+anchor_bottom = 0.933
+offset_left = 150.0
+offset_top = -0.00999999
+offset_right = -2.0
+offset_bottom = 0.0099983215
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_hxa2i")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_6hnnl")
+min_value = 0.4
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="setting/VB/TabC/Graphics"]
+layout_mode = 2
+theme_override_constants/separation = 52
+
+[node name="Label" type="Label" parent="setting/VB/TabC/Graphics/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_25bb8")
+text = "VSync"
+
+[node name="CheckBox" type="CheckBox" parent="setting/VB/TabC/Graphics/VBoxContainer2/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.938
+anchor_top = 0.5
+anchor_right = 0.938
+anchor_bottom = 0.5
+offset_left = -33.226013
+offset_top = -14.0
+offset_right = 33.773987
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 20
+button_pressed = true
+text = "active"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="setting/VB/TabC/Graphics"]
+layout_mode = 2
+theme_override_constants/separation = 52
+
+[node name="Label" type="Label" parent="setting/VB/TabC/Graphics/VBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_25bb8")
+text = "Resolution"
+
+[node name="OptionButton" type="OptionButton" parent="setting/VB/TabC/Graphics/VBoxContainer3/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.89300007
+anchor_top = 0.5
+anchor_right = 0.89300007
+anchor_bottom = 0.5
+offset_left = -42.261047
+offset_top = -15.0
+offset_right = 61.738953
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("2_32w1k")
+flat = true
+selected = 0
+item_count = 3
+popup/item_0/text = "1280, 720"
+popup/item_0/id = 0
+popup/item_1/text = "1600, 900"
+popup/item_1/id = 1
+popup/item_2/text = "1920, 1080"
+popup/item_2/id = 2
+
+[node name="control" type="VBoxContainer" parent="setting/VB/TabC"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 35
+metadata/_tab_index = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="setting/VB/TabC/control"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="setting/VB/TabC/control/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_25bb8")
+text = "mouse sensitivity"
+
+[node name="HSlider" type="HSlider" parent="setting/VB/TabC/control/VBoxContainer/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.067
+anchor_right = 1.0
+anchor_bottom = 0.933
+offset_left = 173.0
+offset_top = -0.00999999
+offset_right = -2.0
+offset_bottom = 0.0099983215
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_hxa2i")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_6hnnl")
+value = 50.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="setting/VB/TabC/control"]
+layout_mode = 2
+theme_override_constants/separation = 52
+
+[node name="Label" type="Label" parent="setting/VB/TabC/control/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_25bb8")
+
+[node name="HSlider" type="HSlider" parent="setting/VB/TabC/control/VBoxContainer2/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.86100006
+anchor_bottom = 0.933
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 0.20297241
+offset_bottom = 0.0099983215
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_hxa2i")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_6hnnl")
+max_value = 24.0
+value = 5.0
+
+[node name="CheckBox" type="CheckBox" parent="setting/VB/TabC/control/VBoxContainer2/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.938
+anchor_top = 0.5
+anchor_right = 0.938
+anchor_bottom = 0.5
+offset_left = -33.226013
+offset_top = -14.0
+offset_right = 33.773987
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 20
+text = "mute"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="setting/VB/TabC/control"]
+layout_mode = 2
+theme_override_constants/separation = 52
+
+[node name="Label" type="Label" parent="setting/VB/TabC/control/VBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_25bb8")
+
+[node name="HSlider" type="HSlider" parent="setting/VB/TabC/control/VBoxContainer3/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.067
+anchor_right = 0.86100006
+anchor_bottom = 0.933
+offset_left = 150.0
+offset_top = -0.00999999
+offset_right = 0.20297241
+offset_bottom = 0.0099983215
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_hxa2i")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_6hnnl")
+value = 50.0
+
+[node name="CheckBox" type="CheckBox" parent="setting/VB/TabC/control/VBoxContainer3/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.938
+anchor_top = 0.5
+anchor_right = 0.938
+anchor_bottom = 0.5
+offset_left = -33.226013
+offset_top = -14.0
+offset_right = 33.773987
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 20
+text = "mute"
+
+[node name="apply" type="Button" parent="setting/VB"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_pa0cq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i25m7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_npqem")
+text = "A p p l y"
+
+[node name="back" type="Button" parent="setting/VB"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_32w1k")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_pa0cq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i25m7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_npqem")
+text = "B a c k"
+
+[connection signal="value_changed" from="setting/VB/TabC/Audio/Master/name/HSlider" to="." method="_on_master_h_slider_value_changed"]
+[connection signal="toggled" from="setting/VB/TabC/Audio/Master/name/CheckBox" to="." method="_on_master_check_box_toggled"]
+[connection signal="value_changed" from="setting/VB/TabC/Audio/music/name/HSlider" to="." method="_on_music_h_slider_value_changed"]
+[connection signal="toggled" from="setting/VB/TabC/Audio/music/name/CheckBox" to="." method="_on_music_check_box_toggled"]
+[connection signal="value_changed" from="setting/VB/TabC/Audio/SFX/name/HSlider" to="." method="_on_sfx_h_slider_value_changed"]
+[connection signal="toggled" from="setting/VB/TabC/Audio/SFX/name/CheckBox" to="." method="_on_sfx_check_box_toggled"]
+[connection signal="value_changed" from="setting/VB/TabC/Graphics/VBoxContainer/Label/HSlider" to="." method="_on_brightness_slider_value_changed"]
+[connection signal="toggled" from="setting/VB/TabC/Graphics/VBoxContainer2/Label/CheckBox" to="." method="_on_vsync_check_box_toggled"]
+[connection signal="item_selected" from="setting/VB/TabC/Graphics/VBoxContainer3/Label/OptionButton" to="." method="_on_resolution_option_button_item_selected"]
+[connection signal="pressed" from="setting/VB/apply" to="." method="_on_apply_home_pressed"]
+[connection signal="pressed" from="setting/VB/back" to="." method="_on_back_home_pressed"]
