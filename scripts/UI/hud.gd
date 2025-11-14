@@ -19,7 +19,7 @@ const PULSE_DURATION = 0.6  # مدة النبضة الواحدة بالثوان�
 
 func _ready():
 	# 💡 ربط الـ Player الثابت (المسار الصحيح هو من Root)
-	player_node = get_tree().root.get_node_or_null("Game/Boss")
+	player_node = get_tree().root.get_node_or_null("Game/samourai")
 	
 	red_overlay.modulate.a = 0.0
 	

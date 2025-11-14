@@ -118,7 +118,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_32wjw"]
 resource_name = "hit"
-length = 0.05
+length = 0.1
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -127,7 +127,7 @@ tracks/0/path = NodePath("Marker2D/Golmn:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.05),
+"times": PackedFloat32Array(0.1),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("26_46agu")]
@@ -203,7 +203,6 @@ collision_mask = 5
 script = ExtResource("1_xeqru")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3.8571403, -29.785706)
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_cphpr")
 
@@ -211,13 +210,14 @@ shape = SubResource("RectangleShape2D_cphpr")
 
 [node name="Golmn" type="Sprite2D" parent="Marker2D"]
 texture_filter = 1
-position = Vector2(2.8571472, -44.285713)
+position = Vector2(0, -14.285713)
 texture = ExtResource("30_tjovr")
 
 [node name="Area2D" type="Area2D" parent="Marker2D/Golmn"]
 visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/Golmn/Area2D"]
+visible = false
 light_mask = 2
 position = Vector2(11.428558, 29.285706)
 scale = Vector2(0.49999917, 0.49999917)
@@ -236,14 +236,15 @@ anchors_preset = 5
 anchor_top = 0.0
 anchor_bottom = 0.0
 offset_left = -27.142859
-offset_top = -68.571434
+offset_top = -42.857147
 offset_right = 32.857132
-offset_bottom = -64.28572
+offset_bottom = -38.571434
 grow_vertical = 1
 theme_override_styles/background = SubResource("StyleBoxFlat_xhexh")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ye0u0")
 
 [node name="attack" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2.857143, -40)
 bus = &"SFX"
 
 [node name="walk" type="AudioStreamPlayer2D" parent="."]

@@ -1,7 +1,7 @@
-[gd_scene load_steps=86 format=3 uid="uid://ba8s43aufgie0"]
+[gd_scene load_steps=64 format=3 uid="uid://ba8s43aufgie0"]
 
 [ext_resource type="Texture2D" uid="uid://dpc3xem1audni" path="res://Asset/SHADOW Series/Boss/idle/idle1.png" id="1_t3dpj"]
-[ext_resource type="Script" uid="uid://dp23ylgm23wdg" path="res://scripts/basic/boss.gd" id="1_tjc7u"]
+[ext_resource type="Script" uid="uid://dp23ylgm23wdg" path="res://scripts/players/boss.gd" id="1_tjc7u"]
 [ext_resource type="Texture2D" uid="uid://do4m8pp2jtm8i" path="res://Asset/SHADOW Series/Boss/idle/idle2.png" id="2_45kji"]
 [ext_resource type="Texture2D" uid="uid://c3xpigxf7rduo" path="res://Asset/SHADOW Series/Boss/idle/idle3.png" id="3_bn40l"]
 [ext_resource type="Texture2D" uid="uid://cgkm2njrb6gqq" path="res://Asset/SHADOW Series/Boss/idle/idle4.png" id="4_2p8x7"]
@@ -49,26 +49,6 @@
 [ext_resource type="Texture2D" uid="uid://co5lj2uw53lyl" path="res://Asset/SHADOW Series/Boss/attack2/attack28.png" id="47_ytisx"]
 [ext_resource type="Texture2D" uid="uid://3edkwbbuurhn" path="res://Asset/SHADOW Series/Boss/attack2/attack29.png" id="48_ql0n0"]
 [ext_resource type="Texture2D" uid="uid://cx7a5qnyuxoxh" path="res://Asset/SHADOW Series/Boss/attack2/attack210.png" id="49_1akk2"]
-[ext_resource type="Texture2D" uid="uid://dmnq8s1eq0j7" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh1.png" id="50_l2csq"]
-[ext_resource type="Texture2D" uid="uid://canlsqox1jt1r" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh2.png" id="51_gsudx"]
-[ext_resource type="Texture2D" uid="uid://dw1x18clujr5l" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh3.png" id="52_1jbua"]
-[ext_resource type="Texture2D" uid="uid://cq53abq6yyx2d" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh4.png" id="53_ax3ju"]
-[ext_resource type="Texture2D" uid="uid://cjaqvhsodgtns" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh5.png" id="54_o1qwy"]
-[ext_resource type="Texture2D" uid="uid://bvy17ewu1vjbr" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh6.png" id="55_pg2b6"]
-[ext_resource type="Texture2D" uid="uid://bevwyggob300c" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh7.png" id="56_scdhc"]
-[ext_resource type="Texture2D" uid="uid://ddlby4ug1y3il" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh8.png" id="57_eva7m"]
-[ext_resource type="Texture2D" uid="uid://cklbq4e23tj84" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh9.png" id="58_sebyy"]
-[ext_resource type="Texture2D" uid="uid://5b0gc80pg3r4" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh10.png" id="59_15sqs"]
-[ext_resource type="Texture2D" uid="uid://br1d7ft5l6fsh" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh11.png" id="60_wku00"]
-[ext_resource type="Texture2D" uid="uid://cryjf4cxwb4sm" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh12.png" id="61_dv6ol"]
-[ext_resource type="Texture2D" uid="uid://ga1300dublu0" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh13.png" id="62_rmc04"]
-[ext_resource type="Texture2D" uid="uid://c7c3f5kkqknhe" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh14.png" id="63_23hoh"]
-[ext_resource type="Texture2D" uid="uid://ccx5igj3oodld" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh15.png" id="64_w4s83"]
-[ext_resource type="Texture2D" uid="uid://gkeruto3glmv" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh16.png" id="65_6d0ab"]
-[ext_resource type="Texture2D" uid="uid://co2hllr46pn3h" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh17.png" id="66_yohm8"]
-[ext_resource type="Texture2D" uid="uid://7mrcsyemkkxf" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh18.png" id="67_tqu3j"]
-[ext_resource type="Texture2D" uid="uid://bge72144tymss" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh19.png" id="68_5omil"]
-[ext_resource type="Texture2D" uid="uid://dbl2w5wfa236x" path="res://Asset/SHADOW Series/Boss/idle sh/idlesh20.png" id="69_j50gw"]
 [ext_resource type="AudioStream" uid="uid://d2ekir1vln3pn" path="res://Asset/sounds efficts/jumplanding-398256.mp3" id="70_0m0ui"]
 [ext_resource type="AudioStream" uid="uid://baxk1ddqixg85" path="res://Asset/sounds efficts/sword-blade-slicing-flesh-352708.mp3" id="71_esbxj"]
 
@@ -104,7 +84,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("SH:visible")
+tracks/2/path = NodePath("Area2D/CollisionShape2D2:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -116,46 +96,10 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("SH:position")
+tracks/3/path = NodePath("Area2D:monitoring")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 4)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("SH:shape:radius")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.01]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Area2D/CollisionShape2D2:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Area2D:monitoring")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -267,47 +211,6 @@ tracks/3/keys = {
 "values": [false, true, false, true, false]
 }
 
-[sub_resource type="Animation" id="Animation_osiia"]
-resource_name = "dash"
-length = 0.8
-step = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Marker2D/Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.30065542, 0.4, 0.44, 0.6008578, 0.700673, 0.8004882),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("19_agf1w"), ExtResource("20_svuus"), ExtResource("21_pweif"), ExtResource("42_esbxj"), ExtResource("15_21bpv"), ExtResource("23_h3ij1"), ExtResource("24_4fimm"), ExtResource("25_21bpv"), ExtResource("1_t3dpj")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Marker2D/Sprite2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.399, 0.4, 0.439, 0.44002852, 0.596, 0.6008578, 0.79614836),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(4, 0), Vector2(-4, 0), Vector2(-4, 0), Vector2(-13, 0), Vector2(-13, 0), Vector2(1, 0), Vector2(1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D:monitoring")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
 [sub_resource type="Animation" id="Animation_ws8gx"]
 resource_name = "dead"
 tracks/0/type = "value"
@@ -400,6 +303,10 @@ tracks/3/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_hmlur"]
+resource_name = "hit"
+length = 0.001
+
 [sub_resource type="Animation" id="Animation_nac8m"]
 resource_name = "idle"
 length = 0.75
@@ -454,71 +361,6 @@ tracks/3/keys = {
 "values": [false]
 }
 
-[sub_resource type="Animation" id="Animation_w2e4o"]
-resource_name = "idle_SH"
-length = 1.9
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Marker2D/Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.39733413, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("50_l2csq"), ExtResource("51_gsudx"), ExtResource("52_1jbua"), ExtResource("53_ax3ju"), ExtResource("54_o1qwy"), ExtResource("55_pg2b6"), ExtResource("56_scdhc"), ExtResource("57_eva7m"), ExtResource("58_sebyy"), ExtResource("59_15sqs"), ExtResource("60_wku00"), ExtResource("61_dv6ol"), ExtResource("62_rmc04"), ExtResource("63_23hoh"), ExtResource("64_w4s83"), ExtResource("65_6d0ab"), ExtResource("66_yohm8"), ExtResource("67_tqu3j"), ExtResource("68_5omil"), ExtResource("69_j50gw")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Marker2D/Sprite2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("SH:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("SH:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -5)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("SH:shape:radius")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.1, 0.2, 0.29, 0.35, 0.4, 1.7, 1.8, 1.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.01, 5.3851647, 14.0, 26.076809, 24.0, 26.0, 13.0, 0.01]
-}
-
 [sub_resource type="Animation" id="Animation_7is13"]
 resource_name = "jump"
 length = 0.3
@@ -562,7 +404,6 @@ tracks/2/keys = {
 [sub_resource type="Animation" id="Animation_tjc7u"]
 resource_name = "run"
 length = 0.45
-loop_mode = 1
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -618,17 +459,13 @@ _data = {
 &"RESET": SubResource("Animation_3dsk3"),
 &"attack1": SubResource("Animation_r2qhq"),
 &"attack2": SubResource("Animation_ehok8"),
-&"dash": SubResource("Animation_osiia"),
 &"dead": SubResource("Animation_ws8gx"),
 &"fall": SubResource("Animation_i3up5"),
+&"hit": SubResource("Animation_hmlur"),
 &"idle": SubResource("Animation_nac8m"),
-&"idle_SH": SubResource("Animation_w2e4o"),
 &"jump": SubResource("Animation_7is13"),
 &"run": SubResource("Animation_tjc7u")
 }
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_ma8jb"]
-radius = 0.01
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_41f3f"]
 size = Vector2(103, 19.5)
@@ -638,8 +475,6 @@ position = Vector2(302, 280)
 collision_mask = 6
 floor_block_on_wall = false
 script = ExtResource("1_tjc7u")
-jump_velocity = -250.0
-damage = 10.0
 metadata/_edit_vertical_guides_ = [52.0]
 
 [node name="PlayerCamera" type="Camera2D" parent="."]
@@ -653,6 +488,7 @@ position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_tjc7u")
 
@@ -674,12 +510,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_n67d4")
 }
 
-[node name="SH" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, 4)
-shape = SubResource("CircleShape2D_ma8jb")
-debug_color = Color(0.7602595, 0.43510717, 1, 0.41960785)
-
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
 collision_mask = 2
@@ -693,14 +523,17 @@ shape = SubResource("RectangleShape2D_41f3f")
 debug_color = Color(0.58945054, 0.42131573, 0, 0.41960785)
 
 [node name="jump" type="AudioStreamPlayer2D" parent="."]
+visible = false
 stream = ExtResource("70_0m0ui")
 bus = &"SFX"
 
 [node name="attack" type="AudioStreamPlayer2D" parent="."]
+visible = false
 stream = ExtResource("71_esbxj")
 bus = &"SFX"
 
 [node name="run" type="AudioStreamPlayer2D" parent="."]
+visible = false
 pitch_scale = 1.1
 bus = &"SFX"
 

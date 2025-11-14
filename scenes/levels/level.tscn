@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://dmdnbyybivkg8"]
+[gd_scene load_steps=25 format=4 uid="uid://dmdnbyybivkg8"]
 
 [ext_resource type="Script" uid="uid://bs0xh2dwl66xh" path="res://scripts/basic/level.gd" id="1_4ab0e"]
 [ext_resource type="Texture2D" uid="uid://bqjgd2pfk3132" path="res://Asset/Tilemap/dark city.jpg" id="2_c8ctg"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bq0uemdsvl0ms" path="res://Asset/Tilemap/Platformer  Village/sprites/tomb.png" id="17_suqb0"]
 [ext_resource type="PackedScene" uid="uid://oifxdol8021h" path="res://scenes/Characters/enemys/Wetlands.tscn" id="19_jyre1"]
 [ext_resource type="PackedScene" uid="uid://b8obwhi7c78ll" path="res://scenes/athers/box.tscn" id="20_475l0"]
+[ext_resource type="PackedScene" uid="uid://cnq7nwk4ut1hu" path="res://scenes/Characters/enemys/samurai_nap.tscn" id="20_lp2ca"]
 [ext_resource type="Texture2D" uid="uid://bwffjkdvn351x" path="res://Asset/Tilemap/Texturelabs_Atmosphere_210M.jpg" id="28_roaf3"]
 [ext_resource type="Script" uid="uid://b86eao8c6i1u7" path="res://scripts/world/fog_overlay.gd" id="29_eu7jx"]
 [ext_resource type="PackedScene" uid="uid://dblxvgm7y3t2s" path="res://scenes/Characters/enemys/Golems/golems_blue.tscn" id="36_nijtg"]
@@ -82,7 +83,7 @@ sources/9 = SubResource("TileSetAtlasSource_roaf3")
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_4ab0e")
-metadata/_edit_vertical_guides_ = [0.0, 3490.0, -7481.0]
+metadata/_edit_vertical_guides_ = [0.0, 3490.0, -7481.0, 0.0]
 metadata/_edit_horizontal_guides_ = [-2.0, 26.0, 99.0, 95.0, 107.0]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
@@ -281,10 +282,22 @@ collision_mask = 4
 modulate = Color(0.46348983, 0.38479492, 0.47905213, 1)
 
 [node name="Golems_blue" parent="enemys" instance=ExtResource("36_nijtg")]
-position = Vector2(2115, 369)
+position = Vector2(2884, 351)
 
 [node name="wetland" parent="enemys" instance=ExtResource("19_jyre1")]
-position = Vector2(2507.0002, 353)
+position = Vector2(2705, 330)
+
+[node name="samurai nap" parent="enemys" instance=ExtResource("20_lp2ca")]
+position = Vector2(2230, 369)
+
+[node name="samurai nap2" parent="enemys" instance=ExtResource("20_lp2ca")]
+position = Vector2(2265, 369)
+
+[node name="samurai nap3" parent="enemys" instance=ExtResource("20_lp2ca")]
+position = Vector2(2199, 369)
+
+[node name="samurai nap4" parent="enemys" instance=ExtResource("20_lp2ca")]
+position = Vector2(2162, 369)
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
-position = Vector2(1859, 245)
+position = Vector2(1871, 330)

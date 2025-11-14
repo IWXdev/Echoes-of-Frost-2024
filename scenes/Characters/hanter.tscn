@@ -1,6 +1,6 @@
-[gd_scene load_steps=78 format=3 uid="uid://4jco874r5vt7"]
+[gd_scene load_steps=70 format=3 uid="uid://4jco874r5vt7"]
 
-[ext_resource type="Script" uid="uid://baebmk0668dd2" path="res://scripts/basic/player.gd" id="1_k130v"]
+[ext_resource type="Script" uid="uid://cr40yqmmjn288" path="res://scripts/players/hanter.gd" id="1_a4c6v"]
 [ext_resource type="Texture2D" uid="uid://d1jvllpaccxdu" path="res://Asset/SHADOW Series/hanter/idle/tile012.png" id="2_1v4cw"]
 [ext_resource type="Texture2D" uid="uid://bjd4qayeafaob" path="res://Asset/SHADOW Series/hanter/idle/tile001.png" id="3_tcxjt"]
 [ext_resource type="Texture2D" uid="uid://dwkprf43xs8ns" path="res://Asset/SHADOW Series/hanter/idle/tile002.png" id="4_la4jf"]
@@ -35,24 +35,14 @@
 [ext_resource type="Texture2D" uid="uid://8n2o2yebts1j" path="res://Asset/SHADOW Series/hanter/attack/tile19.png" id="43_gajhi"]
 [ext_resource type="Texture2D" uid="uid://r2e17jqwef5q" path="res://Asset/SHADOW Series/hanter/attack/tile20.png" id="44_di5pk"]
 [ext_resource type="Texture2D" uid="uid://c0rgom4w6vum8" path="res://Asset/SHADOW Series/hanter/attack/tile21.png" id="45_oqt1s"]
-[ext_resource type="Texture2D" uid="uid://ycof36kuf3al" path="res://Asset/SHADOW Series/hanter/dash/tile01.png" id="45_slocv"]
 [ext_resource type="Texture2D" uid="uid://8miy3d1065gx" path="res://Asset/SHADOW Series/hanter/attack/tile22.png" id="46_b5v42"]
-[ext_resource type="Texture2D" uid="uid://2aumxfo2evlx" path="res://Asset/SHADOW Series/hanter/dash/tile02.png" id="46_ndxno"]
-[ext_resource type="Texture2D" uid="uid://odbbduc1c5sk" path="res://Asset/SHADOW Series/hanter/dash/tile03.png" id="47_0hsly"]
 [ext_resource type="Texture2D" uid="uid://bntbdnm68onat" path="res://Asset/SHADOW Series/hanter/attack/tile24.png" id="48_ue6cq"]
-[ext_resource type="Texture2D" uid="uid://darlrqxs1llf" path="res://Asset/SHADOW Series/hanter/dash/tile04.png" id="48_vvcr0"]
-[ext_resource type="Texture2D" uid="uid://d335uaomexwn4" path="res://Asset/SHADOW Series/hanter/dash/tile05.png" id="49_0ln8f"]
 [ext_resource type="Texture2D" uid="uid://na6gx21o2b27" path="res://Asset/SHADOW Series/hanter/attack/tile25.png" id="49_o2o0e"]
 [ext_resource type="Texture2D" uid="uid://bnliyxh688q00" path="res://Asset/SHADOW Series/hanter/attack/tile26.png" id="50_xowtb"]
-[ext_resource type="Texture2D" uid="uid://brmfk04xjeit6" path="res://Asset/SHADOW Series/hanter/dash/tile06.png" id="50_yu4iy"]
 [ext_resource type="Texture2D" uid="uid://x2v0g0lux7ij" path="res://Asset/SHADOW Series/hanter/attack/tile27.png" id="51_bu4p0"]
-[ext_resource type="Texture2D" uid="uid://cjavu275arwem" path="res://Asset/SHADOW Series/hanter/dash/tile07.png" id="51_dihru"]
-[ext_resource type="Texture2D" uid="uid://dqtd73oy2udws" path="res://Asset/SHADOW Series/hanter/dash/tile08.png" id="52_shhjp"]
 [ext_resource type="Texture2D" uid="uid://b2i55twc4grdp" path="res://Asset/SHADOW Series/hanter/attack/tile28.png" id="52_yokxw"]
-[ext_resource type="Texture2D" uid="uid://c26fxr4o40ftk" path="res://Asset/SHADOW Series/hanter/dash/tile09.png" id="53_6023c"]
 [ext_resource type="Texture2D" uid="uid://ccy7j7xlq6ygn" path="res://Asset/SHADOW Series/hanter/dead/tile001.png" id="53_dg6r4"]
 [ext_resource type="Texture2D" uid="uid://6drw8r7emxv" path="res://Asset/SHADOW Series/hanter/attack/tile29.png" id="53_vshj7"]
-[ext_resource type="Texture2D" uid="uid://bjgnsm17q351o" path="res://Asset/SHADOW Series/hanter/dash/tile10.png" id="54_5ytk7"]
 [ext_resource type="Texture2D" uid="uid://boxnnnn3ql1u" path="res://Asset/SHADOW Series/hanter/dead/tile002.png" id="54_g8pcj"]
 [ext_resource type="Texture2D" uid="uid://dq1r8xh1rmjdg" path="res://Asset/SHADOW Series/hanter/dead/tile003.png" id="55_nnsey"]
 [ext_resource type="Texture2D" uid="uid://ce8aq2ib504kt" path="res://Asset/SHADOW Series/hanter/dead/tile004.png" id="56_pd7w5"]
@@ -66,6 +56,8 @@
 [ext_resource type="Texture2D" uid="uid://be1qn7hg2p22r" path="res://Asset/SHADOW Series/hanter/hit/tile002.png" id="64_v8e3q"]
 [ext_resource type="Texture2D" uid="uid://gian6g8m54j6" path="res://Asset/SHADOW Series/hanter/hit/tile003.png" id="65_v07nl"]
 [ext_resource type="Texture2D" uid="uid://cw00eed6fr7bw" path="res://Asset/SHADOW Series/hanter/hit/tile004.png" id="66_agwq8"]
+[ext_resource type="AudioStream" uid="uid://d2ekir1vln3pn" path="res://Asset/sounds efficts/jumplanding-398256.mp3" id="66_dgehb"]
+[ext_resource type="AudioStream" uid="uid://baxk1ddqixg85" path="res://Asset/sounds efficts/sword-blade-slicing-flesh-352708.mp3" id="67_a4c6v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tdcjv"]
 size = Vector2(9.254837, 24.965706)
@@ -75,7 +67,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Marker2D/hanter:texture")
+tracks/0/path = NodePath("Marker2D/Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -99,7 +91,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Marker2D/hanter:position")
+tracks/2/path = NodePath("Marker2D/Sprite2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -122,13 +114,13 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_5xtl0"]
-resource_name = "attack"
+resource_name = "attack1"
 length = 1.3
 step = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Marker2D/hanter:texture")
+tracks/0/path = NodePath("Marker2D/Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -152,7 +144,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Marker2D/hanter:position")
+tracks/2/path = NodePath("Marker2D/Sprite2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -162,53 +154,13 @@ tracks/2/keys = {
 "values": [Vector2(118.462, -12.7273)]
 }
 
-[sub_resource type="Animation" id="Animation_q7bif"]
-resource_name = "dash"
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Marker2D/hanter:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.85, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("45_slocv"), ExtResource("46_ndxno"), ExtResource("47_0hsly"), ExtResource("48_vvcr0"), ExtResource("49_0ln8f"), ExtResource("50_yu4iy"), ExtResource("51_dihru"), ExtResource("52_shhjp"), ExtResource("53_6023c"), ExtResource("54_5ytk7")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.05, 0.1, 0.55, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-1.52588e-05, -2.0504e-05), Vector2(175.385, 6.67572e-06), Vector2(175.385, 6.67572e-06), Vector2(-1.52588e-05, -2.0504e-05)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Marker2D/hanter:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(86.1539, -18.1818)]
-}
-
 [sub_resource type="Animation" id="Animation_4axof"]
 resource_name = "dead"
 length = 1.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Marker2D/hanter:texture")
+tracks/0/path = NodePath("Marker2D/Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -220,7 +172,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Marker2D/hanter:position")
+tracks/1/path = NodePath("Marker2D/Sprite2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -249,7 +201,7 @@ step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Marker2D/hanter:texture")
+tracks/0/path = NodePath("Marker2D/Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -273,7 +225,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Marker2D/hanter:position")
+tracks/2/path = NodePath("Marker2D/Sprite2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -290,7 +242,7 @@ step = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Marker2D/hanter:texture")
+tracks/0/path = NodePath("Marker2D/Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -302,7 +254,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Marker2D/hanter:position")
+tracks/1/path = NodePath("Marker2D/Sprite2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -332,7 +284,7 @@ step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Marker2D/hanter:texture")
+tracks/0/path = NodePath("Marker2D/Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -356,7 +308,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Marker2D/hanter:position")
+tracks/2/path = NodePath("Marker2D/Sprite2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -373,7 +325,7 @@ step = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Marker2D/hanter:texture")
+tracks/0/path = NodePath("Marker2D/Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -385,7 +337,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Marker2D/hanter:position")
+tracks/1/path = NodePath("Marker2D/Sprite2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -398,7 +350,6 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_bq1nv"]
 resource_name = "run"
 length = 0.7
-loop_mode = 1
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -415,7 +366,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Marker2D/hanter:texture")
+tracks/1/path = NodePath("Marker2D/Sprite2D:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -427,7 +378,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Marker2D/hanter:position")
+tracks/2/path = NodePath("Marker2D/Sprite2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -440,8 +391,7 @@ tracks/2/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_45yj7"]
 _data = {
 &"RESET": SubResource("Animation_jcd3o"),
-&"attack": SubResource("Animation_5xtl0"),
-&"dash": SubResource("Animation_q7bif"),
+&"attack1": SubResource("Animation_5xtl0"),
 &"dead": SubResource("Animation_4axof"),
 &"fall": SubResource("Animation_h7im6"),
 &"hit": SubResource("Animation_h32fu"),
@@ -450,15 +400,18 @@ _data = {
 &"run": SubResource("Animation_bq1nv")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7n37"]
+size = Vector2(103, 19.5)
+
 [node name="hanter" type="CharacterBody2D" groups=["player"]]
 texture_filter = 1
 position = Vector2(547, 312)
 scale = Vector2(0.3, 0.253)
 collision_mask = 4
 floor_block_on_wall = false
-script = ExtResource("1_k130v")
+script = ExtResource("1_a4c6v")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="PlayerCamera" type="Camera2D" parent="."]
 zoom = Vector2(2.8, 2.8)
 limit_left = 0
 limit_top = 95
@@ -475,12 +428,12 @@ shape = SubResource("RectangleShape2D_tdcjv")
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(3.333333, 3.9525692)
 
-[node name="hanter" type="Sprite2D" parent="Marker2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Marker2D"]
 position = Vector2(3.07695, 1.81819)
 scale = Vector2(2.31703, 3.12524)
 texture = ExtResource("2_1v4cw")
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Marker2D/hanter"]
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Marker2D/Sprite2D"]
 position = Vector2(9.29572, -11.0537)
 color = Color(0.209789, 0.207911, 0, 1)
 energy = 1.5
@@ -492,5 +445,31 @@ libraries = {
 &"": SubResource("AnimationLibrary_45yj7")
 }
 autoplay = "idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+monitoring = false
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+visible = false
+visibility_layer = 2
+position = Vector2(0.5, 7)
+shape = SubResource("RectangleShape2D_t7n37")
+debug_color = Color(0.58945054, 0.42131573, 0, 0.41960785)
+
+[node name="jump" type="AudioStreamPlayer2D" parent="."]
+visible = false
+stream = ExtResource("66_dgehb")
+bus = &"SFX"
+
+[node name="attack" type="AudioStreamPlayer2D" parent="."]
+visible = false
+stream = ExtResource("67_a4c6v")
+bus = &"SFX"
+
+[node name="run" type="AudioStreamPlayer2D" parent="."]
+visible = false
+pitch_scale = 1.1
+bus = &"SFX"
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

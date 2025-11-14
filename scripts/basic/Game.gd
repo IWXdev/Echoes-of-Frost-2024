@@ -3,7 +3,7 @@ extends Node
 # ✅ الأسماء صحيحة الآن بناءً على الصورة الأخيرة
 @onready var current_level = $currentLevel
 @onready var loading_screen = $Loading
-@onready var player = $Boss
+@onready var player = $samourai
 @onready var hud_node = $HUD
 @onready var splash_screen = $splash
 func _ready():

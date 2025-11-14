@@ -36,7 +36,7 @@ func move():
 
 	var distance = global_position.distance_to(player.global_position)
 	
-	if distance < attack_range and can_attack:
+	if distance <= attack_range and can_attack:
 		velocity = Vector2.ZERO
 		attack()
 	elif distance < detection_range:
@@ -49,7 +49,8 @@ func move():
 		if direction.length() > 0:
 			anim.play("walk")
 			$walk.play()
-			$Marker2D/Golmn.flip_h = direction.x < 0
+			var target_scale_x = 1 if direction.x >= 0 else -1
+			$Marker2D.scale.x = target_scale_x
 		else:
 			anim.play("idle")
 	else:
@@ -59,29 +60,6 @@ func move():
 func attack() -> void:
 	pass
 # enemy hit
-func hit(amount: int):
-	if health <= 0:
-		return # اللاعب ميت بالفعل
-	
-	health -= amount
-	healthbar.value = health
-	anim.play("hit")
-	# 2. تحميل مشهد رقم الضرر
-	const DAMAGE_NUMBER_SCENE = preload("res://scenes/athers/damage_number.tscn")
-
-# 3. إنشاء نسخة من المشهد
-	var damage_instance = DAMAGE_NUMBER_SCENE.instantiate()
-
-# 4. إضافة النسخة إلى المشهد الرئيسي (أو المشهد الذي يتواجد فيه العدو)
-	get_parent().add_child(damage_instance)
-
-# 5. ضبط موقع الرقم ليكون فوق العدو
-	damage_instance.global_position = self.global_position + Vector2(0, -65) # -50 ليكون فوق العدو قليلاً
-
-# 6. تمرير قيمة الضرر وتشغيل الحركة
-	damage_instance.setup_damage(amount, false) # false لعدم وجود ضربة حرجة كمثال
-	if health <= 0:
-		die()
 
 # Enemy Die
 func die():

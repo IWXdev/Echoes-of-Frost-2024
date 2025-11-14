@@ -233,6 +233,7 @@ theme_override_styles/background = SubResource("StyleBoxFlat_xhexh")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ye0u0")
 
 [node name="attack" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -69.99999)
 stream = ExtResource("49_xhexh")
 volume_db = -10.024
 bus = &"SFX"
