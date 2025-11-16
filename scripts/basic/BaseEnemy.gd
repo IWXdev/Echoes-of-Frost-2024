@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var detection_range: float = 200.0
 @export var attack_range: float = 40.0
 @export var damage: float = 10.0
+@export var xp_value: int = 50
 
 @onready var attack_coll: CollisionShape2D = $Marker2D/Golmn/Area2D/CollisionShape2D
 @onready var anim: AnimationPlayer = $AnimationPlayer
@@ -30,7 +31,7 @@ func _physics_process(_delta: float) -> void:
 # Enemy move 
 func move():
 	if anim.current_animation == "attack":
-		return  # ما نحركوش أثناء الهجوم
+		return  
 	if anim.current_animation == "hit":
 		return 
 
@@ -65,6 +66,8 @@ func attack() -> void:
 func die():
 	anim.play("dead")
 	set_physics_process(false)
+	if player and player.is_in_group("player") and player.has_method("get_head_position"):
+		GlobalSettings.gain_xp(xp_value, player)
 	await anim.animation_finished
 	queue_free()
 

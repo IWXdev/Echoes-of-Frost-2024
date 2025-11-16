@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://e7ajaoa5heys"]
+
+[ext_resource type="FontFile" uid="uid://ds2q7k08drb8x" path="res://Asset/font/dash/Dash-Horizon-Demo.otf" id="1_7hmul"]
+[ext_resource type="Script" uid="uid://dor5fno7p6nv" path="res://scripts/world/floating_xp.gd" id="2_dwa75"]
+
+[node name="FloatingXP" type="Label"]
+texture_filter = 1
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 36.0
+offset_bottom = 20.0
+scale = Vector2(0.20305252, 0.18603724)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_7hmul")
+text = "+50"
+script = ExtResource("2_dwa75")

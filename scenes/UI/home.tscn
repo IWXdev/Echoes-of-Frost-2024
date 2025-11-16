@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c1mhpkr81bh5q"]
+[gd_scene load_steps=24 format=3 uid="uid://c1mhpkr81bh5q"]
 
 [ext_resource type="Script" uid="uid://ikfqga1tmvtb" path="res://scripts/UI/home.gd" id="1_4nfyx"]
 [ext_resource type="FontFile" uid="uid://ds2q7k08drb8x" path="res://Asset/font/dash/Dash-Horizon-Demo.otf" id="2_lw7wx"]
@@ -163,6 +163,18 @@ scale_max = 0.9
 scale_over_velocity_max = 1000.0
 anim_speed_min = 7.28
 anim_speed_max = 7.64
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4nfyx"]
+bg_color = Color(0.11372549, 0.11372549, 0.11372549, 0.68235296)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [node name="home" type="Control"]
 layout_mode = 3
@@ -527,6 +539,22 @@ autoplay = "star"
 position = Vector2(579, 496)
 amount = 900
 process_material = SubResource("ParticleProcessMaterial_cmjdo")
+
+[node name="LoadStatusLabel" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_right = 81.0
+offset_bottom = 24.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_lw7wx")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_4nfyx")
 
 [connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]

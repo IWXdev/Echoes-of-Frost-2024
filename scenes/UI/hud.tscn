@@ -1,17 +1,18 @@
-[gd_scene load_steps=42 format=3 uid="uid://b5xpanusejoot"]
+[gd_scene load_steps=45 format=3 uid="uid://b5xpanusejoot"]
 
 [ext_resource type="FontFile" uid="uid://ds2q7k08drb8x" path="res://Asset/font/dash/Dash-Horizon-Demo.otf" id="1_k00v8"]
 [ext_resource type="Script" uid="uid://doo0ppmai3cb6" path="res://scripts/UI/hud.gd" id="1_t6axx"]
-[ext_resource type="Texture2D" uid="uid://bkjx5asc1orgn" path="res://Asset/icon/LINK/icons8-menu-50.png" id="2_t6axx"]
-[ext_resource type="Texture2D" uid="uid://rgui1gal1qmc" path="res://Asset/icon/LINK/icons8-setting-24.png" id="3_kj32l"]
-[ext_resource type="Texture2D" uid="uid://cdqtvv2jlwavv" path="res://Asset/icon/LINK/icons8-save-24.png" id="4_0fcg2"]
-[ext_resource type="Texture2D" uid="uid://d0mh124bic36f" path="res://Asset/icon/LINK/icons8-pause-24.png" id="5_qe851"]
-[ext_resource type="Texture2D" uid="uid://bo5sy4tn7qda0" path="res://Asset/icon/LINK/icons8-exit-24.png" id="6_ggbtr"]
+[ext_resource type="Texture2D" uid="uid://1k6du5jyr1rf" path="res://Asset/icon/LINK/icons8-pause-80.png" id="3_0fcg2"]
+[ext_resource type="Texture2D" uid="uid://bfydvg5fjjifc" path="res://Asset/icon/LINK/icons8-setting-38.png" id="4_qe851"]
+[ext_resource type="Texture2D" uid="uid://07jgs7f7h4us" path="res://Asset/icon/LINK/icons8-add-bookmark-38.png" id="5_ggbtr"]
+[ext_resource type="Texture2D" uid="uid://djka62uvqo0nr" path="res://Asset/icon/LINK/icons8-pause-38.png" id="6_w414h"]
+[ext_resource type="Texture2D" uid="uid://b78b7jh6h4r5e" path="res://Asset/icon/LINK/icons8-exit-38.png" id="7_d15ok"]
 [ext_resource type="Script" uid="uid://b1h36ytu5q7pj" path="res://scripts/UI/menu_button.gd" id="7_w414h"]
 [ext_resource type="PackedScene" uid="uid://cx2qv2hiapgk7" path="res://scenes/UI/healthbar.tscn" id="8_d15ok"]
 [ext_resource type="FontFile" uid="uid://bi4g4q5ofbr6a" path="res://Asset/font/gemstone/Gemstone.ttf" id="9_kj32l"]
 [ext_resource type="Texture2D" uid="uid://b2y5tqs4tkcn4" path="res://Asset/icon/LINK/icons8-play-60.png" id="10_syq1e"]
 [ext_resource type="Script" uid="uid://bgp1cuv77o3rm" path="res://scripts/UI/settings.gd" id="10_t6axx"]
+[ext_resource type="FontFile" uid="uid://dcxlywwtygij5" path="res://Asset/font/paladins-font/Paladins-BL0PG.otf" id="12_qe851"]
 
 [sub_resource type="Gradient" id="Gradient_t6axx"]
 offsets = PackedFloat32Array(0.6047904, 0.98802394)
@@ -95,7 +96,7 @@ border_width_bottom = 2
 border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bp6n0"]
-bg_color = Color(1, 0.61549336, 0.5444042, 1)
+bg_color = Color(0.9999905, 0.4189678, 0.3267064, 1)
 skew = Vector2(-1.2, 0)
 border_width_left = 1
 border_width_top = 2
@@ -113,13 +114,33 @@ border_width_bottom = 2
 border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ca8v"]
-bg_color = Color(0.68113697, 0.90956277, 0.90392655, 1)
+bg_color = Color(0.55363876, 0.85054076, 0.8468683, 1)
 skew = Vector2(0.8, 0)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kj32l"]
+bg_color = Color(0.147672, 0.147672, 0.147672, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0fcg2"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
 
 [sub_resource type="Gradient" id="Gradient_32w1k"]
 offsets = PackedFloat32Array(0.0074626803, 0.994012)
@@ -365,32 +386,39 @@ text = "NO"
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.016
-anchor_top = 0.119
-anchor_right = 0.053000003
-anchor_bottom = 0.185
-offset_left = -0.7200012
-offset_top = -0.519989
-offset_right = 8.191994
-offset_bottom = 8.440018
+anchor_left = 0.94000006
+anchor_top = 0.017
+anchor_right = 0.98200005
+anchor_bottom = 0.083000004
+offset_left = 0.19995117
+offset_top = -0.3600006
+offset_right = 8.75
+offset_bottom = 8.943108
+grow_horizontal = 0
 scale = Vector2(0.8969584, 0.8934874)
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_7frj2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dm2wl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_vatau")
 toggle_mode = false
-icon = ExtResource("2_t6axx")
+icon = ExtResource("3_0fcg2")
+autowrap_mode = 2
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
 item_count = 4
 popup/item_0/text = "SETTING"
-popup/item_0/icon = ExtResource("3_kj32l")
+popup/item_0/icon = ExtResource("4_qe851")
 popup/item_0/id = 0
 popup/item_1/text = "SAVE"
-popup/item_1/icon = ExtResource("4_0fcg2")
+popup/item_1/icon = ExtResource("5_ggbtr")
 popup/item_1/id = 1
 popup/item_2/text = "PAUSE"
-popup/item_2/icon = ExtResource("5_qe851")
+popup/item_2/icon = ExtResource("6_w414h")
 popup/item_2/id = 2
 popup/item_3/text = "EXIT"
-popup/item_3/icon = ExtResource("6_ggbtr")
+popup/item_3/icon = ExtResource("7_d15ok")
 popup/item_3/id = 3
 script = ExtResource("7_w414h")
 
@@ -436,15 +464,49 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_bp6n0")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.030000001
-anchor_top = 0.09900001
+anchor_top = 0.097
 anchor_right = 0.37100002
-anchor_bottom = 0.108
-offset_left = 0.43999863
-offset_top = -0.15200806
-offset_right = -0.3920288
-offset_bottom = 0.3600006
+anchor_bottom = 0.109000005
+offset_left = 0.3999977
+offset_top = 0.23999786
+offset_right = -0.43200684
+offset_bottom = 0.27999115
 theme_override_styles/background = SubResource("StyleBoxFlat_defph")
 theme_override_styles/fill = SubResource("StyleBoxFlat_1ca8v")
+
+[node name="XPBar" parent="Control" instance=ExtResource("8_d15ok")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.030000001
+anchor_top = 0.11100001
+anchor_right = 0.356
+anchor_bottom = 0.120000005
+offset_left = 0.3999977
+offset_top = 0.11998749
+offset_right = 0.47998047
+offset_bottom = 0.3999939
+theme_override_styles/background = SubResource("StyleBoxFlat_kj32l")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0fcg2")
+
+[node name="XPProgressLabel" type="Label" parent="Control/XPBar"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.79200006
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 3.673
+offset_left = 0.2079773
+offset_bottom = -0.002998352
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 15
+text = "XP 0/100"
+horizontal_alignment = 2
 
 [node name="SettingsMenu" type="Control" parent="Control"]
 visible = false
@@ -454,10 +516,10 @@ anchor_left = 0.036000002
 anchor_top = 0.123
 anchor_right = 0.372
 anchor_bottom = 0.86600006
-offset_left = -0.47200394
-offset_top = 0.29599762
-offset_right = 0.45599365
-offset_bottom = -0.16802979
+offset_left = 1032.88
+offset_top = 0.16000366
+offset_right = 1033.808
+offset_bottom = -0.3040161
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -926,6 +988,25 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_eaxyl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rydri")
 text = "B a c k"
 
+[node name="LevelLabel" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.44200003
+anchor_top = 0.016
+anchor_right = 0.558
+anchor_bottom = 0.042000003
+offset_left = -0.6400757
+offset_top = -0.2800007
+offset_right = 0.6398926
+offset_bottom = -0.36000443
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("12_qe851")
+theme_override_font_sizes/font_size = 20
+text = "L E V E L   :   1 0"
+
 [node name="Panel" type="Panel" parent="Control"]
 visible = false
 layout_mode = 1
@@ -955,6 +1036,29 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_fmq7i")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_kq36x")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bbf7x")
 icon = ExtResource("10_syq1e")
+
+[node name="CenterMessageLabel" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.469
+anchor_top = 0.18100001
+anchor_right = 0.536
+anchor_bottom = 0.22600001
+offset_left = -7.4800415
+offset_top = -139.48001
+offset_right = -18.84729
+offset_bottom = -143.08002
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1, 1.1)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 30
+text = "Level Up"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Control/go_out/yes" to="Control/MenuButton" method="_on_yes_pressed"]
 [connection signal="pressed" from="Control/go_out/no" to="Control/MenuButton" method="_on_no_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://dmdnbyybivkg8"]
+[gd_scene load_steps=26 format=4 uid="uid://dmdnbyybivkg8"]
 
 [ext_resource type="Script" uid="uid://bs0xh2dwl66xh" path="res://scripts/basic/level.gd" id="1_4ab0e"]
 [ext_resource type="Texture2D" uid="uid://bqjgd2pfk3132" path="res://Asset/Tilemap/dark city.jpg" id="2_c8ctg"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cmqdxqnk6dfss" path="res://Asset/Tilemap/Platformer  Village/sprites/tree.png" id="15_475l0"]
 [ext_resource type="Texture2D" uid="uid://b4loh1vujo5jc" path="res://Asset/Tilemap/Platformer  Village/sprites/woman tomb.png" id="16_xp3ar"]
 [ext_resource type="Texture2D" uid="uid://bq0uemdsvl0ms" path="res://Asset/Tilemap/Platformer  Village/sprites/tomb.png" id="17_suqb0"]
+[ext_resource type="PackedScene" uid="uid://dt8b3nc11ih7y" path="res://scenes/Characters/enemys/samurai_smp.tscn" id="19_4ab0e"]
 [ext_resource type="PackedScene" uid="uid://oifxdol8021h" path="res://scenes/Characters/enemys/Wetlands.tscn" id="19_jyre1"]
 [ext_resource type="PackedScene" uid="uid://b8obwhi7c78ll" path="res://scenes/athers/box.tscn" id="20_475l0"]
 [ext_resource type="PackedScene" uid="uid://cnq7nwk4ut1hu" path="res://scenes/Characters/enemys/samurai_nap.tscn" id="20_lp2ca"]
@@ -489,6 +490,14 @@ position = Vector2(1472, 341)
 
 [node name="samurai nap4" parent="enemys/Samurai nap" instance=ExtResource("20_lp2ca")]
 position = Vector2(2441, 336)
+
+[node name="Samurai smp" type="Node2D" parent="enemys"]
+
+[node name="samurai smp" parent="enemys/Samurai smp" instance=ExtResource("19_4ab0e")]
+position = Vector2(905, 339)
+
+[node name="samurai smp2" parent="enemys/Samurai smp" instance=ExtResource("19_4ab0e")]
+position = Vector2(1595, 339)
 
 [node name="Golems_blue" type="Node2D" parent="enemys"]
 

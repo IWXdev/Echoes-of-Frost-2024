@@ -25,7 +25,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var attack_count = 0
 var combo_timer = 0.8
 var combo_active = false
+var is_dead : bool = false
 
+signal died
 
 func _ready() -> void:
 	max_health = health
@@ -64,7 +66,7 @@ func _physics_process(delta: float) -> void:
 # -----------------------------------
 func move():
 	if anim.current_animation == "attack":
-		return  # ما نحركوش أثناء الهجوم
+		return
 	
 	
 	direction = Input.get_axis("left", "right")
@@ -74,22 +76,14 @@ func move():
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
-# -----------------------------------
-# Push object
-# -----------------------------------
-
-# -----------------------------------
 # Jump
-# -----------------------------------
 func jump():
 	if stamina > 10 and Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_velocity
 		$jump.play()
 		stamina -= 10
 
-# -----------------------------------
 #Attack
-# -----------------------------------
 func Attack():
 	if stamina > 20 and Input.is_action_just_pressed("attack") and !attacking:
 		attack_count += 1
@@ -100,7 +94,7 @@ func Attack():
 			await get_tree().create_timer(combo_timer).timeout
 			combo_active = false
 
-			# إذا ماضغطش ثاني ضغطة، نصفر الكومبو
+			# if input ont double click 0 combat
 			if attack_count == 1:
 				attack_count = 0
 				return
@@ -108,6 +102,10 @@ func Attack():
 		elif attack_count == 2 and combo_active:
 			start_attack2()
 			attack_count = 0
+
+func get_head_position() -> Vector2:
+	# ⬅️ +50 بكسل للأعلى (لإظهار النص فوق الشخصية)
+	return global_position + Vector2(0, -12)
 
 func start_attack1():
 	attacking = true
@@ -125,36 +123,26 @@ func start_attack2():
 	await anim.animation_finished
 	attacking = false
 
-# -----------------------------------
 # hit player
-# -----------------------------------
 func hit(amount: int):
 	anim.play("hit")
 	if health <= 0:
 		return # اللاعب ميت بالفعل
 	health -= amount
 
-	if health <= 0:
+	if health <= 0 and not is_dead:
 		die()
 
-# -----------------------------------
 # Dead
-# -----------------------------------
 func die():
+	is_dead = true
 	anim.play("dead")
+	set_process_input(false)
 	set_physics_process(false)
 	await anim.animation_finished
-	var game_node = get_tree().root.get_node("Game")
-	if game_node:
-		# ✅ الآن يمكننا المناداة بأمان
-		game_node.load_level1()
-		set_physics_process(true)
-	else:
-		print("ERROR: Could not find 'Game' node! Check Main Scene setting.")
+	died.emit()
 
-# -----------------------------------
 # Check wall
-# -----------------------------------
 func check_wall():
 	on_wall = false
 	wall_dir = 0
@@ -173,9 +161,8 @@ func check_wall():
 			on_wall = true
 			wall_dir = direction
 
-# -----------------------------------
+
 # the animations
-# -----------------------------------
 func animation():
 	if health <= 0:
 		return
@@ -195,9 +182,7 @@ func animation():
 	else:
 		anim.play("idle")
 
-# -----------------------------------
 # Animation finished
-# -----------------------------------
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name in ["attack1", "attack2"]:
 		attacking = false

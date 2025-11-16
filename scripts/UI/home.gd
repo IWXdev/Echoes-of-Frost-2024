@@ -1,44 +1,69 @@
 extends Control
 
-# ✅ متغير محلي لتفادي الضغطات المتعددة
 var is_menu_busy: bool = false
 @onready var continue_button = $VBoxContainer/Continue
 @onready var player_name_label = $PlayerNameLabel
+@onready var load_status_label = $LoadStatusLabel
 var has_save = GlobalSettings.has_saved_game()
 
 func _ready() -> void:
 	$AnimationPlayer.play("star")
 	if has_save:
 		continue_button.show()
+		load_status_label.text = "  Data uploaded successfully !  " # ⬅️ رسالة التأكيد
+		animate_load_status(load_status_label) # ⬅️ تشغيل الحركة
 	else:
+		load_status_label.hide()
 		continue_button.hide()
 	display_player_name()
 	if not has_save and GlobalSettings.player_name == "":
-		call_deferred("show_name_popup") # تأجيل الظهور حتى يتم تحميل كل شيء
+		call_deferred("show_name_popup") #awite show
+
+func animate_load_status(label: Label):
+	# 1. إظهار الـ Label بوضوح
+	label.modulate.a = 1.0 
+	label.position.y -= 0 # ⬅️ نبدأ من أعلى قليلاً
+	
+	var tween = create_tween()
+	
+	# 2. المرحلة 1: النزول إلى الموقع الأصلي (بسرعة)
+	tween.tween_property(label, "position", label.position + Vector2(0, 35), 1.5) \
+		.set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_OUT)
+		
+	# 3. المرحلة 2: الانتظار لمدة ثانية واحدة
+	tween.tween_interval(1.5)
+	
+	# 4. المرحلة 3: الاختفاء التدريجي (Fade out) أثناء الصعود قليلاً
+	tween.tween_property(label, "modulate:a", 0.0, 0.7)
+	tween.tween_property(label, "position:y", label.position.y - 25, 1) # ⬅️ صعود طفيف أثناء الاختفاء
+	
+	# 5. تنظيف الـ Label بعد انتهاء الحركة
+	await tween.finished
+	label.hide() # إخفاء الـ Label
 
 func display_player_name():
-	# ⬅️ عرض الاسم المحفوظ
+	# load the save name
 	player_name_label.text = GlobalSettings.player_name
 
 func show_name_popup():
-	# ⬅️ تحميل مشهد النافذة (تأكد من المسار)
+	# load scene window
 	var popup_scene = load("res://scenes/UI/player_name_popup.tscn")
 	var popup = popup_scene.instantiate()
 	add_child(popup)
 	
-	# ⬅️ ربط الإشارة لي كترجع لينا الاسم
+	#connect the signal
 	popup.name_entered.connect(Callable(self, "_on_name_entered"))
 
 
 func _on_name_entered(player_name_input):
-	# ⬅️ يتم المناداة على هاد الدالة ملي اللاعب يدخل الاسم
+	# if player enetr name
 	GlobalSettings.player_name = player_name_input
-	GlobalSettings.save_settings() # ⬅️ ضروري نحفظو الاسم الجديد
-	display_player_name() # ⬅️ تحديث الاسم في Home
-	# 💡 الكود الجديد: طلب تحديث الـ HUD
+	GlobalSettings.save_settings() # save new name
+	display_player_name() # update name ==> home
+	# update name ==> HUD
 	var hud_node = get_tree().root.get_node_or_null("res://scenes/UI/hud.tscn")
 	if hud_node:
-		hud_node.update_player_name() # ⬅️ المناداة على دالة التحديث في HUD.gd
+		hud_node.update_player_name() # call the fund update HUD.gd
 
 func _on_timer_timeout() -> void:
 	$AnimationPlayer.play("star")
@@ -46,7 +71,6 @@ func _on_timer_timeout() -> void:
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "star":
 		$Timer.start()
-	# ✅ إذا كان عندك أنيميشن ديال 'setting_out' خصك هنا ترجع is_menu_busy لـ false
 
 func _on_play_pressed() -> void:
 	if not is_menu_busy:
@@ -58,12 +82,11 @@ func _on_play_pressed() -> void:
 			var game_node = get_tree().root.get_node("Game")
 		
 			if GlobalSettings.has_saved_game():
-				var dir = DirAccess.open("user://") # ⬅️ الوصول لمجلد المستخدم
+				var dir = DirAccess.open("user://") # open user folder
 				if dir:
 					dir.remove("savegame.json")
 	
 			if game_node:
-				# ✅ الآن يمكننا المناداة بأمان
 				game_node.load_level1()
 			else:
 				print("ERROR: Could not find 'Game' node! Check Main Scene setting.")
@@ -78,7 +101,7 @@ func _on_continue_pressed() -> void:
 func _on_settings_pressed() -> void:
 	if not is_menu_busy:
 		$Settings.visible = true
-		is_menu_busy = true # سدينا القائمة
+		is_menu_busy = true
 
 func _on_about_pressed() -> void:
 	if not is_menu_busy:
@@ -95,19 +118,19 @@ func _on_yes_pressed() -> void:
 
 func _on_no_pressed() -> void:
 	$go_out.visible = false
-	is_menu_busy = false # حلينا القائمة
+	is_menu_busy = false
 
 
 func _on_warning_yes_pressed() -> void:
 	var game_node = get_tree().root.get_node("Game")
 	
 	if GlobalSettings.has_saved_game():
-		var dir = DirAccess.open("user://") # ⬅️ الوصول لمجلد المستخدم
+		var dir = DirAccess.open("user://") # open user folder
 		if dir:
+			# delet the save data
 			dir.remove("savegame.json")
 	
 	if game_node:
-		# ✅ الآن يمكننا المناداة بأمان
 		game_node.load_level1()
 	else:
 		print("ERROR: Could not find 'Game' node! Check Main Scene setting.")

@@ -536,6 +536,7 @@ position = Vector2(302, 280)
 collision_mask = 6
 floor_block_on_wall = false
 script = ExtResource("1_t4a7k")
+damage = 50.0
 metadata/_edit_vertical_guides_ = [52.0]
 
 [node name="PlayerCamera" type="Camera2D" parent="."]
@@ -595,7 +596,7 @@ stream = ExtResource("51_toumn")
 bus = &"SFX"
 
 [node name="run" type="AudioStreamPlayer2D" parent="."]
-visible = false
+position = Vector2(1, -12)
 pitch_scale = 1.1
 bus = &"SFX"
 

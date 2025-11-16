@@ -5,7 +5,6 @@
 
 [sub_resource type="Animation" id="Animation_ehvkk"]
 resource_name = "Intro"
-length = 8.0
 step = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false

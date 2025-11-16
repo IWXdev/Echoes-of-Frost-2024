@@ -8,13 +8,11 @@ func attack() -> void:
 	# نفعّل الاصطدام فقط لحظة الضربة
 	await get_tree().create_timer(0.5).timeout
 	attack_coll.disabled = false
+
 	await get_tree().create_timer(0.8).timeout
 	attack_coll.disabled = true
-	await get_tree().create_timer(1.1).timeout
-	attack_coll.disabled = false
-	await get_tree().create_timer(1.5).timeout
-	attack_coll.disabled = true
-	await get_tree().create_timer(2.0).timeout
+
+	await get_tree().create_timer(1.0).timeout
 	can_attack = true
 
 func hit(amount: int):

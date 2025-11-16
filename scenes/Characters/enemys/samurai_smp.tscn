@@ -1,0 +1,264 @@
+[gd_scene load_steps=54 format=3 uid="uid://dt8b3nc11ih7y"]
+
+[ext_resource type="Script" uid="uid://cvwxv4dg83k2m" path="res://scripts/enemys/samurai_smp.gd" id="1_4k08b"]
+[ext_resource type="PackedScene" uid="uid://cx2qv2hiapgk7" path="res://scenes/UI/healthbar.tscn" id="2_b3ld3"]
+[ext_resource type="Texture2D" uid="uid://bartiw6ngk0dv" path="res://Asset/SHADOW Series/samurai enemy 2/idle/idle0.png" id="3_4k08b"]
+[ext_resource type="Texture2D" uid="uid://sqapudgcqlc3" path="res://Asset/SHADOW Series/samurai enemy 2/attack/attack0.png" id="4_px8yd"]
+[ext_resource type="Texture2D" uid="uid://vwvu8l5tua7x" path="res://Asset/SHADOW Series/samurai enemy 2/attack/attack1.png" id="5_2eavy"]
+[ext_resource type="Texture2D" uid="uid://btc87or70v7vp" path="res://Asset/SHADOW Series/samurai enemy 2/attack/attack2.png" id="6_4ls5r"]
+[ext_resource type="Texture2D" uid="uid://c7rhdj7k40kjo" path="res://Asset/SHADOW Series/samurai enemy 2/attack/attack3.png" id="7_0m1as"]
+[ext_resource type="Texture2D" uid="uid://bdslk2xybvbv4" path="res://Asset/SHADOW Series/samurai enemy 2/attack/attack4.png" id="8_ollhw"]
+[ext_resource type="Texture2D" uid="uid://b3tnewl531viy" path="res://Asset/SHADOW Series/samurai enemy 2/attack/attack5.png" id="9_tf3hv"]
+[ext_resource type="Texture2D" uid="uid://yy8bi6hdsuni" path="res://Asset/SHADOW Series/samurai enemy 2/attack/attack6.png" id="10_sphqf"]
+[ext_resource type="Texture2D" uid="uid://b7wno8ds776uj" path="res://Asset/SHADOW Series/samurai enemy 2/attack/attack7.png" id="11_7etjx"]
+[ext_resource type="Texture2D" uid="uid://djpchpl5jrodd" path="res://Asset/SHADOW Series/samurai enemy 2/attack/attack8.png" id="12_ocgeg"]
+[ext_resource type="Texture2D" uid="uid://dcasg73agkl6" path="res://Asset/SHADOW Series/samurai enemy 2/attack/attack9.png" id="13_2bhpn"]
+[ext_resource type="Texture2D" uid="uid://dj6qpka26i6nu" path="res://Asset/SHADOW Series/samurai enemy 2/dead/daed0.png" id="14_4hyox"]
+[ext_resource type="Texture2D" uid="uid://4jng4uocb0o6" path="res://Asset/SHADOW Series/samurai enemy 2/dead/daed1.png" id="15_fye4v"]
+[ext_resource type="Texture2D" uid="uid://cx1wf2huitsxb" path="res://Asset/SHADOW Series/samurai enemy 2/dead/daed2.png" id="16_2l623"]
+[ext_resource type="Texture2D" uid="uid://dil5lcg7qsmmy" path="res://Asset/SHADOW Series/samurai enemy 2/dead/daed3.png" id="17_ypgtb"]
+[ext_resource type="Texture2D" uid="uid://dkub8hm0l8kw6" path="res://Asset/SHADOW Series/samurai enemy 2/dead/daed4.png" id="18_ayl06"]
+[ext_resource type="Texture2D" uid="uid://c8txpjkbpm5s2" path="res://Asset/SHADOW Series/samurai enemy 2/dead/daed5.png" id="19_nib4w"]
+[ext_resource type="Texture2D" uid="uid://dlgta0b7ougcj" path="res://Asset/SHADOW Series/samurai enemy 2/dead/daed6.png" id="20_b3ld3"]
+[ext_resource type="Texture2D" uid="uid://bdkvdn82fjqsv" path="res://Asset/SHADOW Series/samurai enemy 2/dead/daed7.png" id="21_dar5x"]
+[ext_resource type="Texture2D" uid="uid://ujih6byji3u8" path="res://Asset/SHADOW Series/samurai enemy 2/hit/hit0.png" id="22_cwmfk"]
+[ext_resource type="Texture2D" uid="uid://cids5wqhj4t8g" path="res://Asset/SHADOW Series/samurai enemy 2/hit/hit1.png" id="23_mufcy"]
+[ext_resource type="Texture2D" uid="uid://bxpu7bap7ekns" path="res://Asset/SHADOW Series/samurai enemy 2/idle/idle1.png" id="24_qcovr"]
+[ext_resource type="Texture2D" uid="uid://dlh3tn1hmd65v" path="res://Asset/SHADOW Series/samurai enemy 2/idle/idle2.png" id="25_b3g8t"]
+[ext_resource type="Texture2D" uid="uid://bdqm6q7qt0vwd" path="res://Asset/SHADOW Series/samurai enemy 2/idle/idle3.png" id="26_c0wv6"]
+[ext_resource type="Texture2D" uid="uid://bg7ln7silgfq1" path="res://Asset/SHADOW Series/samurai enemy 2/idle/idle4.png" id="27_ipuo6"]
+[ext_resource type="Texture2D" uid="uid://cbk3cm3qyc018" path="res://Asset/SHADOW Series/samurai enemy 2/idle/idle5.png" id="28_sgolc"]
+[ext_resource type="Texture2D" uid="uid://slvo4q8y7wva" path="res://Asset/SHADOW Series/samurai enemy 2/idle/idle6.png" id="29_gun3r"]
+[ext_resource type="Texture2D" uid="uid://d321c3kfgpm0g" path="res://Asset/SHADOW Series/samurai enemy 2/idle/idle7.png" id="30_ap3gu"]
+[ext_resource type="Texture2D" uid="uid://du5li7yp5ev8i" path="res://Asset/SHADOW Series/samurai enemy 2/idle/idle8.png" id="31_gqpkw"]
+[ext_resource type="Texture2D" uid="uid://w4rh22ncx8kx" path="res://Asset/SHADOW Series/samurai enemy 2/idle/idle9.png" id="32_p441e"]
+[ext_resource type="Texture2D" uid="uid://b3u3a5xftur1a" path="res://Asset/SHADOW Series/samurai enemy 2/idle/idle10.png" id="33_kerq0"]
+[ext_resource type="Texture2D" uid="uid://cf67xoo0ybyvx" path="res://Asset/SHADOW Series/samurai enemy 2/idle/idle11.png" id="34_nwt5h"]
+[ext_resource type="Texture2D" uid="uid://cqprgssm1pcga" path="res://Asset/SHADOW Series/samurai enemy 2/run/run0.png" id="35_gx6id"]
+[ext_resource type="Texture2D" uid="uid://bi1dmjh8dyo3" path="res://Asset/SHADOW Series/samurai enemy 2/run/run1.png" id="36_cxkcp"]
+[ext_resource type="Texture2D" uid="uid://vheeq5ddtiyy" path="res://Asset/SHADOW Series/samurai enemy 2/run/run2.png" id="37_syofd"]
+[ext_resource type="Texture2D" uid="uid://cid52v38l200s" path="res://Asset/SHADOW Series/samurai enemy 2/run/run3.png" id="38_rng6t"]
+[ext_resource type="Texture2D" uid="uid://bmdsiabtk47fw" path="res://Asset/SHADOW Series/samurai enemy 2/run/run4.png" id="39_sicxt"]
+[ext_resource type="Texture2D" uid="uid://cc64gc14jcspg" path="res://Asset/SHADOW Series/samurai enemy 2/run/run5.png" id="40_8pr7x"]
+[ext_resource type="Texture2D" uid="uid://cqgia6dikc6e2" path="res://Asset/SHADOW Series/samurai enemy 2/run/run6.png" id="41_200xd"]
+[ext_resource type="Texture2D" uid="uid://dmtbs2sctwjml" path="res://Asset/SHADOW Series/samurai enemy 2/run/run7.png" id="42_a4f61"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgl5c"]
+size = Vector2(14.000007, 27.428583)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhexh"]
+bg_color = Color(0.14902, 0.14902, 0.14902, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.86036956, 0.8603691, 0.8603692, 1)
+corner_radius_top_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ye0u0"]
+bg_color = Color(0.737389, 0, 0.0984616, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8047434, 0.8047423, 0.8047426, 1)
+corner_radius_top_left = 60
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v021y"]
+size = Vector2(93.75017, 73.42871)
+
+[sub_resource type="Animation" id="Animation_5iokk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_4k08b")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_2e3oh"]
+resource_name = "attack"
+length = 0.9
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_px8yd"), ExtResource("5_2eavy"), ExtResource("6_4ls5r"), ExtResource("7_0m1as"), ExtResource("8_ollhw"), ExtResource("9_tf3hv"), ExtResource("10_sphqf"), ExtResource("11_7etjx"), ExtResource("12_ocgeg"), ExtResource("13_2bhpn")]
+}
+
+[sub_resource type="Animation" id="Animation_taof5"]
+resource_name = "dead"
+length = 0.7
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("14_4hyox"), ExtResource("15_fye4v"), ExtResource("16_2l623"), ExtResource("17_ypgtb"), ExtResource("18_ayl06"), ExtResource("19_nib4w"), ExtResource("20_b3ld3"), ExtResource("21_dar5x")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_32wjw"]
+resource_name = "hit"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("22_cwmfk"), ExtResource("23_mufcy")]
+}
+
+[sub_resource type="Animation" id="Animation_joc3b"]
+resource_name = "idle"
+length = 1.1
+loop_mode = 1
+step = 0.07
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_4k08b"), ExtResource("24_qcovr"), ExtResource("25_b3g8t"), ExtResource("26_c0wv6"), ExtResource("27_ipuo6"), ExtResource("28_sgolc"), ExtResource("29_gun3r"), ExtResource("30_ap3gu"), ExtResource("31_gqpkw"), ExtResource("32_p441e"), ExtResource("33_kerq0"), ExtResource("34_nwt5h")]
+}
+
+[sub_resource type="Animation" id="Animation_rlqrv"]
+resource_name = "walk"
+length = 0.7
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Golmn:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("35_gx6id"), ExtResource("36_cxkcp"), ExtResource("37_syofd"), ExtResource("38_rng6t"), ExtResource("39_sicxt"), ExtResource("40_8pr7x"), ExtResource("41_200xd"), ExtResource("42_a4f61")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q4g20"]
+_data = {
+&"RESET": SubResource("Animation_5iokk"),
+&"attack": SubResource("Animation_2e3oh"),
+&"dead": SubResource("Animation_taof5"),
+&"hit": SubResource("Animation_32wjw"),
+&"idle": SubResource("Animation_joc3b"),
+&"walk": SubResource("Animation_rlqrv")
+}
+
+[node name="samurai smp" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_4k08b")
+detection_range = 180.0
+attack_range = 30.0
+damage = 15.0
+xp_value = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_wgl5c")
+
+[node name="healthbar" parent="." instance=ExtResource("2_b3ld3")]
+anchors_preset = 5
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_left = -13.0
+offset_top = -16.000002
+offset_right = 58.0
+offset_bottom = -12.000002
+grow_vertical = 1
+scale = Vector2(0.40158173, 0.5221129)
+theme_override_styles/background = SubResource("StyleBoxFlat_xhexh")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ye0u0")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Golmn" type="Sprite2D" parent="Marker2D"]
+texture_filter = 1
+position = Vector2(9, -10)
+texture = ExtResource("3_4k08b")
+
+[node name="Area2D" type="Area2D" parent="Marker2D/Golmn"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/Golmn/Area2D"]
+visible = false
+light_mask = 2
+position = Vector2(11.562504, 5.6428585)
+scale = Vector2(0.499999, 0.499999)
+shape = SubResource("RectangleShape2D_v021y")
+debug_color = Color(0.99390334, 0, 0.23754907, 0.41960785)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_q4g20")
+}
+
+[node name="attack" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+
+[node name="walk" type="AudioStreamPlayer2D" parent="."]
+pitch_scale = 1.2
+bus = &"SFX"
+
+[connection signal="body_entered" from="Marker2D/Golmn/Area2D" to="." method="_on_area_2d_body_entered"]

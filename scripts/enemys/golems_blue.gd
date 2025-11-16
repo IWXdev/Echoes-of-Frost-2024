@@ -6,7 +6,7 @@ func attack() -> void:
 	can_attack = false
 	$attack.play()
 	anim.play("attack")
-	# نفعّل الاصطدام فقط لحظة الضربة
+	# activate the collision at the moment of attack
 	await get_tree().create_timer(0.65).timeout
 	attack_coll.disabled = false
 
@@ -18,24 +18,24 @@ func attack() -> void:
 
 func hit(amount: int):
 	if health <= 0:
-		return # اللاعب ميت بالفعل
+		return # the player ready death
 	
 	health -= amount
 	healthbar.value = health
 	anim.play("hit")
-	# 2. تحميل مشهد رقم الضرر
+	# Load Damage number 
 	const DAMAGE_NUMBER_SCENE = preload("res://scenes/athers/damage_number.tscn")
 
-# 3. إنشاء نسخة من المشهد
+# create copy scene
 	var damage_instance = DAMAGE_NUMBER_SCENE.instantiate()
 
-# 4. إضافة النسخة إلى المشهد الرئيسي (أو المشهد الذي يتواجد فيه العدو)
+#add copy to enemy scene
 	get_parent().add_child(damage_instance)
 
-# 5. ضبط موقع الرقم ليكون فوق العدو
-	damage_instance.global_position = self.global_position + Vector2(0, -70) # -50 ليكون فوق العدو قليلاً
+# Number position 
+	damage_instance.global_position = self.global_position + Vector2(0, -70)
 
-# 6. تمرير قيمة الضرر وتشغيل الحركة
-	damage_instance.setup_damage(amount, false) # false لعدم وجود ضربة حرجة كمثال
+# damage value
+	damage_instance.setup_damage(amount, false) # false if critcale 
 	if health <= 0:
 		die()
