@@ -6,6 +6,8 @@ extends Node
 @onready var player = $samourai
 @onready var hud_node = $HUD
 @onready var splash_screen = $splash
+var saved_game_data: Dictionary = {}
+
 func _ready():
 	if player:
 		player.hide()
@@ -14,11 +16,9 @@ func _ready():
 		hud_node.hide()
 	# التحقق من وجود النودز قبل ربط الإشارة
 	if loading_screen and is_instance_valid(loading_screen):
-		
-		# 💡 يجب ربط الإشارة هنا! 
-		# (إذا كنت غتربطها بالكود، وإلا يجب ربطها يدوياً في المحرك)
 		if not loading_screen.scene_loaded.is_connected(_on_scene_loaded):
 			loading_screen.scene_loaded.connect(_on_scene_loaded)
+		
 		if splash_screen and is_instance_valid(splash_screen):
 			splash_screen.splash_finished.connect(_on_splash_finished)
 #		load_home()
@@ -55,6 +55,18 @@ func load_level1():
 	else:
 		print("scene not laoding")
 
+func load_saved_game():
+	
+	saved_game_data = GlobalSettings.load_game() # ⬅️ تخزين البيانات هنا
+	var level_path = saved_game_data.game.current_level if saved_game_data.has("game") else "res://scenes/UI/home.tscn"
+
+	if player: player.show()
+
+	if loading_screen and is_instance_valid(loading_screen):
+		loading_screen.start_loading(level_path) 
+	else:
+		print("CRITICAL ERROR: Loading Screen not ready for saved game load.")
+
 func _on_splash_finished():
 	# 💡 هذا الكود يتم تنفيذه بعد انتهاء الرسوم المتحركة للشعار
 	load_home()
@@ -64,8 +76,21 @@ func _on_scene_loaded(scene: PackedScene):
 	clear_level()
 	var new_scene = scene.instantiate()
 	current_level.add_child(new_scene)
+	if not saved_game_data.is_empty():
+		# ✅ تطبيق بيانات الحفظ وتغيير الموقع
+		var data = saved_game_data.player
+		player.health = data.health
+		player.stamina = data.stamina
+		player.global_position = Vector2(data.pos_x, data.pos_y)
+		
+		# ⚠️ تنظيف الـ Flag (ضروري)
+		saved_game_data = {} 
+	
+		# ✅ تفعيل الكاميرا والـ HUD
+		player.player_camera.enabled = true
+		hud_node.show()
 	# 💡 الخطوة الجديدة: تحديد مكان Player
-	if player.visible: # إذا كان اللاعب ظاهر (يعني رآه Level)
+	elif player.visible: # إذا كان اللاعب ظاهر (يعني رآه Level)
 		set_player_spawn(new_scene) # ندوزو المشهد الجديد باش نلقاو فيه Spawn Point 
 		if player.player_camera:
 			player.player_camera.enabled = true 

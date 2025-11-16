@@ -96,14 +96,14 @@ func init_settings_values():
 
 
 func _on_back_home_pressed() -> void:
-	$"../AnimationPlayer".play("setting_out")
+	$".".visible = false
 	$"..".is_menu_busy = false
 
 
 func _on_apply_home_pressed() -> void:
 	# 💡 حفظ كل التغييرات بشكل نهائي
 	GlobalSettings.save_settings()
-	$"../AnimationPlayer".play("setting_out")
+	$".".visible = false
 	$"..".is_menu_busy = false
 	print("Settings Applied and Saved!")
 

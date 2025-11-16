@@ -540,13 +540,15 @@ metadata/_edit_vertical_guides_ = [52.0]
 
 [node name="PlayerCamera" type="Camera2D" parent="."]
 position = Vector2(0, -15)
-zoom = Vector2(5, 5)
+zoom = Vector2(7, 7)
 limit_left = 0
 limit_top = 107
 limit_right = 3490
 limit_bottom = 700
 position_smoothing_enabled = true
+position_smoothing_speed = 3.5
 rotation_smoothing_enabled = true
+rotation_smoothing_speed = 8.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 2)

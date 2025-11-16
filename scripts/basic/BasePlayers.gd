@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
-@export var health : float = 100
-@export var stamina: float = 100
+@export var max_health: float = 100
+@export var max_stamina: float = 100.0
+var health : float = 100
+var stamina: float = 100
 @export var speed: float = 100
 @export var jump_velocity: float = -300
 @export var damage: float = 20.0
@@ -15,8 +17,6 @@ extends CharacterBody2D
 var wall_dir = 0 
 var on_wall = false
 
-var max_health: float = 100
-var max_stamina: float = 100.0
 
 var direction: float
 var attacking = false
@@ -144,7 +144,13 @@ func die():
 	anim.play("dead")
 	set_physics_process(false)
 	await anim.animation_finished
-	get_tree().reload_current_scene()
+	var game_node = get_tree().root.get_node("Game")
+	if game_node:
+		# ✅ الآن يمكننا المناداة بأمان
+		game_node.load_level1()
+		set_physics_process(true)
+	else:
+		print("ERROR: Could not find 'Game' node! Check Main Scene setting.")
 
 # -----------------------------------
 # Check wall
@@ -199,6 +205,3 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy") and body.has_method("hit"):
 		body.hit(damage)
-		print("enemy entred the area")
-	else:
-		print("enemy not ontred the area")

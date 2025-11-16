@@ -1,0 +1,162 @@
+[gd_scene load_steps=12 format=3 uid="uid://cggn8dc3xncbc"]
+
+[ext_resource type="Script" uid="uid://7vqgb0g6yng6" path="res://scripts/UI/player_name_popup.gd" id="1_gv3ap"]
+[ext_resource type="FontFile" uid="uid://ds2q7k08drb8x" path="res://Asset/font/dash/Dash-Horizon-Demo.otf" id="1_k4mk5"]
+[ext_resource type="Texture2D" uid="uid://dvqlotkxq1xyg" path="res://Asset/icon/LINK/icons8-select-cursor-28 (1).png" id="2_88fqc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k4mk5"]
+bg_color = Color(0.01, 0.01, 0.01, 0.36078432)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_det78"]
+bg_color = Color(0, 0, 0, 0.11764706)
+border_width_left = 1
+border_width_top = 3
+border_width_right = 1
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_bottom_right = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88fqc"]
+bg_color = Color(0, 0, 0, 0.5254902)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(0.55295557, 0.5529556, 0.5529553, 1)
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxqav"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gv3ap"]
+bg_color = Color(0.13, 0.13, 0.13, 0.23137255)
+border_width_left = 1
+border_width_top = 2
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_bottom_right = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pup84"]
+bg_color = Color(0.051970966, 0.05197096, 0.05197095, 0.5529412)
+border_width_left = 1
+border_width_top = 2
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_bottom_right = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bhdav"]
+bg_color = Color(0.23753911, 0.23753914, 0.23753911, 0.5529412)
+border_width_left = 2
+border_width_top = 1
+border_width_right = 2
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_bottom_right = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yd8h7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="PlayerNamePopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gv3ap")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.287
+anchor_top = 0.31800002
+anchor_right = 0.71300006
+anchor_bottom = 0.68200004
+offset_left = -0.039978027
+offset_top = 0.05996704
+offset_right = 0.039916992
+offset_bottom = -0.060058594
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_k4mk5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.033
+anchor_top = 0.040000003
+anchor_right = 0.9710001
+anchor_bottom = 0.943
+offset_left = 0.21999931
+offset_top = 0.11999893
+offset_right = 0.13995361
+offset_bottom = -0.071014404
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 21
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_k4mk5")
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxFlat_det78")
+text = "Enter your name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NameLineEdit" type="LineEdit" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_88fqc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_oxqav")
+placeholder_text = "enter name..."
+alignment = 1
+max_length = 10
+right_icon = ExtResource("2_88fqc")
+
+[node name="ConfirmButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39400002
+anchor_top = 0.67600006
+anchor_right = 0.606
+anchor_bottom = 0.757
+offset_left = -0.2920227
+offset_top = 0.3319702
+offset_right = 0.2919922
+offset_bottom = -0.5010071
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_k4mk5")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_gv3ap")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pup84")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bhdav")
+theme_override_styles/focus = SubResource("StyleBoxFlat_yd8h7")
+text = "OK"
+
+[connection signal="text_submitted" from="Panel/VBoxContainer/NameLineEdit" to="." method="_on_name_line_edit_text_submitted"]
+[connection signal="pressed" from="Panel/ConfirmButton" to="." method="_on_confirm_button_pressed"]

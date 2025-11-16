@@ -51,10 +51,9 @@ func _on_item_selected(id: int):
 		0: 
 			Setting()
 		1: 
-			print("Game Saved!")
-			# 💡 هنا غادي تنادي على GlobalSettings.save_game() من بعد
+			call_save_game()
 		2: 
-			toggle_pause() # يقوم بعمل Resume
+			toggle_pause()
 		3: 
 			ExitConfirmation()
 
@@ -65,6 +64,14 @@ func Setting():
 func ExitConfirmation():
 	go_out_menu.visible = true
 
+func call_save_game():
+	var game_node = get_tree().root.get_node("Game")
+	if game_node:
+		var player_node = game_node.get_node("samourai") # ⬅️ نود Player ديالك
+		var current_path = game_node.current_level.get_child(0).scene_file_path # ⬅️ مسار المستوى الحالي
+		
+		GlobalSettings.save_game(player_node, current_path)
+		print("Game saved!")
 
 # ----------------------------------------------------
 # 🔹 دوال أزرار قوائم الخروج و الإعدادات

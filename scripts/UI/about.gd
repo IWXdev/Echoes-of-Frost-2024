@@ -1,7 +1,7 @@
 extends Control
 
 func _on_exit_pressed() -> void:
-	$"../AnimationPlayer".play("about_out")
+	$".".visible = false
 	$"..".is_menu_busy = false
 
 #link of my social acounte

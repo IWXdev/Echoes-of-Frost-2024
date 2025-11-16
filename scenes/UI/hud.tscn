@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://b5xpanusejoot"]
+[gd_scene load_steps=42 format=3 uid="uid://b5xpanusejoot"]
 
 [ext_resource type="FontFile" uid="uid://ds2q7k08drb8x" path="res://Asset/font/dash/Dash-Horizon-Demo.otf" id="1_k00v8"]
 [ext_resource type="Script" uid="uid://doo0ppmai3cb6" path="res://scripts/UI/hud.gd" id="1_t6axx"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bo5sy4tn7qda0" path="res://Asset/icon/LINK/icons8-exit-24.png" id="6_ggbtr"]
 [ext_resource type="Script" uid="uid://b1h36ytu5q7pj" path="res://scripts/UI/menu_button.gd" id="7_w414h"]
 [ext_resource type="PackedScene" uid="uid://cx2qv2hiapgk7" path="res://scenes/UI/healthbar.tscn" id="8_d15ok"]
+[ext_resource type="FontFile" uid="uid://bi4g4q5ofbr6a" path="res://Asset/font/gemstone/Gemstone.ttf" id="9_kj32l"]
 [ext_resource type="Texture2D" uid="uid://b2y5tqs4tkcn4" path="res://Asset/icon/LINK/icons8-play-60.png" id="10_syq1e"]
 [ext_resource type="Script" uid="uid://bgp1cuv77o3rm" path="res://scripts/UI/settings.gd" id="10_t6axx"]
 
@@ -392,6 +393,30 @@ popup/item_3/text = "EXIT"
 popup/item_3/icon = ExtResource("6_ggbtr")
 popup/item_3/id = 3
 script = ExtResource("7_w414h")
+
+[node name="PlayerNameLabel" type="Label" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021000002
+anchor_top = 0.039
+anchor_right = 0.164
+anchor_bottom = 0.076000005
+offset_left = 2.447998
+offset_top = -0.12000275
+offset_right = -0.16799927
+offset_bottom = -0.08000183
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.5294118)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.015686275)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.61960787)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("9_kj32l")
+theme_override_font_sizes/font_size = 40
+vertical_alignment = 1
 
 [node name="healthbar" parent="Control" instance=ExtResource("8_d15ok")]
 layout_mode = 1

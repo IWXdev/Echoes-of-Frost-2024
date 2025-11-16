@@ -1,9 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://c1mhpkr81bh5q"]
+[gd_scene load_steps=23 format=3 uid="uid://c1mhpkr81bh5q"]
 
 [ext_resource type="Script" uid="uid://ikfqga1tmvtb" path="res://scripts/UI/home.gd" id="1_4nfyx"]
 [ext_resource type="FontFile" uid="uid://ds2q7k08drb8x" path="res://Asset/font/dash/Dash-Horizon-Demo.otf" id="2_lw7wx"]
 [ext_resource type="FontFile" uid="uid://dh2vb5h8q0xdn" path="res://Asset/font/paladins-font/PaladinsLaser-KVdRZ.otf" id="3_pvykf"]
 [ext_resource type="PackedScene" uid="uid://bun0rf6prausr" path="res://scenes/UI/settings.tscn" id="4_3iw5y"]
+[ext_resource type="FontFile" uid="uid://dj850dihykvod" path="res://Asset/font/paladins-font/PaladinsCondensed-YqELy.otf" id="4_lw7wx"]
 [ext_resource type="PackedScene" uid="uid://dbamoyflfyor4" path="res://scenes/UI/about.tscn" id="5_ptm1h"]
 [ext_resource type="Texture2D" uid="uid://45884v3yq24q" path="res://Asset/icon/effects/toppng.com-shooting-star-no-background-401x163.png" id="6_f4sm3"]
 [ext_resource type="PackedScene" uid="uid://cuai1cmp07o1k" path="res://scenes/UI/gpu_particles_2d.tscn" id="8_jexk8"]
@@ -25,6 +26,8 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 40
+corner_radius_bottom_right = 40
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vc333"]
 bg_color = Color(0.18425646, 0.20476055, 0.37713018, 1)
@@ -33,6 +36,8 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 40
+corner_radius_bottom_right = 40
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hhep5"]
 bg_color = Color(0.40058154, 0.43755722, 0.70153606, 1)
@@ -42,6 +47,11 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.74978, 0.7497801, 0.74977976, 1)
+corner_radius_top_left = 40
+corner_radius_bottom_right = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1evo"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmjdo"]
 bg_color = Color(0, 0, 0, 0.6745098)
@@ -109,168 +119,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(-209.91608, -52.829834)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("home/Settings:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("home/Settings:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(256, 656)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("home/about:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("home/about:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(256, 656)]
-}
-
-[sub_resource type="Animation" id="Animation_vc333"]
-resource_name = "about_in"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("home/about:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("home/about:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.05, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(256, 656), Vector2(256, 2)]
-}
-
-[sub_resource type="Animation" id="Animation_hhep5"]
-resource_name = "about_out"
-length = 0.5
-step = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("home/about:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.06666667, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("home/about:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.06666667, 0.495),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(256, 2), Vector2(256, 656)]
-}
-
-[sub_resource type="Animation" id="Animation_mahjx"]
-resource_name = "setting_in"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("home/Settings:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("home/Settings:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.05, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(256, 656), Vector2(256, 2)]
-}
-
-[sub_resource type="Animation" id="Animation_4fycn"]
-resource_name = "setting_out"
-length = 0.5
-step = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("home/Settings:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.06666667, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("home/Settings:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.06666667, 0.495),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(256, 2), Vector2(256, 656)]
-}
 
 [sub_resource type="Animation" id="Animation_reixx"]
 resource_name = "star"
@@ -292,10 +140,6 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yxilm"]
 _data = {
 &"RESET": SubResource("Animation_uhids"),
-&"about_in": SubResource("Animation_vc333"),
-&"about_out": SubResource("Animation_hhep5"),
-&"setting_in": SubResource("Animation_mahjx"),
-&"setting_out": SubResource("Animation_4fycn"),
 &"star": SubResource("Animation_reixx")
 }
 
@@ -344,14 +188,14 @@ texture = SubResource("GradientTexture2D_mahjx")
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.81200004
+anchor_left = 0.711
 anchor_top = 0.13900001
 anchor_right = 0.952
 anchor_bottom = 0.57100004
-offset_left = -0.42407227
+offset_left = -0.11999512
 offset_top = -0.072006226
 offset_right = 0.2960205
-offset_bottom = -0.008026123
+offset_bottom = -0.008056641
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_constants/separation = 30
@@ -367,6 +211,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_4fycn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vc333")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hhep5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_h1evo")
 text = "Play"
 
 [node name="Continue" type="Button" parent="VBoxContainer"]
@@ -380,6 +225,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_4fycn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vc333")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hhep5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_h1evo")
 text = "Continue"
 
 [node name="about" type="Button" parent="VBoxContainer"]
@@ -393,6 +239,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_4fycn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vc333")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hhep5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_h1evo")
 text = "About"
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
@@ -406,6 +253,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_4fycn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vc333")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hhep5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_h1evo")
 text = "Settings"
 
 [node name="exit" type="Button" parent="VBoxContainer"]
@@ -419,20 +267,21 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_4fycn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vc333")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hhep5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_h1evo")
 text = "Exit"
 
 [node name="tea" type="Label" parent="."]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.027
+anchor_left = 0.031000001
 anchor_top = 0.09
-anchor_right = 0.69500005
+anchor_right = 0.47400004
 anchor_bottom = 0.47800002
-offset_left = -0.10400009
-offset_top = -0.3200035
-offset_right = 0.35992432
-offset_bottom = 0.25598145
+offset_left = -0.5200043
+offset_top = -0.20000458
+offset_right = 0.9199219
+offset_bottom = 0.37597656
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.5019608, 0.54509807, 0.79607844, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.015686275)
@@ -442,26 +291,50 @@ theme_override_constants/shadow_offset_y = 10
 theme_override_constants/outline_size = 8
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("3_pvykf")
-theme_override_font_sizes/font_size = 82
+theme_override_font_sizes/font_size = 100
 text = "Echoes
          of
          frost"
 
+[node name="PlayerNameLabel" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.652
+anchor_top = 0.081
+anchor_right = 0.95100003
+anchor_bottom = 0.12900001
+offset_left = 0.57592773
+offset_top = 0.51999664
+offset_right = 0.2878418
+offset_bottom = -0.32000732
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.5019608, 0.54509807, 0.79607844, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.015686275)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("4_lw7wx")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 2
+
 [node name="Settings" parent="." instance=ExtResource("4_3iw5y")]
 visible = false
 layout_mode = 1
-offset_left = -170.24002
-offset_top = 656.0
-offset_right = -170.75195
-offset_bottom = 656.0049
+anchor_left = 0.246
+anchor_right = 0.71900004
+offset_left = -0.32000732
+offset_right = -0.48010254
 
 [node name="about" parent="." instance=ExtResource("5_ptm1h")]
 visible = false
 layout_mode = 1
-offset_left = -170.24002
-offset_top = 656.0
-offset_right = -170.23999
-offset_bottom = 656.00195
+anchor_left = 0.246
+anchor_right = 0.721
+offset_left = -0.32000732
+offset_right = -4.3200684
 
 [node name="star" type="Sprite2D" parent="."]
 position = Vector2(-209.91608, -52.829834)
@@ -543,6 +416,103 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ip4d6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gi00y")
 text = "NO"
 
+[node name="warning" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.333
+anchor_top = 0.38300002
+anchor_right = 0.611
+anchor_bottom = 0.57600003
+offset_left = 0.3840027
+offset_top = -0.18400574
+offset_right = 0.12799072
+offset_bottom = -0.24801636
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cmjdo")
+
+[node name="name win" type="Label" parent="warning"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42600003
+anchor_top = 0.055000003
+anchor_right = 0.572
+anchor_bottom = 0.171
+offset_left = -0.01675415
+offset_top = 0.08332348
+offset_right = 0.091674805
+offset_bottom = -0.08829498
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_lw7wx")
+theme_override_font_sizes/font_size = 23
+text = "WARNING"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="warning"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11100001
+anchor_top = 0.291
+anchor_right = 0.90900004
+anchor_bottom = 0.439
+offset_left = -0.18162918
+offset_top = -0.093429565
+offset_right = 0.08215332
+offset_bottom = 0.06691742
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_lw7wx")
+theme_override_font_sizes/font_size = 23
+text = "Are you sure you want a new start you have a save ?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="warning_yes" type="Button" parent="warning"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.64000005
+anchor_right = 0.397
+anchor_bottom = 0.91200006
+offset_right = -0.040008545
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_lw7wx")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_yu5fn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ip4d6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gi00y")
+text = "YES"
+
+[node name="warning_no" type="Button" parent="warning"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6
+anchor_top = 0.64000005
+anchor_right = 0.80600005
+anchor_bottom = 0.91200006
+offset_right = 0.07998657
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_lw7wx")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_yu5fn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ip4d6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gi00y")
+text = "NO"
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
 
@@ -551,6 +521,7 @@ root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_yxilm")
 }
+autoplay = "star"
 
 [node name="GPUParticles2D" parent="." instance=ExtResource("8_jexk8")]
 position = Vector2(579, 496)
@@ -558,11 +529,14 @@ amount = 900
 process_material = SubResource("ParticleProcessMaterial_cmjdo")
 
 [connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/about" to="." method="_on_about_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="mouse_entered" from="VBoxContainer/exit" to="." method="_on_exit_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="go_out/yes" to="." method="_on_yes_pressed"]
 [connection signal="pressed" from="go_out/no" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="warning/warning_yes" to="." method="_on_warning_yes_pressed"]
+[connection signal="pressed" from="warning/warning_no" to="." method="_on_warning_no_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

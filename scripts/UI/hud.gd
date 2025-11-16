@@ -6,6 +6,7 @@ extends Control # ⬅️ التصحيح هو أننا نرجعوها Control
 @onready var health_bar = $healthbar 
 @onready var stamina_bar = $stamina
 @onready var red_overlay = $damag_player
+@onready var player_name_hud_label = $PlayerNameLabel
 var current_pulse_tween: Tween = null
 
 var player_node: Node = null 
@@ -23,6 +24,8 @@ func _ready():
 	
 	red_overlay.modulate.a = 0.0
 	
+	update_player_name()
+	
 	if player_node:
 		# إعداد الـ Bars الأولية
 		health_bar.max_value = player_node.max_health 
@@ -32,6 +35,8 @@ func _ready():
 		health_bar.hide()
 		stamina_bar.hide()
 
+func update_player_name():
+	player_name_hud_label.text = GlobalSettings.player_name
 
 func _process(_delta):
 	# تحديث الـ Bars في كل إطار

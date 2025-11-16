@@ -4,6 +4,8 @@ extends Node
 # ----------------------------------------------------
 # 📌 المتغيرات (الحالة العامة)
 # ----------------------------------------------------
+# 📌 Player Info
+var player_name: String = ""
 
 # Audio
 var master_volume: float = 1.0 
@@ -27,7 +29,8 @@ const RESOLUTIONS = [
 ]
 
 # 📦 مسار الحفظ
-const SAVE_PATH = "user://game_settings.cfg"
+const SETTING_SAVE_PATH = "user://game_settings.json"
+const GAME_SAVE_PATH = "user://savegame.json"
 
 
 func _ready():
@@ -41,9 +44,10 @@ func _ready():
 
 func load_settings():
 	var config = ConfigFile.new()
-	var err = config.load(SAVE_PATH)
+	var err = config.load(SETTING_SAVE_PATH)
 	
 	if err == OK:
+		player_name = config.get_value("player_info", "name", "player")
 		# Audio
 		master_volume = config.get_value("audio", "master_volume", 1.0)
 		music_volume = config.get_value("audio", "music_volume", 1.0)
@@ -62,9 +66,10 @@ func load_settings():
 	apply_graphics_settings()
 
 
+
 func save_settings():
 	var config = ConfigFile.new()
-	
+	config.set_value("player_info", "name", player_name)
 	# Audio
 	config.set_value("audio", "master_volume", master_volume)
 	config.set_value("audio", "music_volume", music_volume)
@@ -78,8 +83,73 @@ func save_settings():
 	config.set_value("graphics", "vsync", vsync_enabled)
 	config.set_value("graphics", "resolution_index", current_resolution_index)
 	
-	config.save(SAVE_PATH)
+	config.save(SETTING_SAVE_PATH)
 
+# ----------------------------------------------------
+# 💾 دوال حفظ حالة اللعب (JSON)
+# ----------------------------------------------------
+
+func save_game(player_node: Node, level_scene_path: String):
+	# 1. تجميع البيانات في Dictionary
+	var save_data = {
+		"player": {
+			"health": player_node.health,
+			"stamina": player_node.stamina,
+			"pos_x": player_node.global_position.x,
+			"pos_y": player_node.global_position.y
+		},
+		"game": {
+			"current_level": level_scene_path
+		},
+		"player_info" : {
+			"name" = player_name
+		},
+		}
+	
+	# 2. تحويل الـ Dictionary إلى نص JSON
+	var json_string = JSON.stringify(save_data, "\t", true)
+	
+	# 3. كتابة النص في ملف
+	var file = FileAccess.open(GAME_SAVE_PATH, FileAccess.WRITE)
+	if file:
+		file.store_string(json_string)
+		print("Game saved successfully to JSON!")
+	else:
+		print("Error saving game: Could not open file.")
+
+
+func load_game() -> Dictionary:
+	var file = FileAccess.open(GAME_SAVE_PATH, FileAccess.READ)
+	
+	if file:
+		# 1. قراءة النص من الملف
+		var json_string = file.get_as_text()
+		
+		# 2. تحويل نص JSON إلى Dictionary
+		var parse_result = JSON.parse_string(json_string)
+		
+		if parse_result is Dictionary:
+			var config = parse_result
+			# 💡 تحميل اسم اللاعب مباشرة في المتغير العام
+			if config.has("player_info"):
+				player_name = config.player_info.name
+			print("Game data loaded successfully from JSON.")
+			return config
+		else:
+			print("Error parsing JSON data.")
+			return {}
+	else:
+		print("No saved game found.")
+		return {} # نرجعو Dictionary فارغة
+
+
+# ----------------------------------------------------
+# 💡 دالة Check File (للتأكد من وجود ملف الحفظ)
+# ----------------------------------------------------
+
+func has_saved_game() -> bool:
+	# نتحقق من وجود ملف الحفظ
+	return FileAccess.file_exists(GAME_SAVE_PATH)
 
 # ----------------------------------------------------
 # 🔊 دوال تطبيق الإعدادات (Apply Logic)

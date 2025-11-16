@@ -62,6 +62,24 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgl5c"]
 size = Vector2(14.000007, 27.428583)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhexh"]
+bg_color = Color(0.14902, 0.14902, 0.14902, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.86036956, 0.8603691, 0.8603692, 1)
+corner_radius_top_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ye0u0"]
+bg_color = Color(0.737389, 0, 0.0984616, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8047434, 0.8047423, 0.8047426, 1)
+corner_radius_top_left = 60
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v021y"]
 size = Vector2(91.75017, 52.857246)
 
@@ -78,6 +96,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("37_un3m1")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_2e3oh"]
@@ -112,6 +142,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("27_f2pkj"), ExtResource("28_2nmkk"), ExtResource("29_hmue7"), ExtResource("30_bun4t"), ExtResource("31_fixg0"), ExtResource("32_876oc"), ExtResource("33_csefm"), ExtResource("34_l7mvx")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_32wjw"]
@@ -176,24 +218,6 @@ _data = {
 &"walk": SubResource("Animation_rlqrv")
 }
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhexh"]
-bg_color = Color(0.14902, 0.14902, 0.14902, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.86036956, 0.8603691, 0.8603692, 1)
-corner_radius_top_left = 60
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ye0u0"]
-bg_color = Color(0.737389, 0, 0.0984616, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.8047434, 0.8047423, 0.8047426, 1)
-corner_radius_top_left = 60
-
 [node name="samurai nap" type="CharacterBody2D" groups=["enemy"]]
 collision_layer = 2
 collision_mask = 5
@@ -203,8 +227,22 @@ attack_range = 30.0
 damage = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 scale = Vector2(0.9999995, 0.9999995)
 shape = SubResource("RectangleShape2D_wgl5c")
+
+[node name="healthbar" parent="." instance=ExtResource("59_wn4j3")]
+anchors_preset = 5
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_left = -13.0
+offset_top = -16.000002
+offset_right = 58.0
+offset_bottom = -12.000002
+grow_vertical = 1
+scale = Vector2(0.40158173, 0.5221129)
+theme_override_styles/background = SubResource("StyleBoxFlat_xhexh")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ye0u0")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
@@ -230,18 +268,6 @@ debug_color = Color(0.99390334, 0, 0.23754907, 0.41960785)
 libraries = {
 &"": SubResource("AnimationLibrary_q4g20")
 }
-
-[node name="healthbar" parent="." instance=ExtResource("59_wn4j3")]
-anchors_preset = 5
-anchor_top = 0.0
-anchor_bottom = 0.0
-offset_left = -6.0
-offset_top = -43.0
-offset_right = 23.0
-offset_bottom = -40.0
-grow_vertical = 1
-theme_override_styles/background = SubResource("StyleBoxFlat_xhexh")
-theme_override_styles/fill = SubResource("StyleBoxFlat_ye0u0")
 
 [node name="attack" type="AudioStreamPlayer2D" parent="."]
 bus = &"SFX"
