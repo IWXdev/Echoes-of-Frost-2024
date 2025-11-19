@@ -1,7 +1,5 @@
 extends Control
 
-# 🔗 تعريف العناصر (بناءً على البنية ديالك: VB/TabC/...)
-# MASTER
 @onready var master_slider = $setting/VB/TabC/Audio/Master/name/HSlider
 @onready var master_mute_box = $setting/VB/TabC/Audio/Master/name/CheckBox
 
@@ -21,7 +19,6 @@ extends Control
 
 
 func _ready():
-	# 💡 يتم تحميل وعرض القيم الحالية عند الفتح
 	
 	# Audio Init
 	master_slider.value = GlobalSettings.master_volume
@@ -39,7 +36,7 @@ func _ready():
 	init_settings_values()
 
 # ----------------------------------------------------
-# 🔊 دوال التحكم في الصوت (يجب ربط HSlider/CheckBox بـ Signals)
+# (HSlider / CheckBox / Signals)
 # ----------------------------------------------------
 
 # Master Volume / Mute
@@ -65,7 +62,7 @@ func _on_sfx_check_box_toggled(toggled_on: bool) -> void:
 
 
 # ----------------------------------------------------
-# 🖥️ دوال التحكم في الجرافيكس
+# Graphiqe
 # ----------------------------------------------------
 
 func _on_brightness_slider_value_changed(value: float) -> void:
@@ -80,18 +77,14 @@ func _on_resolution_option_button_item_selected(index: int) -> void:
 
 
 func init_settings_values():
-	# 💡 يُنادى هذا عند فتح القائمة أو في _ready()
-	# 1. تحميل قيم الصوت
 	master_slider.value = GlobalSettings.master_volume
 	master_mute_box.button_pressed = GlobalSettings.master_muted
-	# ... (باقي قيم Music و SFX)
 	
-	# 2. تحميل قيم الجرافيكس
 	resolution_option.select(GlobalSettings.current_resolution_index)
 	vsync_toggle.button_pressed = GlobalSettings.vsync_enabled
 
 # ----------------------------------------------------
-# 💾 دوال الحفظ والخروج
+# SAVE FUNC
 # ----------------------------------------------------
 
 
@@ -101,7 +94,7 @@ func _on_back_home_pressed() -> void:
 
 
 func _on_apply_home_pressed() -> void:
-	# 💡 حفظ كل التغييرات بشكل نهائي
+	# save the changes
 	GlobalSettings.save_settings()
 	$".".visible = false
 	$"..".is_menu_busy = false

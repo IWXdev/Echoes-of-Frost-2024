@@ -1,0 +1,83 @@
+[gd_scene load_steps=15 format=3 uid="uid://ct2ni03i3x6hu"]
+
+[ext_resource type="Script" uid="uid://5aytlu5srkhu" path="res://scripts/world/health_orb.gd" id="1_c2e37"]
+[ext_resource type="Texture2D" uid="uid://11xgra0ofpdt" path="res://Asset/FireBall/Animation Pack/ice idle/iceidle0.png" id="1_sc2qs"]
+[ext_resource type="Texture2D" uid="uid://c2vcsduyasgib" path="res://Asset/FireBall/Animation Pack/ice idle/iceidle1.png" id="2_c2e37"]
+[ext_resource type="Texture2D" uid="uid://1hypgh53fxhf" path="res://Asset/FireBall/Animation Pack/ice idle/iceidle2.png" id="3_q20te"]
+[ext_resource type="Texture2D" uid="uid://bm2p67h4tqjtf" path="res://Asset/FireBall/Animation Pack/ice idle/iceidle3.png" id="4_glk5c"]
+[ext_resource type="Texture2D" uid="uid://dv2tlupigb7og" path="res://Asset/FireBall/Animation Pack/ice take/icetake0.png" id="5_8316p"]
+[ext_resource type="Texture2D" uid="uid://c3djfb8nu1dxh" path="res://Asset/FireBall/Animation Pack/ice take/icetake1.png" id="6_73dsf"]
+[ext_resource type="Texture2D" uid="uid://cqtbj8pqv83s5" path="res://Asset/FireBall/Animation Pack/ice take/icetake2.png" id="7_weij2"]
+[ext_resource type="Texture2D" uid="uid://c4hnwsmmnsixk" path="res://Asset/FireBall/Animation Pack/ice take/icetake3.png" id="8_lvg38"]
+[ext_resource type="Texture2D" uid="uid://dox0la5dxqwc" path="res://Asset/FireBall/Animation Pack/ice take/icetake4.png" id="9_tbcyj"]
+[ext_resource type="Texture2D" uid="uid://db6rkytfq554w" path="res://Asset/FireBall/Animation Pack/ice take/icetake5.png" id="10_x6xxo"]
+[ext_resource type="Texture2D" uid="uid://c380x30fxyrhg" path="res://Asset/FireBall/Animation Pack/ice take/icetake6.png" id="11_lujv7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sc2qs"]
+radius = 19.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5lmp7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sc2qs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_c2e37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_q20te")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_glk5c")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8316p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_73dsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_weij2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lvg38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tbcyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_x6xxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_lujv7")
+}],
+"loop": false,
+"name": &"take",
+"speed": 14.0
+}]
+
+[node name="HealthOrb" type="Area2D"]
+scale = Vector2(0.12937991, 0.12359518)
+script = ExtResource("1_c2e37")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_sc2qs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.42745098, 0.6392157, 0, 1)
+sprite_frames = SubResource("SpriteFrames_5lmp7")
+animation = &"idle"
+frame_progress = 0.4657794
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

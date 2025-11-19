@@ -30,13 +30,13 @@ func _ready():
 		GlobalSettings.xp_spawn_requested.connect(Callable(self, "_on_xp_spawn_requested"))
 
 func _on_xp_spawn_requested(amount: int, position: Vector2):
-	# 1. إنشاء مثيل من الـ Label
+	# 1. copy the Label
 	var xp_label = FLOATING_XP_SCENE.instantiate()
 	
-	# 2. تهيئة النص والموقع
+	# 2. write the text
 	xp_label.text = "+" + str(amount) + " XP"
-# ✅ هذا هو الكود لي كيخليه يبان فوق اللاعب (Global Position - 50px)
-	xp_label.global_position = position # ⬅️ الموقع هو رأس اللاعب
+	# (Global Position - 50px)
+	xp_label.global_position = position
 	
 	current_level.add_child(xp_label)
 
@@ -92,7 +92,6 @@ func _on_scene_loaded(scene: PackedScene):
 	current_level.add_child(new_scene)
 	var is_load_game = not saved_game_data.is_empty()
 
-
 	# 1 RESET PLAYER STATE
 	# check Player not dead
 	if player:
@@ -100,7 +99,7 @@ func _on_scene_loaded(scene: PackedScene):
 		player.set_process_input(true)
 		player.set_physics_process(true)
 
-	# 2 LOAD GAME LOGIC (الأولوية)
+	# 2 LOAD GAME LOGIC ()
 	if is_load_game:
 		# applic (health, stamina, position)
 		var data = saved_game_data.player
@@ -112,8 +111,8 @@ func _on_scene_loaded(scene: PackedScene):
 	# 3 NEW GAME/RESPAWN LOGIC (Load Game)
 	else: # if not has save game (New Game أو Respawn)
 		# Health Max Health (New Game/Respawn)
-		player.health = player.max_health
-		player.stamina = player.max_stamina
+		player.health = GlobalSettings.player_max_health
+		player.stamina = GlobalSettings.player_max_stamina
 		
 		if player.visible: #Home
 			set_player_spawn(new_scene) 

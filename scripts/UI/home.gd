@@ -10,8 +10,8 @@ func _ready() -> void:
 	$AnimationPlayer.play("star")
 	if has_save:
 		continue_button.show()
-		load_status_label.text = "  Data uploaded successfully !  " # ⬅️ رسالة التأكيد
-		animate_load_status(load_status_label) # ⬅️ تشغيل الحركة
+		load_status_label.text = "  Data uploaded successfully !  " 
+		animate_load_status(load_status_label) #
 	else:
 		load_status_label.hide()
 		continue_button.hide()
@@ -20,26 +20,26 @@ func _ready() -> void:
 		call_deferred("show_name_popup") #awite show
 
 func animate_load_status(label: Label):
-	# 1. إظهار الـ Label بوضوح
+	# 1. show the label
 	label.modulate.a = 1.0 
-	label.position.y -= 0 # ⬅️ نبدأ من أعلى قليلاً
+	label.position.y -= 0
 	
 	var tween = create_tween()
 	
-	# 2. المرحلة 1: النزول إلى الموقع الأصلي (بسرعة)
+	# 2. down to teh position
 	tween.tween_property(label, "position", label.position + Vector2(0, 35), 1.5) \
 		.set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_OUT)
 		
-	# 3. المرحلة 2: الانتظار لمدة ثانية واحدة
+	# 3. wite 1.5s
 	tween.tween_interval(1.5)
 	
-	# 4. المرحلة 3: الاختفاء التدريجي (Fade out) أثناء الصعود قليلاً
+	# 4.hide step by step (Fade out) and up
 	tween.tween_property(label, "modulate:a", 0.0, 0.7)
-	tween.tween_property(label, "position:y", label.position.y - 25, 1) # ⬅️ صعود طفيف أثناء الاختفاء
+	tween.tween_property(label, "position:y", label.position.y - 25, 1)
 	
-	# 5. تنظيف الـ Label بعد انتهاء الحركة
+	# 5. clean the Label aftar finish
 	await tween.finished
-	label.hide() # إخفاء الـ Label
+	label.hide() # hide Label
 
 func display_player_name():
 	# load the save name

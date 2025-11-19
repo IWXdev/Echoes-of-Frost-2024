@@ -40,6 +40,7 @@ corner_radius_top_left = 40
 corner_radius_bottom_right = 40
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hhep5"]
+content_margin_bottom = 10.0
 bg_color = Color(0.40058154, 0.43755722, 0.70153606, 1)
 draw_center = false
 border_width_left = 2

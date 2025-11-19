@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://b5xpanusejoot"]
+[gd_scene load_steps=49 format=3 uid="uid://b5xpanusejoot"]
 
 [ext_resource type="FontFile" uid="uid://ds2q7k08drb8x" path="res://Asset/font/dash/Dash-Horizon-Demo.otf" id="1_k00v8"]
 [ext_resource type="Script" uid="uid://doo0ppmai3cb6" path="res://scripts/UI/hud.gd" id="1_t6axx"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b2y5tqs4tkcn4" path="res://Asset/icon/LINK/icons8-play-60.png" id="10_syq1e"]
 [ext_resource type="Script" uid="uid://bgp1cuv77o3rm" path="res://scripts/UI/settings.gd" id="10_t6axx"]
 [ext_resource type="FontFile" uid="uid://dcxlywwtygij5" path="res://Asset/font/paladins-font/Paladins-BL0PG.otf" id="12_qe851"]
+[ext_resource type="PackedScene" uid="uid://de6rlfhhol8eg" path="res://scenes/UI/level_up_menu.tscn" id="14_qe851"]
 
 [sub_resource type="Gradient" id="Gradient_t6axx"]
 offsets = PackedFloat32Array(0.6047904, 0.98802394)
@@ -83,7 +84,7 @@ content_margin_bottom = 1.0
 draw_center = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vatau"]
-content_margin_top = 1.0
+content_margin_bottom = 10.0
 draw_center = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2twfv"]
@@ -133,7 +134,7 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0fcg2"]
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(0.8227463, 0.8227464, 0, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -169,12 +170,16 @@ content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-draw_center = false
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
+bg_color = Color(0, 0, 0, 0.4862745)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtwuk"]
@@ -274,6 +279,17 @@ corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w414h"]
+bg_color = Color(7.893444e-06, 0.67506033, 0.91575, 0.3647059)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9471994, 0.9471994, 0.9471994, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5b84"]
 bg_color = Color(0, 0, 0, 0.6784314)
 
@@ -287,6 +303,30 @@ draw_center = false
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbf7x"]
 content_margin_top = 2.0
 draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qe851"]
+bg_color = Color(0.17077562, 0.50070643, 0.4552356, 0.63529414)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 1
+border_color = Color(0.03839716, 0.038397178, 0.0383971, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ggbtr"]
+bg_color = Color(0.27803257, 0.7269905, 0.66188157, 0.63529414)
+border_width_left = 2
+border_width_top = 1
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [node name="HUD" type="CanvasLayer"]
 
@@ -430,10 +470,10 @@ anchor_left = 0.021000002
 anchor_top = 0.039
 anchor_right = 0.164
 anchor_bottom = 0.076000005
-offset_left = 2.447998
-offset_top = -0.12000275
-offset_right = -0.16799927
-offset_bottom = -0.08000183
+offset_left = -8.3200035
+offset_top = -10.120003
+offset_right = -10.936005
+offset_bottom = -10.080002
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 0.5294118)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.015686275)
@@ -444,47 +484,56 @@ theme_override_constants/outline_size = 8
 theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/font = ExtResource("9_kj32l")
 theme_override_font_sizes/font_size = 40
+text = "hello"
 vertical_alignment = 1
 
 [node name="healthbar" parent="Control" instance=ExtResource("8_d15ok")]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.026
-anchor_top = 0.076000005
-anchor_right = 0.40300003
-anchor_bottom = 0.096
-offset_left = 0.048000336
-offset_top = -0.08000183
-offset_right = -0.25604248
-offset_bottom = -0.20800018
+anchor_left = 0.008
+anchor_top = 0.059000004
+anchor_right = 0.402
+anchor_bottom = 0.085
+offset_left = 0.6399994
+offset_top = 16.279995
+offset_right = -0.3040161
+offset_bottom = 16.199997
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 12
 theme_override_styles/background = SubResource("StyleBoxFlat_2twfv")
 theme_override_styles/fill = SubResource("StyleBoxFlat_bp6n0")
 
 [node name="stamina" parent="Control" instance=ExtResource("8_d15ok")]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.030000001
-anchor_top = 0.097
-anchor_right = 0.37100002
-anchor_bottom = 0.109000005
-offset_left = 0.3999977
-offset_top = 0.23999786
-offset_right = -0.43200684
-offset_bottom = 0.27999115
+anchor_left = 0.012
+anchor_top = 0.087000005
+anchor_right = 0.39200002
+anchor_bottom = 0.102000006
+offset_left = 0.9599991
+offset_top = 16.039993
+offset_right = -0.64001465
+offset_bottom = 15.839996
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 6
 theme_override_styles/background = SubResource("StyleBoxFlat_defph")
 theme_override_styles/fill = SubResource("StyleBoxFlat_1ca8v")
 
 [node name="XPBar" parent="Control" instance=ExtResource("8_d15ok")]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.030000001
-anchor_top = 0.11100001
-anchor_right = 0.356
-anchor_bottom = 0.120000005
-offset_left = 0.3999977
-offset_top = 0.11998749
-offset_right = 0.47998047
-offset_bottom = 0.3999939
+anchor_left = 0.008
+anchor_top = 0.104
+anchor_right = 0.38700002
+anchor_bottom = 0.113000005
+offset_left = 0.6399994
+offset_top = 15.68
+offset_right = 0.95996094
+offset_bottom = 15.959991
 theme_override_styles/background = SubResource("StyleBoxFlat_kj32l")
 theme_override_styles/fill = SubResource("StyleBoxFlat_0fcg2")
 
@@ -502,9 +551,9 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("1_k00v8")
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 17
 text = "XP 0/100"
 horizontal_alignment = 2
 
@@ -512,14 +561,14 @@ horizontal_alignment = 2
 visible = false
 modulate = Color(1, 1, 1, 0.77254903)
 layout_mode = 1
-anchor_left = 0.036000002
-anchor_top = 0.123
-anchor_right = 0.372
-anchor_bottom = 0.86600006
-offset_left = 1032.88
-offset_top = 0.16000366
-offset_right = 1033.808
-offset_bottom = -0.3040161
+anchor_left = 0.75200003
+anchor_top = 0.42700002
+anchor_right = 0.75200003
+anchor_bottom = 0.42700002
+offset_left = -304.8401
+offset_top = -328.16
+offset_right = 304.2079
+offset_bottom = 328.84
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -527,7 +576,7 @@ script = ExtResource("10_t6axx")
 
 [node name="TextureRect" type="TextureRect" parent="Control/SettingsMenu"]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -543,23 +592,34 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ufaem")
 
-[node name="setting" type="PanelContainer" parent="Control/SettingsMenu"]
+[node name="setting" type="Panel" parent="Control/SettingsMenu"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.047000002
-anchor_top = 0.11000001
-anchor_right = 0.9480001
-anchor_bottom = 0.95400006
-offset_left = -0.08000183
-offset_top = -0.2800064
-offset_right = 0.27996826
-offset_bottom = -0.1920166
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.5
+offset_top = -274.5313
+offset_right = 256.5
+offset_bottom = 274.5313
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_t1kya")
 
 [node name="VB" type="VBoxContainer" parent="Control/SettingsMenu/setting"]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.5
+offset_top = -253.5
+offset_right = 243.5
+offset_bottom = 253.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/separation = 8
 
 [node name="TabC" type="TabContainer" parent="Control/SettingsMenu/setting/VB"]
@@ -990,22 +1050,22 @@ text = "B a c k"
 
 [node name="LevelLabel" type="Label" parent="Control"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.44200003
-anchor_top = 0.016
-anchor_right = 0.558
-anchor_bottom = 0.042000003
-offset_left = -0.6400757
-offset_top = -0.2800007
-offset_right = 0.6398926
-offset_bottom = -0.36000443
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -119.5
+offset_right = 119.5
+offset_bottom = 37.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 8
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("12_qe851")
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_w414h")
 text = "L E V E L   :   1 0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Panel" type="Panel" parent="Control"]
 visible = false
@@ -1057,6 +1117,152 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("1_k00v8")
 theme_override_font_sizes/font_size = 30
 text = "Level Up"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelUpMenu" parent="Control" instance=ExtResource("14_qe851")]
+layout_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.033
+anchor_top = 0.126
+anchor_right = 0.208
+anchor_bottom = 0.14400001
+offset_left = 0.6399994
+offset_top = 7.919998
+offset_right = 0.63998413
+offset_bottom = 8.479996
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 26
+
+[node name="damage" type="Label" parent="Control/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_qe851")
+text = "  damage  "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="value" type="Label" parent="Control/HBoxContainer/damage"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.95000005
+anchor_right = 0.5
+anchor_bottom = 0.95000005
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9211322, 0.6934611, 3.85046e-07, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_ggbtr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="crit_chance" type="Label" parent="Control/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_qe851")
+text = " crit chance "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="value" type="Label" parent="Control/HBoxContainer/crit_chance"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.95000005
+anchor_right = 0.5
+anchor_bottom = 0.95000005
+offset_left = -20.5
+offset_right = 19.5
+offset_bottom = 20.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9211322, 0.6934611, 3.85046e-07, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_ggbtr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="speed" type="Label" parent="Control/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_qe851")
+text = "    speed    "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="value" type="Label" parent="Control/HBoxContainer/speed"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.95000005
+anchor_right = 0.508
+anchor_bottom = 0.95000005
+offset_left = -19.5
+offset_right = 20.028
+offset_bottom = 20.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9211322, 0.6934611, 3.85046e-07, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_ggbtr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="max_health" type="Label" parent="Control/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_qe851")
+text = " max health "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="value" type="Label" parent="Control/HBoxContainer/max_health"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9211322, 0.6934611, 3.85046e-07, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_k00v8")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_ggbtr")
 horizontal_alignment = 1
 vertical_alignment = 1
 

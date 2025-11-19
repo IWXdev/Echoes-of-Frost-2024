@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dbamoyflfyor4"]
+[gd_scene load_steps=35 format=3 uid="uid://dbamoyflfyor4"]
 
 [ext_resource type="Script" uid="uid://b8y275l0frpti" path="res://scripts/UI/about.gd" id="1_ac6a0"]
 [ext_resource type="FontFile" uid="uid://dh2vb5h8q0xdn" path="res://Asset/font/paladins-font/PaladinsLaser-KVdRZ.otf" id="1_e6kqm"]
@@ -31,6 +31,59 @@ border_width_right = 4
 border_width_bottom = 4
 border_color = Color(1, 1, 1, 1)
 corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_af8cy"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 40
+border_width_top = 40
+border_width_right = 40
+border_width_bottom = 40
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtdvj"]
+draw_center = false
+border_width_left = 40
+border_width_top = 40
+border_width_right = 40
+border_width_bottom = 40
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqali"]
+content_margin_bottom = 10.0
+draw_center = false
+border_width_left = 45
+border_width_top = 45
+border_width_right = 45
+border_width_bottom = 45
+border_color = Color(0.36282945, 0.36282945, 0.36282945, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_da4c7"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7gb5"]
+bg_color = Color(0, 0, 0, 0.42745098)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17uwy"]
 draw_center = false
@@ -127,45 +180,6 @@ draw_center = false
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gw024"]
 draw_center = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_af8cy"]
-draw_center = false
-border_width_left = 40
-border_width_top = 40
-border_width_right = 40
-border_width_bottom = 40
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 100
-corner_radius_top_right = 100
-corner_radius_bottom_right = 100
-corner_radius_bottom_left = 100
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtdvj"]
-draw_center = false
-border_width_left = 40
-border_width_top = 40
-border_width_right = 40
-border_width_bottom = 40
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 100
-corner_radius_top_right = 100
-corner_radius_bottom_right = 100
-corner_radius_bottom_left = 100
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqali"]
-draw_center = false
-border_width_left = 45
-border_width_top = 45
-border_width_right = 45
-border_width_bottom = 45
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 100
-corner_radius_top_right = 100
-corner_radius_bottom_right = 100
-corner_radius_bottom_left = 100
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_da4c7"]
-draw_center = false
-
 [node name="about" type="Control"]
 layout_mode = 3
 anchor_left = 0.22200002
@@ -180,10 +194,15 @@ metadata/_edit_vertical_guides_ = [255.0, 896.0, 256.0]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -462.25208
+offset_top = -521.0
+offset_right = 462.25208
+offset_bottom = 475.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_17uwy")
@@ -201,12 +220,14 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_6h1kh")
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.379
-anchor_right = 0.62100005
-anchor_bottom = 0.05
-offset_left = 0.10797119
-offset_right = -0.10803223
-offset_bottom = 0.049999237
+anchor_left = 0.5
+anchor_top = 0.07
+anchor_right = 0.5
+anchor_bottom = 0.07
+offset_left = -129.00012
+offset_top = -26.529999
+offset_right = 128.99988
+offset_bottom = 27.470001
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.5019608, 0.54509807, 0.79607844, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.015686275)
@@ -219,34 +240,75 @@ theme_override_fonts/font = ExtResource("1_e6kqm")
 theme_override_font_sizes/font_size = 53
 text = "About"
 
-[node name="VScrollBar" type="ScrollContainer" parent="."]
+[node name="exit" type="Button" parent="TextureRect"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.013
-anchor_top = 0.19800001
-anchor_right = 0.98700005
-anchor_bottom = 0.814
-offset_left = -0.367095
-offset_top = 0.1599884
-offset_right = 0.6998291
-offset_bottom = 0.11199951
+anchor_left = 0.85600007
+anchor_top = 0.037
+anchor_right = 0.85600007
+anchor_bottom = 0.037
+offset_left = -45.85504
+offset_top = -14.922998
+offset_right = 1576.2854
+offset_bottom = 540.7336
+grow_horizontal = 0
+scale = Vector2(0.0610305, 0.0521905)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 65
+theme_override_fonts/font = ExtResource("3_8un67")
+theme_override_font_sizes/font_size = 350
+theme_override_styles/normal = SubResource("StyleBoxFlat_af8cy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rtdvj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gqali")
+theme_override_styles/focus = SubResource("StyleBoxFlat_da4c7")
+text = "E X I T"
+
+[node name="background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.87598
+offset_top = -387.5
+offset_right = 350.87598
+offset_bottom = 387.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_q7gb5")
+
+[node name="VScrollBar" type="ScrollContainer" parent="background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -345.00012
+offset_top = -355.75
+offset_right = 342.99988
+offset_bottom = 355.75
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 8
 horizontal_scroll_mode = 0
 
-[node name="HBoxContainer" type="VBoxContainer" parent="VScrollBar"]
+[node name="HBoxContainer" type="VBoxContainer" parent="background/VScrollBar"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 2
-theme_override_constants/separation = 333
+theme_override_constants/separation = 346
 
-[node name="GAME" type="Control" parent="VScrollBar/HBoxContainer"]
+[node name="GAME" type="Control" parent="background/VScrollBar/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 2
 
-[node name="T" type="Label" parent="VScrollBar/HBoxContainer/GAME"]
+[node name="T" type="Label" parent="background/VScrollBar/HBoxContainer/GAME"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
@@ -266,7 +328,7 @@ text = "the game "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="des" type="Label" parent="VScrollBar/HBoxContainer/GAME"]
+[node name="des" type="Label" parent="background/VScrollBar/HBoxContainer/GAME"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -290,12 +352,12 @@ puzzle by navigating rooftops and
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ME" type="Control" parent="VScrollBar/HBoxContainer"]
+[node name="ME" type="Control" parent="background/VScrollBar/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 2
 
-[node name="T" type="Label" parent="VScrollBar/HBoxContainer/ME"]
+[node name="T" type="Label" parent="background/VScrollBar/HBoxContainer/ME"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
@@ -315,7 +377,7 @@ text = "Developer . Contact "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="des" type="Label" parent="VScrollBar/HBoxContainer/ME"]
+[node name="des" type="Label" parent="background/VScrollBar/HBoxContainer/ME"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -335,7 +397,7 @@ Developed by IWX
 Follow & Support:"
 horizontal_alignment = 1
 
-[node name="steam" type="Button" parent="VScrollBar/HBoxContainer/ME/des"]
+[node name="steam" type="Button" parent="background/VScrollBar/HBoxContainer/ME/des"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -364,7 +426,7 @@ icon = ExtResource("4_8un67")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="github" type="Button" parent="VScrollBar/HBoxContainer/ME/des"]
+[node name="github" type="Button" parent="background/VScrollBar/HBoxContainer/ME/des"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -393,7 +455,7 @@ icon = ExtResource("5_ac6a0")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="epic game" type="Button" parent="VScrollBar/HBoxContainer/ME/des"]
+[node name="epic game" type="Button" parent="background/VScrollBar/HBoxContainer/ME/des"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -422,7 +484,7 @@ icon = ExtResource("7_a086s")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="itch_io" type="Button" parent="VScrollBar/HBoxContainer/ME/des"]
+[node name="itch_io" type="Button" parent="background/VScrollBar/HBoxContainer/ME/des"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -451,7 +513,7 @@ icon = ExtResource("8_4sggt")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="instagram" type="Button" parent="VScrollBar/HBoxContainer/ME/des"]
+[node name="instagram" type="Button" parent="background/VScrollBar/HBoxContainer/ME/des"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -480,7 +542,7 @@ icon = ExtResource("6_5rspr")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="version" type="Label" parent="VScrollBar/HBoxContainer"]
+[node name="version" type="Label" parent="background/VScrollBar/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/line_spacing = 25
 theme_override_constants/outline_size = 8
@@ -493,7 +555,7 @@ text = "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="T" type="Label" parent="VScrollBar/HBoxContainer/version"]
+[node name="T" type="Label" parent="background/VScrollBar/HBoxContainer/version"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -516,35 +578,9 @@ text = "version"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="exit" type="Button" parent="."]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.813
-anchor_top = 0.024
-anchor_right = 0.906
-anchor_bottom = 0.051000003
-offset_left = 0.026306152
-offset_top = 0.08000183
-offset_right = 1522.935
-offset_bottom = 526.5766
-grow_horizontal = 0
-scale = Vector2(0.0610305, 0.0521905)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 65
-theme_override_fonts/font = ExtResource("3_8un67")
-theme_override_font_sizes/font_size = 350
-theme_override_styles/normal = SubResource("StyleBoxFlat_af8cy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_rtdvj")
-theme_override_styles/hover = SubResource("StyleBoxFlat_gqali")
-theme_override_styles/focus = SubResource("StyleBoxFlat_da4c7")
-text = "E X I T"
-
-[connection signal="pressed" from="VScrollBar/HBoxContainer/ME/des/steam" to="." method="_on_steam_pressed"]
-[connection signal="pressed" from="VScrollBar/HBoxContainer/ME/des/github" to="." method="_on_github_pressed"]
-[connection signal="pressed" from="VScrollBar/HBoxContainer/ME/des/epic game" to="." method="_on_epic_game_pressed"]
-[connection signal="pressed" from="VScrollBar/HBoxContainer/ME/des/itch_io" to="." method="_on_itch_io_pressed"]
-[connection signal="pressed" from="VScrollBar/HBoxContainer/ME/des/instagram" to="." method="_on_instagram_pressed"]
-[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="TextureRect/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="background/VScrollBar/HBoxContainer/ME/des/steam" to="." method="_on_steam_pressed"]
+[connection signal="pressed" from="background/VScrollBar/HBoxContainer/ME/des/github" to="." method="_on_github_pressed"]
+[connection signal="pressed" from="background/VScrollBar/HBoxContainer/ME/des/epic game" to="." method="_on_epic_game_pressed"]
+[connection signal="pressed" from="background/VScrollBar/HBoxContainer/ME/des/itch_io" to="." method="_on_itch_io_pressed"]
+[connection signal="pressed" from="background/VScrollBar/HBoxContainer/ME/des/instagram" to="." method="_on_instagram_pressed"]

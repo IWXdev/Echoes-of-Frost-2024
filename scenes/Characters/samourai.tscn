@@ -54,6 +54,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tjc7u"]
 size = Vector2(15, 26)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_41f3f"]
+size = Vector2(45, 27.75)
+
 [sub_resource type="Animation" id="Animation_3dsk3"]
 length = 0.001
 tracks/0/type = "value"
@@ -83,7 +86,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D/CollisionShape2D2:visible")
+tracks/2/path = NodePath("Marker2D/Sprite2D/Area2D/CollisionShape2D2:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -95,7 +98,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Area2D:monitoring")
+tracks/3/path = NodePath("Marker2D/Sprite2D/Area2D:monitoring")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -107,7 +110,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Area2D:visible")
+tracks/4/path = NodePath("Marker2D/Sprite2D/Area2D:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -148,7 +151,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D/CollisionShape2D2:visible")
+tracks/2/path = NodePath("Marker2D/Sprite2D/Area2D/CollisionShape2D2:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -160,7 +163,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Area2D:monitoring")
+tracks/3/path = NodePath("Marker2D/Sprite2D/Area2D:monitoring")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -201,7 +204,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D/CollisionShape2D2:visible")
+tracks/2/path = NodePath("Marker2D/Sprite2D/Area2D/CollisionShape2D2:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -213,7 +216,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Area2D:monitoring")
+tracks/3/path = NodePath("Marker2D/Sprite2D/Area2D:monitoring")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -253,7 +256,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D:monitoring")
+tracks/2/path = NodePath("Marker2D/Sprite2D/Area2D:monitoring")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -294,7 +297,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D/CollisionShape2D2:visible")
+tracks/2/path = NodePath("Marker2D/Sprite2D/Area2D/CollisionShape2D2:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -306,7 +309,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Area2D:monitoring")
+tracks/3/path = NodePath("Marker2D/Sprite2D/Area2D:monitoring")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -346,7 +349,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D:visible")
+tracks/2/path = NodePath("Marker2D/Sprite2D/Area2D:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -358,7 +361,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Area2D/CollisionShape2D2:visible")
+tracks/3/path = NodePath("Marker2D/Sprite2D/Area2D/CollisionShape2D2:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -400,7 +403,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D/CollisionShape2D2:visible")
+tracks/2/path = NodePath("Marker2D/Sprite2D/Area2D/CollisionShape2D2:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -412,7 +415,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Area2D:monitoring")
+tracks/3/path = NodePath("Marker2D/Sprite2D/Area2D:monitoring")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -425,6 +428,7 @@ tracks/3/keys = {
 [sub_resource type="Animation" id="Animation_7is13"]
 resource_name = "jump"
 length = 0.3
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -452,7 +456,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D:monitoring")
+tracks/2/path = NodePath("Marker2D/Sprite2D/Area2D:monitoring")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -493,7 +497,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D/CollisionShape2D2:visible")
+tracks/2/path = NodePath("Marker2D/Sprite2D/Area2D/CollisionShape2D2:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -505,7 +509,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Area2D:monitoring")
+tracks/3/path = NodePath("Marker2D/Sprite2D/Area2D:monitoring")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -528,23 +532,20 @@ _data = {
 &"run": SubResource("Animation_tjc7u")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_41f3f"]
-size = Vector2(49, 27.75)
-
 [node name="samourai" type="CharacterBody2D" groups=["player"]]
 position = Vector2(302, 280)
 collision_mask = 6
 floor_block_on_wall = false
 script = ExtResource("1_t4a7k")
-damage = 50.0
+jump_velocity = -250.0
 metadata/_edit_vertical_guides_ = [52.0]
 
 [node name="PlayerCamera" type="Camera2D" parent="."]
-position = Vector2(0, -15)
+position = Vector2(0, -23)
 zoom = Vector2(7, 7)
 limit_left = 0
 limit_top = 107
-limit_right = 3490
+limit_right = 7056
 limit_bottom = 700
 position_smoothing_enabled = true
 position_smoothing_speed = 3.5
@@ -568,22 +569,22 @@ energy = 2.0
 shadow_enabled = true
 shadow_color = Color(0.0509804, 0.0509804, 0.0509804, 1)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_n67d4")
-}
-
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="Marker2D/Sprite2D"]
 visible = false
 collision_mask = 2
 monitoring = false
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Marker2D/Sprite2D/Area2D"]
 visible = false
 visibility_layer = 2
-position = Vector2(12.5, 2.875)
+position = Vector2(14.5, 2.875)
 shape = SubResource("RectangleShape2D_41f3f")
 debug_color = Color(0.58945054, 0.42131573, 0, 0.41960785)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_n67d4")
+}
 
 [node name="jump" type="AudioStreamPlayer2D" parent="."]
 visible = false
@@ -600,5 +601,5 @@ position = Vector2(1, -12)
 pitch_scale = 1.1
 bus = &"SFX"
 
+[connection signal="body_entered" from="Marker2D/Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -7,5 +7,5 @@ func _ready() -> void:
 	
 func _process(delta):
 	position.x += speed * delta
-	if position.x > 3528:
+	if position.x > 7056:
 		position.x = 0

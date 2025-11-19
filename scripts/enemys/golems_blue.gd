@@ -16,7 +16,7 @@ func attack() -> void:
 	await get_tree().create_timer(1.0).timeout
 	can_attack = true
 
-func hit(amount: int):
+func hit(amount: int, is_critical: bool):
 	if health <= 0:
 		return # the player ready death
 	
@@ -36,6 +36,6 @@ func hit(amount: int):
 	damage_instance.global_position = self.global_position + Vector2(0, -70)
 
 # damage value
-	damage_instance.setup_damage(amount, false) # false if critcale 
+	damage_instance.setup_damage(amount, is_critical) # false if critcale 
 	if health <= 0:
 		die()

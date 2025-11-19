@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var attack_range: float = 40.0
 @export var damage: float = 10.0
 @export var xp_value: int = 50
+@export var drop_chance: float = 0.6
 
 @onready var attack_coll: CollisionShape2D = $Marker2D/Golmn/Area2D/CollisionShape2D
 @onready var anim: AnimationPlayer = $AnimationPlayer
@@ -14,7 +15,7 @@ extends CharacterBody2D
 @onready var player = get_tree().get_first_node_in_group("player")
 
 var can_attack = true
-
+const HEALTH_ORB_SCENE = preload("res://scenes/athers/health_orb.tscn")
 
 func _ready() -> void:
 	attack_coll.disabled = true
@@ -68,6 +69,11 @@ func die():
 	set_physics_process(false)
 	if player and player.is_in_group("player") and player.has_method("get_head_position"):
 		GlobalSettings.gain_xp(xp_value, player)
+	if randf() < drop_chance: # randf() value 0.0 and 1.0
+		var orb = HEALTH_ORB_SCENE.instantiate()
+		# Enemy daed positon
+		get_parent().add_child(orb) 
+		orb.global_position = global_position
 	await anim.animation_finished
 	queue_free()
 

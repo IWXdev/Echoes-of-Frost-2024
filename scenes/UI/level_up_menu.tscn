@@ -1,0 +1,230 @@
+[gd_scene load_steps=12 format=3 uid="uid://de6rlfhhol8eg"]
+
+[ext_resource type="Script" uid="uid://sj32vweoyj55" path="res://scripts/UI/level_up_menu.gd" id="1_fd2d1"]
+[ext_resource type="Texture2D" uid="uid://bg5jjb241gced" path="res://Asset/icon/LINK/icons8-pause-100.png" id="2_0tf2r"]
+[ext_resource type="FontFile" uid="uid://bi4g4q5ofbr6a" path="res://Asset/font/gemstone/Gemstone.ttf" id="2_mhoga"]
+[ext_resource type="FontFile" uid="uid://ds2q7k08drb8x" path="res://Asset/font/dash/Dash-Horizon-Demo.otf" id="2_pmnoq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pmnoq"]
+bg_color = Color(0.2, 0.4862745, 0.49019608, 0.54509807)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 0.58431375)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0tf2r"]
+bg_color = Color(0.11792945, 0.2154913, 0.20465872, 0.90588236)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.91394454, 0.8311559, 0.9869359, 0.6117647)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhoga"]
+bg_color = Color(0.05490196, 0.05490196, 0.05490196, 0.75686276)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0rwuo"]
+bg_color = Color(0.12955844, 0.1295585, 0.12955841, 0.75686276)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13bq7"]
+content_margin_bottom = 15.0
+bg_color = Color(0.021434633, 0.021434637, 0.021434618, 0.75686276)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2wcc"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i8bkb"]
+bg_color = Color(0.052594244, 0.112854145, 0.10823303, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="LevelUpMenu" type="Control"]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fd2d1")
+
+[node name="background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -463.5625
+offset_top = -315.1875
+offset_right = 463.5625
+offset_bottom = 315.1875
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pmnoq")
+
+[node name="Panel" type="Panel" parent="background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -427.5625
+offset_top = -271.9375
+offset_right = 427.5625
+offset_bottom = 271.9375
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0tf2r")
+
+[node name="Evolve" type="Label" parent="background/Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.33200002
+anchor_top = 0.059000004
+anchor_right = 0.67
+anchor_bottom = 0.132
+offset_left = -0.33901978
+offset_top = -0.15112686
+offset_right = -0.37127686
+offset_bottom = 0.14600372
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = ExtResource("2_mhoga")
+theme_override_font_sizes/font_size = 40
+text = "Evolve you player"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="background/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -284.0
+offset_top = -80.0
+offset_right = 284.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 120
+
+[node name="UpgradeButton1" type="Button" parent="background/Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_mhoga")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0rwuo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_13bq7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_x2wcc")
+icon = ExtResource("2_0tf2r")
+icon_alignment = 1
+
+[node name="UpgradeButton2" type="Button" parent="background/Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_mhoga")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0rwuo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_13bq7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_x2wcc")
+icon = ExtResource("2_0tf2r")
+icon_alignment = 1
+
+[node name="UpgradeButton3" type="Button" parent="background/Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_mhoga")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0rwuo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_13bq7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_x2wcc")
+icon = ExtResource("2_0tf2r")
+icon_alignment = 1
+
+[node name="skill_points" type="Label" parent="background/Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.035
+anchor_top = 0.17600001
+anchor_right = 0.16700001
+anchor_bottom = 0.23700002
+offset_left = -0.36686707
+offset_top = 0.21549225
+offset_right = 0.24299622
+offset_bottom = 0.039108276
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_pmnoq")
+theme_override_font_sizes/font_size = 24
+text = "skill_points : "
+
+[node name="desc" type="Label" parent="background/Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.791
+anchor_right = 0.5
+anchor_bottom = 0.791
+offset_left = -202.00003
+offset_top = -48.26764
+offset_right = 202.14478
+offset_bottom = 48.73236
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_pmnoq")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxFlat_i8bkb")
+horizontal_alignment = 1
+vertical_alignment = 1

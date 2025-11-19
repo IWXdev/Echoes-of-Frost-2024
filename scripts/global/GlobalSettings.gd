@@ -10,8 +10,20 @@ var player_level: int = 1
 var player_xp: int = 0
 var xp_to_next_level: int = 100
 
+var player_speed: float = 80.0
+var player_max_stamina: float = 100.0
+var player_max_health : float = 100.0
+
+# 2 level = 1 skill_point 
+var skill_points: int = 0 
+
+signal open_upgrade_menu # to open the upgrade menu
+
 # Player Info
 var player_name: String = ""
+var player_damage_base: float = 15.0      # (Base Damage)
+var player_crit_chance: float = 0.05      # (5%)
+var player_crit_multiplier: float = 1.5   # (1.5x)
 
 # Audio
 var master_volume: float = 1.0 
@@ -45,7 +57,7 @@ func _ready():
 	call_deferred("find_brightness_modulator")
 
 # functions (Save/Load) Setting
-#Load setting data
+# Load setting data
 func load_settings():
 	var config = ConfigFile.new()
 	var err = config.load(SETTING_SAVE_PATH)
@@ -108,7 +120,13 @@ func save_game(player_node: Node, level_scene_path: String):
 			"name" : player_name,
 			"level" : player_level,
 			"xp": player_xp,
-			"xp_to_next": xp_to_next_level
+			"xp_to_next": xp_to_next_level,
+			"max_health": player_max_health,
+			"max_stamina" : player_max_stamina,
+			"damage_base": player_damage_base,
+			"crit_chance": player_crit_chance,
+			"crit_multiplier" : player_crit_multiplier,
+			"speed" : player_speed
 		}
 	}
 	
@@ -143,6 +161,14 @@ func load_game() -> Dictionary:
 				player_level = info.level
 				player_xp = info.xp
 				xp_to_next_level = info.xp_to_next
+				#//////
+				player_max_health = info.max_health
+				player_max_stamina = info.max_stamina
+				player_damage_base = info.damage_base
+				player_speed = info.speed
+				player_crit_chance = info.crit_chance
+				player_crit_multiplier = info.crit_multiplier
+				#//////
 			print("Game data loaded successfully from JSON.")
 			return config
 		else:
@@ -159,7 +185,7 @@ func has_saved_game() -> bool:
 	return FileAccess.file_exists(GAME_SAVE_PATH)
 
 
-# 🔊 func app (Apply Logic)
+# func app (Apply Logic)
 func apply_audio_settings():
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(master_volume))
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(music_volume))
@@ -174,15 +200,12 @@ func apply_graphics_settings():
 	# ... (Resolution & VSync Logic) ...
 
 	# ----------------------------------
-	# Brightness Logic (تصحيح)
+	# Brightness Logic ()
 	# ----------------------------------
 	if brightness_modulator:
-		# ✅ هذا هو الكود الصحيح: نطبق Modulate مباشرة على CanvasModulate
 		var color_value = clamp(brightness_level, 0.0, 1.0)
 		brightness_modulator.color = Color(color_value, color_value, color_value, 1.0)
 	else:
-		# ⚠️ إذا فشل العثور عليه، هذا يعني أننا لم نقم بعد بـ find_brightness_modulator()
-		# أو أن النود غير موجودة في المشهد.
 		print("WARNING: CanvasModulate not yet found/registered. Skipping brightness application.")
 	
 	# Resolution
@@ -208,19 +231,20 @@ func check_level_up():
 		check_level_up()
 
 func perform_level_up():
-	# 1. إزالة XP الزائد من XP الحالي
+	# 1. delet XP from current XP
 	player_xp -= xp_to_next_level
-	
-	# 2. زيادة المستوى
+	# 2. add level
 	player_level += 1
 	
-	# 3. تحديد XP المطلوب للمستوى التالي
-	#  (نظام بسيط: نحتاج 20 نقطة زيادة لكل مستوى)
-	xp_to_next_level = int(xp_to_next_level * 1.5) # يزيد بـ 50%
+	xp_to_next_level = int(xp_to_next_level * 1.5) # 50%
+	skill_points += 1 
+	print(skill_points)
+	
+	# check 2 Levels to open menu 
+	if player_level % 2 == 0:
+		open_upgrade_menu.emit() #  start the signal
+	
 	level_up.emit(player_level) 
-	print("LEVEL UP! New Level: ", player_level)
-	#  هنا يمكن إضافة إشارة (Signal) لتحديث الـ HUD أو تشغيل مؤثرات صوتية
-	# emit_signal("level_up", player_level)
 
 # FUNCTION (Setters)
 
@@ -253,7 +277,7 @@ func set_sfx_mute(value: bool) -> void:
 	apply_audio_settings()
 
 
-# 🖥️ GRAPHICS SETTERS
+# GRAPHICS SETTERS
 func find_brightness_modulator():
 	# search node Game.tscn
 	var game_node = get_tree().root.get_node_or_null("Game")

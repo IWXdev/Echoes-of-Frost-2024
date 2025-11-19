@@ -1,6 +1,7 @@
-[gd_scene load_steps=73 format=3 uid="uid://cnq7nwk4ut1hu"]
+[gd_scene load_steps=74 format=3 uid="uid://cnq7nwk4ut1hu"]
 
 [ext_resource type="Script" uid="uid://n563523ty4n2" path="res://scripts/enemys/samurai_nap.gd" id="1_1c8k0"]
+[ext_resource type="Texture2D" uid="uid://dmemsr7r1wrx1" path="res://Asset/VFX Blood/VFX Blood Concepts FXOnly2.png" id="3_se6g5"]
 [ext_resource type="Texture2D" uid="uid://rp2ioidb2m4" path="res://Asset/SHADOW Series/samurai enemy/attack/sa60.png" id="4_se6g5"]
 [ext_resource type="Texture2D" uid="uid://c7kquulxnlhiv" path="res://Asset/SHADOW Series/samurai enemy/attack/sa61.png" id="5_b6skj"]
 [ext_resource type="Texture2D" uid="uid://c7k16qe4sfnhg" path="res://Asset/SHADOW Series/samurai enemy/attack/sa62.png" id="6_re53x"]
@@ -112,6 +113,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Marker2D/damage_eff:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_2e3oh"]
 resource_name = "attack"
@@ -175,6 +188,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ExtResource("37_4jqha"), ExtResource("38_g0aq5")]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Marker2D/damage_eff:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="Animation" id="Animation_joc3b"]
 resource_name = "idle"
@@ -227,8 +252,7 @@ collision_mask = 5
 script = ExtResource("1_1c8k0")
 detection_range = 180.0
 attack_range = 30.0
-damage = 15.0
-xp_value = 20
+xp_value = 30
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -249,6 +273,13 @@ theme_override_styles/background = SubResource("StyleBoxFlat_xhexh")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ye0u0")
 
 [node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="damage_eff" type="Sprite2D" parent="Marker2D"]
+visible = false
+texture_filter = 1
+position = Vector2(-1.6741076, 1.999999)
+scale = Vector2(0.24047312, 0.1252761)
+texture = ExtResource("3_se6g5")
 
 [node name="Golmn" type="Sprite2D" parent="Marker2D"]
 texture_filter = 1

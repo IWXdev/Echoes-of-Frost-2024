@@ -1,7 +1,8 @@
-[gd_scene load_steps=72 format=3 uid="uid://oifxdol8021h"]
+[gd_scene load_steps=73 format=3 uid="uid://oifxdol8021h"]
 
 [ext_resource type="Script" uid="uid://bytrsctfpggdn" path="res://scripts/enemys/wetlands.gd" id="1_xeqru"]
 [ext_resource type="Texture2D" uid="uid://5vhs5acvsplk" path="res://Asset/SHADOW Series/Wetlands/attack1/attack10.png" id="3_bii3o"]
+[ext_resource type="Texture2D" uid="uid://dmemsr7r1wrx1" path="res://Asset/VFX Blood/VFX Blood Concepts FXOnly2.png" id="3_k716c"]
 [ext_resource type="Texture2D" uid="uid://cfuw6ohjc4fs3" path="res://Asset/SHADOW Series/Wetlands/attack1/attack11.png" id="4_jcxci"]
 [ext_resource type="Texture2D" uid="uid://dsydnb6saa4er" path="res://Asset/SHADOW Series/Wetlands/attack1/attack12.png" id="5_hc4r4"]
 [ext_resource type="Texture2D" uid="uid://cymccoavhpg12" path="res://Asset/SHADOW Series/Wetlands/attack1/attack13.png" id="6_dosr7"]
@@ -111,6 +112,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Marker2D/damage_eff:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_2e3oh"]
 resource_name = "attack"
@@ -174,6 +187,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ExtResource("26_46agu")]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Marker2D/damage_eff:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="Animation" id="Animation_joc3b"]
 resource_name = "idle"
@@ -226,8 +251,8 @@ scale = Vector2(0.7, 0.7)
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_xeqru")
-damage = 30.0
-xp_value = 30
+health = 130.0
+damage = 20.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -246,9 +271,17 @@ offset_bottom = -35.714287
 grow_vertical = 1
 theme_override_styles/background = SubResource("StyleBoxFlat_xhexh")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ye0u0")
+max_value = 130.0
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(-4.285713, 0)
+
+[node name="damage_eff" type="Sprite2D" parent="Marker2D"]
+visible = false
+texture_filter = 1
+position = Vector2(-4.285713, 5.714286)
+scale = Vector2(0.4993096, 0.39193657)
+texture = ExtResource("3_k716c")
 
 [node name="Golmn" type="Sprite2D" parent="Marker2D"]
 texture_filter = 1

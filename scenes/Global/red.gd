@@ -1,12 +1,12 @@
 # Red.gd
 extends Node
 
-@onready var music_player = $AudioStreamPlayer2D # ⬅️ تأكد من الاسم
+@onready var music_player = $AudioStreamPlayer2D 
 
 func _ready():
-	# 1. يسجل نفسه في GlobalSettings
+	# 1.save at GlobalSettings
 	GlobalSettings.register_red(self) 
-	# 2. بدأ التشغيل 
+	# 2. play 
 	music_player.play() 
-	# 3. تطبيق الإعدادات الأولية
+	# 3. app the basec setting
 	GlobalSettings.apply_audio_settings()

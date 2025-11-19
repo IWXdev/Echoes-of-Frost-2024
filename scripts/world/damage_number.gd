@@ -3,11 +3,11 @@ extends Node2D
 
 func setup_damage(value, is_critical):
 	$Label.text = "-" + str(value)
-	
-	# يمكنك تغيير لون النص هنا بناءً على إذا كان ضربة حرجة
-	# if is_critical:
-	#     $Label.modulate = Color.RED
-
+	$".".modulate = Color.YELLOW
+	# change color if attack == critical
+	if is_critical:
+		$".".modulate = Color.RED
+		print("Hello")
 	$AnimationPlayer.play("FloatAndFade")
 
 func _on_animation_finished(anim_name):

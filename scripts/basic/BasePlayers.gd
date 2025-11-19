@@ -1,17 +1,14 @@
 extends CharacterBody2D
 
-@export var max_health: float = 100
-@export var max_stamina: float = 100.0
 var health : float = 100
 var stamina: float = 100
-@export var speed: float = 100
 @export var jump_velocity: float = -300
-@export var damage: float = 20.0
 @export var wall_slide_speed = 50
 @export var wall_jump_force = Vector2(200, -300)
 
+@onready var global_settings = GlobalSettings
 @onready var anim: AnimationPlayer = $AnimationPlayer
-@onready var attack_coll = $Area2D/CollisionShape2D2
+@onready var attack_coll = $Marker2D/Sprite2D/Area2D/CollisionShape2D2
 @onready var player_camera = $PlayerCamera
 
 var wall_dir = 0 
@@ -30,8 +27,8 @@ var is_dead : bool = false
 signal died
 
 func _ready() -> void:
-	max_health = health
-	max_stamina = stamina
+	global_settings.player_max_health = health
+	global_settings.player_max_stamina = stamina
 	pass
 
 
@@ -61,9 +58,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-# -----------------------------------
 # Movement
-# -----------------------------------
+
 func move():
 	if anim.current_animation == "attack":
 		return
@@ -71,10 +67,10 @@ func move():
 	
 	direction = Input.get_axis("left", "right")
 	if direction:
-		velocity.x = direction * speed
+		velocity.x = direction * GlobalSettings.player_speed
 		$Marker2D.scale.x = direction
 	else:
-		velocity.x = move_toward(velocity.x, 0, speed)
+		velocity.x = move_toward(velocity.x, 0, GlobalSettings.player_speed)
 
 # Jump
 func jump():
@@ -103,8 +99,20 @@ func Attack():
 			start_attack2()
 			attack_count = 0
 
+func heal(percentage: float):
+	# 1. calcule the health
+	var amount = global_settings.player_max_health * percentage
+	# 2. add the heal to the health
+	health += amount
+	# 3. pluse health < max_health
+	health = min(health, global_settings.player_max_health)
+	
+	print("Player healed for: ", amount)
+	
+	# (VFX)
+
 func get_head_position() -> Vector2:
-	# ⬅️ +50 بكسل للأعلى (لإظهار النص فوق الشخصية)
+	# +50 player positon - 12px
 	return global_position + Vector2(0, -12)
 
 func start_attack1():
@@ -127,7 +135,7 @@ func start_attack2():
 func hit(amount: int):
 	anim.play("hit")
 	if health <= 0:
-		return # اللاعب ميت بالفعل
+		return
 	health -= amount
 
 	if health <= 0 and not is_dead:
@@ -187,6 +195,24 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name in ["attack1", "attack2"]:
 		attacking = false
 
+func get_calculated_damage() -> Dictionary:
+	# 1.git the player_damage_base
+	var final_damage = global_settings.player_damage_base
+	var is_critical = false
+	
+	# 2.(Critical Hit Check)
+	# randf()
+	if randf() < global_settings.player_crit_chance:
+		final_damage *= global_settings.player_crit_multiplier
+		is_critical = true
+		print("CRITICAL HIT APPLIED!")
+		# (add sound or somting)
+		
+	return {"damage": final_damage, "is_critical": is_critical}
+	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy") and body.has_method("hit"):
-		body.hit(damage)
+		# 1. calcule the final damage
+		var result = get_calculated_damage()   
+		# 2.applice the damage to enemy
+		body.hit(result.damage, result.is_critical)
