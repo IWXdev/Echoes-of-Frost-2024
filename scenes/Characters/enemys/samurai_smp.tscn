@@ -234,7 +234,8 @@ script = ExtResource("1_4k08b")
 speed = 60.0
 detection_range = 180.0
 attack_range = 30.0
-xp_value = 30
+damage = 8.0
+drop_chance = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

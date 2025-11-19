@@ -7,7 +7,6 @@ func setup_damage(value, is_critical):
 	# change color if attack == critical
 	if is_critical:
 		$".".modulate = Color.RED
-		print("Hello")
 	$AnimationPlayer.play("FloatAndFade")
 
 func _on_animation_finished(anim_name):

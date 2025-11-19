@@ -537,7 +537,8 @@ position = Vector2(302, 280)
 collision_mask = 6
 floor_block_on_wall = false
 script = ExtResource("1_t4a7k")
-jump_velocity = -250.0
+jump_velocity = -260.0
+wall_jump_force = Vector2(200, -280)
 metadata/_edit_vertical_guides_ = [52.0]
 
 [node name="PlayerCamera" type="Camera2D" parent="."]

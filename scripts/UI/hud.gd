@@ -14,7 +14,8 @@ extends Control
 @onready var damage =$HBoxContainer/damage/value
 @onready var crit =$HBoxContainer/crit_chance/value
 @onready var speed = $HBoxContainer/speed/value
-@onready var max_health = $HBoxContainer/max_health/value
+@onready var max_health = $HBoxContainer/health/value
+@onready var stamina_recovery = $HBoxContainer/stamina_recovery/value
 #<<<<<
 var current_pulse_tween: Tween = null
 
@@ -147,3 +148,4 @@ func ui_skells():
 	crit.text = str(GlobalSettings.player_crit_chance)
 	speed.text = str(GlobalSettings.player_speed)
 	max_health.text = str(GlobalSettings.player_max_health)
+	stamina_recovery.text = str(GlobalSettings.player_stamina_recovery)

@@ -71,10 +71,11 @@ position = Vector2(-1, 1)
 shape = SubResource("CircleShape2D_sc2qs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-modulate = Color(0.42745098, 0.6392157, 0, 1)
+modulate = Color(0.99999994, 0.10835094, 0.18358314, 1)
 sprite_frames = SubResource("SpriteFrames_5lmp7")
 animation = &"idle"
-frame_progress = 0.4657794
+frame = 2
+frame_progress = 0.2810124
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0

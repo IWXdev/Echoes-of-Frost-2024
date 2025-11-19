@@ -12,8 +12,9 @@ const ALL_SKILLS = [
 	{"key": "MAX_HP", "desc": "Max Health +5 hp", "type": "Health", "icon_path": "res://Asset/icon/LINK/icons8-health-100.png"},
 	{"key": "MAX_STAMINA", "desc": "stamina +5 ", "type": "Stamina", "icon_path": "res://Asset/icon/LINK/icons8-power-100.png"},
 	{"key": "ATTACK_DMG", "desc": "damage +5", "type": "Damage", "icon_path": "res://Asset/icon/LINK/icons8-sword-100.png"},
-	{"key": "CRIT_CHANCE", "desc": "critical attack  +5% ", "type": "Damage", "icon_path": "res://Asset/icon/LINK/icons8-sword-100 (1).png"},
-	{"key": "SPEED", "desc": "player speed +3", "type": "Speed", "icon_path": "res://Asset/icon/LINK/icons8-exercise-100.png"},
+	{"key": "CRIT_CHANCE", "desc": "critical attack  +5% ", "type": "Damage_Crit", "icon_path": "res://Asset/icon/LINK/icons8-sword-100 (1).png"},
+	{"key": "SPEED", "desc": "speed +3", "type": "Speed", "icon_path": "res://Asset/icon/LINK/icons8-exercise-100.png"},
+	{"key": "STAMINA_RECO", "desc": "stamina recovery +5%", "type": "Stamina_Reco", "icon_path": "res://Asset/icon/LINK/icons8-pause-100.png"}
 	# {"key": "LIFESTEAL", "desc": "مص الحياة: +3% فرصة لشفاء الذات", "type": "Utility"},
 ]
 
@@ -43,6 +44,10 @@ func generate_skill_choices():
 		if btn.is_connected("pressed", Callable(self, "apply_upgrade")):
 			btn.disconnect("pressed", Callable(self, "apply_upgrade"))
 			
+		# DISCONNECT 'mouse_entered' (NEW: to fix the warning)
+		if btn.is_connected("mouse_entered", Callable(self, "_on_upgrade_button_mouse_entered")):
+			# Note: Use the base callable, not the bound one, for disconnect
+			btn.disconnect("mouse_entered", Callable(self, "_on_upgrade_button_mouse_entered"))
 	# 2. select 3 devs 
 	var mutable_skills = ALL_SKILLS.duplicate()
 	
@@ -87,6 +92,8 @@ func apply_upgrade(skill_key: String):
 			GlobalSettings.player_crit_chance += 0.05
 		"SPEED":
 			GlobalSettings.player_speed += 5
+		"STAMINA_RECO":
+			GlobalSettings.player_stamina_recovery += 0.05
 	# 3.consome the point
 	GlobalSettings.skill_points -= 1
 	update_skill_points_display()

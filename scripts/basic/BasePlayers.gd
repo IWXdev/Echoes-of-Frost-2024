@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y += gravity * delta
 
 	if stamina < 100 and direction == 0:
-		stamina += 0.15
+		stamina += GlobalSettings.player_stamina_recovery
 # The Functions
 
 	move()
@@ -107,7 +107,6 @@ func heal(percentage: float):
 	# 3. pluse health < max_health
 	health = min(health, global_settings.player_max_health)
 	
-	print("Player healed for: ", amount)
 	
 	# (VFX)
 

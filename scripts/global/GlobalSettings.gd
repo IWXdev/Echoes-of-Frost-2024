@@ -10,6 +10,7 @@ var player_level: int = 1
 var player_xp: int = 0
 var xp_to_next_level: int = 100
 
+var player_stamina_recovery: float = 0.15
 var player_speed: float = 80.0
 var player_max_stamina: float = 100.0
 var player_max_health : float = 100.0
@@ -126,7 +127,8 @@ func save_game(player_node: Node, level_scene_path: String):
 			"damage_base": player_damage_base,
 			"crit_chance": player_crit_chance,
 			"crit_multiplier" : player_crit_multiplier,
-			"speed" : player_speed
+			"speed" : player_speed,
+			"stamina_recovery" : player_stamina_recovery
 		}
 	}
 	
@@ -168,6 +170,7 @@ func load_game() -> Dictionary:
 				player_speed = info.speed
 				player_crit_chance = info.crit_chance
 				player_crit_multiplier = info.crit_multiplier
+				player_stamina_recovery = info.stamina_recovery
 				#//////
 			print("Game data loaded successfully from JSON.")
 			return config
