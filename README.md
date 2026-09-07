@@ -1,3 +1,5 @@
+# By IWX
+
 # ❄️ Echoes of Frost
 A 2D game combining **parkour** and **puzzles** set in a fantasy city at night under falling snow.  
 The hero tries to reach a mysterious puzzle by navigating rooftops and solving diverse challenges.
